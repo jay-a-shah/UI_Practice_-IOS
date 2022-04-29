@@ -16,6 +16,11 @@
 		F19B1886281BA6070061EEDC /* CuBa_PracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19B1885281BA6070061EEDC /* CuBa_PracticeTests.swift */; };
 		F19B1890281BA6070061EEDC /* CuBa_PracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19B188F281BA6070061EEDC /* CuBa_PracticeUITests.swift */; };
 		F19B1892281BA6070061EEDC /* CuBa_PracticeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19B1891281BA6070061EEDC /* CuBa_PracticeUITestsLaunchTests.swift */; };
+		F19B18A0281BAA2C0061EEDC /* BaseCustomUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19B189F281BAA2C0061EEDC /* BaseCustomUITextField.swift */; };
+		F1D102AF281BC72300DD2C0D /* ColorFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D102AE281BC72300DD2C0D /* ColorFile.swift */; };
+		F1D102B9281BEA5F00DD2C0D /* UserNameTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D102B8281BEA5F00DD2C0D /* UserNameTextField.swift */; };
+		F1D102BC281BF54E00DD2C0D /* BaseCustomUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D102BB281BF54E00DD2C0D /* BaseCustomUIButton.swift */; };
+		F1D102BE281C0AE000DD2C0D /* PasswordUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D102BD281C0AE000DD2C0D /* PasswordUITextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,17 @@
 		F19B188B281BA6070061EEDC /* CuBa_PracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CuBa_PracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F19B188F281BA6070061EEDC /* CuBa_PracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuBa_PracticeUITests.swift; sourceTree = "<group>"; };
 		F19B1891281BA6070061EEDC /* CuBa_PracticeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuBa_PracticeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F19B189F281BAA2C0061EEDC /* BaseCustomUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCustomUITextField.swift; sourceTree = "<group>"; };
+		F1D102AE281BC72300DD2C0D /* ColorFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorFile.swift; sourceTree = "<group>"; };
+		F1D102B2281BE67600DD2C0D /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
+		F1D102B3281BE67600DD2C0D /* DMSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Medium.ttf"; sourceTree = "<group>"; };
+		F1D102B4281BE67600DD2C0D /* DMSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Bold.ttf"; sourceTree = "<group>"; };
+		F1D102B5281BE67600DD2C0D /* DMSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		F1D102B6281BE67600DD2C0D /* DMSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-MediumItalic.ttf"; sourceTree = "<group>"; };
+		F1D102B7281BE67600DD2C0D /* DMSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Italic.ttf"; sourceTree = "<group>"; };
+		F1D102B8281BEA5F00DD2C0D /* UserNameTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameTextField.swift; sourceTree = "<group>"; };
+		F1D102BB281BF54E00DD2C0D /* BaseCustomUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCustomUIButton.swift; sourceTree = "<group>"; };
+		F1D102BD281C0AE000DD2C0D /* PasswordUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordUITextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +95,7 @@
 		F19B1862281BA6050061EEDC = {
 			isa = PBXGroup;
 			children = (
+				F1D102B1281BE67600DD2C0D /* Fonts */,
 				F19B186D281BA6050061EEDC /* CuBa_Practice */,
 				F19B1884281BA6070061EEDC /* CuBa_PracticeTests */,
 				F19B188E281BA6070061EEDC /* CuBa_PracticeUITests */,
@@ -99,6 +116,8 @@
 		F19B186D281BA6050061EEDC /* CuBa_Practice */ = {
 			isa = PBXGroup;
 			children = (
+				F1D102AD281BC70E00DD2C0D /* Extensions */,
+				F19B189E281BAA040061EEDC /* Custom Control */,
 				F19B186E281BA6050061EEDC /* AppDelegate.swift */,
 				F19B1870281BA6050061EEDC /* SceneDelegate.swift */,
 				F19B1872281BA6050061EEDC /* ViewController.swift */,
@@ -125,6 +144,54 @@
 				F19B1891281BA6070061EEDC /* CuBa_PracticeUITestsLaunchTests.swift */,
 			);
 			path = CuBa_PracticeUITests;
+			sourceTree = "<group>";
+		};
+		F19B189E281BAA040061EEDC /* Custom Control */ = {
+			isa = PBXGroup;
+			children = (
+				F1D102BA281BF52B00DD2C0D /* UIButton */,
+				F1D102B0281BCBB700DD2C0D /* CustomUITextField */,
+			);
+			path = "Custom Control";
+			sourceTree = "<group>";
+		};
+		F1D102AD281BC70E00DD2C0D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F1D102AE281BC72300DD2C0D /* ColorFile.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F1D102B0281BCBB700DD2C0D /* CustomUITextField */ = {
+			isa = PBXGroup;
+			children = (
+				F19B189F281BAA2C0061EEDC /* BaseCustomUITextField.swift */,
+				F1D102B8281BEA5F00DD2C0D /* UserNameTextField.swift */,
+				F1D102BD281C0AE000DD2C0D /* PasswordUITextField.swift */,
+			);
+			path = CustomUITextField;
+			sourceTree = "<group>";
+		};
+		F1D102B1281BE67600DD2C0D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F1D102B2281BE67600DD2C0D /* DMSans-Regular.ttf */,
+				F1D102B3281BE67600DD2C0D /* DMSans-Medium.ttf */,
+				F1D102B4281BE67600DD2C0D /* DMSans-Bold.ttf */,
+				F1D102B5281BE67600DD2C0D /* DMSans-BoldItalic.ttf */,
+				F1D102B6281BE67600DD2C0D /* DMSans-MediumItalic.ttf */,
+				F1D102B7281BE67600DD2C0D /* DMSans-Italic.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		F1D102BA281BF52B00DD2C0D /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				F1D102BB281BF54E00DD2C0D /* BaseCustomUIButton.swift */,
+			);
+			path = UIButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +325,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F19B18A0281BAA2C0061EEDC /* BaseCustomUITextField.swift in Sources */,
 				F19B1873281BA6050061EEDC /* ViewController.swift in Sources */,
+				F1D102BC281BF54E00DD2C0D /* BaseCustomUIButton.swift in Sources */,
 				F19B186F281BA6050061EEDC /* AppDelegate.swift in Sources */,
+				F1D102AF281BC72300DD2C0D /* ColorFile.swift in Sources */,
+				F1D102B9281BEA5F00DD2C0D /* UserNameTextField.swift in Sources */,
+				F1D102BE281C0AE000DD2C0D /* PasswordUITextField.swift in Sources */,
 				F19B1871281BA6050061EEDC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
