@@ -7,15 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D6FB0500E2904B6D9A86C4C /* Pods_CuBa_Practice_CuBa_PracticeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 251FFC1920AB7313F653F9E6 /* Pods_CuBa_Practice_CuBa_PracticeUITests.framework */; };
+		A2C1D93D9AC81042A3730CD0 /* Pods_CuBa_PracticeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79FA4227B0257FEC6F0CF6EC /* Pods_CuBa_PracticeTests.framework */; };
+		AA98585FB41C98122C01F547 /* Pods_CuBa_Practice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C7DEE6144DBC2BD98067DF /* Pods_CuBa_Practice.framework */; };
+		F10DA7872821BD2900C0BAAB /* UsernameTextFieldWithButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10DA7862821BD2900C0BAAB /* UsernameTextFieldWithButton.swift */; };
+		F10DA7892821C25600C0BAAB /* CustomSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10DA7882821C25600C0BAAB /* CustomSignInButton.swift */; };
+		F13A3A2628216A480073D373 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F13A3A2428216A480073D373 /* Main.storyboard */; };
+		F13A3A2C282174BB0073D373 /* CustomSignupButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13A3A2B282174BB0073D373 /* CustomSignupButton.swift */; };
+		F13A3A2E282176290073D373 /* BaseCustomUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13A3A2D282176290073D373 /* BaseCustomUIButton.swift */; };
+		F13A3A30282178AA0073D373 /* BaseUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13A3A2F282178AA0073D373 /* BaseUILabel.swift */; };
+		F142DC4E2825BC9A0031366B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F142DC4D2825BC9A0031366B /* Constants.swift */; };
+		F157700E282166DB008EEF6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F19B1879281BA6060061EEDC /* LaunchScreen.storyboard */; };
+		F15CB90028224B4600032101 /* DMSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1D102B5281BE67600DD2C0D /* DMSans-BoldItalic.ttf */; };
+		F15CB90128224B4900032101 /* DMSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1D102B4281BE67600DD2C0D /* DMSans-Bold.ttf */; };
+		F15CB90228224B4C00032101 /* DMSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1D102B3281BE67600DD2C0D /* DMSans-Medium.ttf */; };
+		F15CB90328224B4E00032101 /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1D102B2281BE67600DD2C0D /* DMSans-Regular.ttf */; };
+		F15CB90428224B5100032101 /* DMSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1D102B6281BE67600DD2C0D /* DMSans-MediumItalic.ttf */; };
+		F15CB90528224B5300032101 /* DMSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1D102B7281BE67600DD2C0D /* DMSans-Italic.ttf */; };
+		F172EBE128215B8000B05DCA /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F172EBDF28215B8000B05DCA /* SignInViewController.swift */; };
+		F172EBE228215B8000B05DCA /* SignUpScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F172EBE028215B8000B05DCA /* SignUpScreenViewController.swift */; };
+		F172EBEB28215CBA00B05DCA /* BuisnessUrlTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F172EBE928215CBA00B05DCA /* BuisnessUrlTextField.swift */; };
+		F172EBEC28215CBA00B05DCA /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F172EBEA28215CBA00B05DCA /* EmailTextField.swift */; };
+		F172EBF928215FEC00B05DCA /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F172EBF828215FEC00B05DCA /* UIViewController.swift */; };
+		F19788DD282399E100CFCE07 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F19788DA28238FA500CFCE07 /* Localizable.strings */; };
+		F19788DE282399E200CFCE07 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F19788DA28238FA500CFCE07 /* Localizable.strings */; };
+		F19788DF282399E200CFCE07 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F19788DA28238FA500CFCE07 /* Localizable.strings */; };
+		F19788E128239A8A00CFCE07 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19788E028239A8A00CFCE07 /* R.generated.swift */; };
 		F19B186F281BA6050061EEDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19B186E281BA6050061EEDC /* AppDelegate.swift */; };
 		F19B1871281BA6050061EEDC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19B1870281BA6050061EEDC /* SceneDelegate.swift */; };
 		F19B1873281BA6050061EEDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19B1872281BA6050061EEDC /* ViewController.swift */; };
-		F19B1876281BA6050061EEDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F19B1874281BA6050061EEDC /* Main.storyboard */; };
 		F19B1878281BA6060061EEDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F19B1877281BA6060061EEDC /* Assets.xcassets */; };
-		F19B187B281BA6060061EEDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F19B1879281BA6060061EEDC /* LaunchScreen.storyboard */; };
 		F19B1886281BA6070061EEDC /* CuBa_PracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19B1885281BA6070061EEDC /* CuBa_PracticeTests.swift */; };
 		F19B1890281BA6070061EEDC /* CuBa_PracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19B188F281BA6070061EEDC /* CuBa_PracticeUITests.swift */; };
 		F19B1892281BA6070061EEDC /* CuBa_PracticeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19B1891281BA6070061EEDC /* CuBa_PracticeUITestsLaunchTests.swift */; };
+		F19B18A0281BAA2C0061EEDC /* BaseCustomUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19B189F281BAA2C0061EEDC /* BaseCustomUITextField.swift */; };
+		F1D102AF281BC72300DD2C0D /* ColorFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D102AE281BC72300DD2C0D /* ColorFile.swift */; };
+		F1D102B9281BEA5F00DD2C0D /* UserNameTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D102B8281BEA5F00DD2C0D /* UserNameTextField.swift */; };
+		F1D102BE281C0AE000DD2C0D /* PasswordUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D102BD281C0AE000DD2C0D /* PasswordUITextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +64,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		251FFC1920AB7313F653F9E6 /* Pods_CuBa_Practice_CuBa_PracticeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CuBa_Practice_CuBa_PracticeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5382DE418E641E1043CE2B45 /* Pods-CuBa_Practice-CuBa_PracticeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuBa_Practice-CuBa_PracticeUITests.release.xcconfig"; path = "Target Support Files/Pods-CuBa_Practice-CuBa_PracticeUITests/Pods-CuBa_Practice-CuBa_PracticeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		79FA4227B0257FEC6F0CF6EC /* Pods_CuBa_PracticeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CuBa_PracticeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F416A0A766D00BA287882F9 /* Pods-CuBa_Practice-CuBa_PracticeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuBa_Practice-CuBa_PracticeUITests.debug.xcconfig"; path = "Target Support Files/Pods-CuBa_Practice-CuBa_PracticeUITests/Pods-CuBa_Practice-CuBa_PracticeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		977EB4441445293D07863A55 /* Pods-CuBa_PracticeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuBa_PracticeTests.release.xcconfig"; path = "Target Support Files/Pods-CuBa_PracticeTests/Pods-CuBa_PracticeTests.release.xcconfig"; sourceTree = "<group>"; };
+		D6C7DEE6144DBC2BD98067DF /* Pods_CuBa_Practice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CuBa_Practice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D91EB1B59697612B8760C8A8 /* Pods-CuBa_Practice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuBa_Practice.release.xcconfig"; path = "Target Support Files/Pods-CuBa_Practice/Pods-CuBa_Practice.release.xcconfig"; sourceTree = "<group>"; };
+		DEE4D0329124B8DAFF9823BE /* Pods-CuBa_PracticeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuBa_PracticeTests.debug.xcconfig"; path = "Target Support Files/Pods-CuBa_PracticeTests/Pods-CuBa_PracticeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F10DA7862821BD2900C0BAAB /* UsernameTextFieldWithButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameTextFieldWithButton.swift; sourceTree = "<group>"; };
+		F10DA7882821C25600C0BAAB /* CustomSignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSignInButton.swift; sourceTree = "<group>"; };
+		F13A3A2528216A480073D373 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F13A3A2B282174BB0073D373 /* CustomSignupButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSignupButton.swift; sourceTree = "<group>"; };
+		F13A3A2D282176290073D373 /* BaseCustomUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCustomUIButton.swift; sourceTree = "<group>"; };
+		F13A3A2F282178AA0073D373 /* BaseUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUILabel.swift; sourceTree = "<group>"; };
+		F142DC4D2825BC9A0031366B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F172EBDF28215B8000B05DCA /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		F172EBE028215B8000B05DCA /* SignUpScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreenViewController.swift; sourceTree = "<group>"; };
+		F172EBE928215CBA00B05DCA /* BuisnessUrlTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuisnessUrlTextField.swift; sourceTree = "<group>"; };
+		F172EBEA28215CBA00B05DCA /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
+		F172EBF828215FEC00B05DCA /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		F19788D928238FA500CFCE07 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F19788E028239A8A00CFCE07 /* R.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		F19B186B281BA6050061EEDC /* CuBa_Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CuBa_Practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F19B186E281BA6050061EEDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F19B1870281BA6050061EEDC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F19B1872281BA6050061EEDC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F19B1875281BA6050061EEDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F19B1877281BA6060061EEDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F19B187A281BA6060061EEDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F19B187C281BA6060061EEDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +98,17 @@
 		F19B188B281BA6070061EEDC /* CuBa_PracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CuBa_PracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F19B188F281BA6070061EEDC /* CuBa_PracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuBa_PracticeUITests.swift; sourceTree = "<group>"; };
 		F19B1891281BA6070061EEDC /* CuBa_PracticeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuBa_PracticeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F19B189F281BAA2C0061EEDC /* BaseCustomUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCustomUITextField.swift; sourceTree = "<group>"; };
+		F1D102AE281BC72300DD2C0D /* ColorFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorFile.swift; sourceTree = "<group>"; };
+		F1D102B2281BE67600DD2C0D /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
+		F1D102B3281BE67600DD2C0D /* DMSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Medium.ttf"; sourceTree = "<group>"; };
+		F1D102B4281BE67600DD2C0D /* DMSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Bold.ttf"; sourceTree = "<group>"; };
+		F1D102B5281BE67600DD2C0D /* DMSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		F1D102B6281BE67600DD2C0D /* DMSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-MediumItalic.ttf"; sourceTree = "<group>"; };
+		F1D102B7281BE67600DD2C0D /* DMSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Italic.ttf"; sourceTree = "<group>"; };
+		F1D102B8281BEA5F00DD2C0D /* UserNameTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameTextField.swift; sourceTree = "<group>"; };
+		F1D102BD281C0AE000DD2C0D /* PasswordUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordUITextField.swift; sourceTree = "<group>"; };
+		FBCB2B33FE063C65966A11EE /* Pods-CuBa_Practice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuBa_Practice.debug.xcconfig"; path = "Target Support Files/Pods-CuBa_Practice/Pods-CuBa_Practice.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA98585FB41C98122C01F547 /* Pods_CuBa_Practice.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2C1D93D9AC81042A3730CD0 /* Pods_CuBa_PracticeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,19 +132,81 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D6FB0500E2904B6D9A86C4C /* Pods_CuBa_Practice_CuBa_PracticeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2DD1873C85826892F1A6F478 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FBCB2B33FE063C65966A11EE /* Pods-CuBa_Practice.debug.xcconfig */,
+				D91EB1B59697612B8760C8A8 /* Pods-CuBa_Practice.release.xcconfig */,
+				7F416A0A766D00BA287882F9 /* Pods-CuBa_Practice-CuBa_PracticeUITests.debug.xcconfig */,
+				5382DE418E641E1043CE2B45 /* Pods-CuBa_Practice-CuBa_PracticeUITests.release.xcconfig */,
+				DEE4D0329124B8DAFF9823BE /* Pods-CuBa_PracticeTests.debug.xcconfig */,
+				977EB4441445293D07863A55 /* Pods-CuBa_PracticeTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		745131582AB54CF98FF4F996 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D6C7DEE6144DBC2BD98067DF /* Pods_CuBa_Practice.framework */,
+				251FFC1920AB7313F653F9E6 /* Pods_CuBa_Practice_CuBa_PracticeUITests.framework */,
+				79FA4227B0257FEC6F0CF6EC /* Pods_CuBa_PracticeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F142DC4C2825BC820031366B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F142DC4D2825BC9A0031366B /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		F172EBDC28215AC100B05DCA /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				F13A3A2B282174BB0073D373 /* CustomSignupButton.swift */,
+				F13A3A2D282176290073D373 /* BaseCustomUIButton.swift */,
+				F10DA7882821C25600C0BAAB /* CustomSignInButton.swift */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
+		F172EBFA2821601900B05DCA /* CustomUILabel */ = {
+			isa = PBXGroup;
+			children = (
+				F13A3A2F282178AA0073D373 /* BaseUILabel.swift */,
+			);
+			path = CustomUILabel;
+			sourceTree = "<group>";
+		};
+		F19788D528238E2200CFCE07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F19788DA28238FA500CFCE07 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		F19B1862281BA6050061EEDC = {
 			isa = PBXGroup;
 			children = (
+				F19788E028239A8A00CFCE07 /* R.generated.swift */,
+				F1D102B1281BE67600DD2C0D /* Fonts */,
 				F19B186D281BA6050061EEDC /* CuBa_Practice */,
 				F19B1884281BA6070061EEDC /* CuBa_PracticeTests */,
 				F19B188E281BA6070061EEDC /* CuBa_PracticeUITests */,
 				F19B186C281BA6050061EEDC /* Products */,
+				2DD1873C85826892F1A6F478 /* Pods */,
+				745131582AB54CF98FF4F996 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,10 +223,16 @@
 		F19B186D281BA6050061EEDC /* CuBa_Practice */ = {
 			isa = PBXGroup;
 			children = (
+				F142DC4C2825BC820031366B /* Utils */,
+				F19788D528238E2200CFCE07 /* Resources */,
+				F1D102AD281BC70E00DD2C0D /* Extensions */,
+				F19B189E281BAA040061EEDC /* Custom Control */,
 				F19B186E281BA6050061EEDC /* AppDelegate.swift */,
 				F19B1870281BA6050061EEDC /* SceneDelegate.swift */,
 				F19B1872281BA6050061EEDC /* ViewController.swift */,
-				F19B1874281BA6050061EEDC /* Main.storyboard */,
+				F172EBDF28215B8000B05DCA /* SignInViewController.swift */,
+				F172EBE028215B8000B05DCA /* SignUpScreenViewController.swift */,
+				F13A3A2428216A480073D373 /* Main.storyboard */,
 				F19B1877281BA6060061EEDC /* Assets.xcassets */,
 				F19B1879281BA6060061EEDC /* LaunchScreen.storyboard */,
 				F19B187C281BA6060061EEDC /* Info.plist */,
@@ -127,6 +257,51 @@
 			path = CuBa_PracticeUITests;
 			sourceTree = "<group>";
 		};
+		F19B189E281BAA040061EEDC /* Custom Control */ = {
+			isa = PBXGroup;
+			children = (
+				F172EBFA2821601900B05DCA /* CustomUILabel */,
+				F172EBDC28215AC100B05DCA /* UIButton */,
+				F1D102B0281BCBB700DD2C0D /* CustomUITextField */,
+			);
+			path = "Custom Control";
+			sourceTree = "<group>";
+		};
+		F1D102AD281BC70E00DD2C0D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F1D102AE281BC72300DD2C0D /* ColorFile.swift */,
+				F172EBF828215FEC00B05DCA /* UIViewController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F1D102B0281BCBB700DD2C0D /* CustomUITextField */ = {
+			isa = PBXGroup;
+			children = (
+				F19B189F281BAA2C0061EEDC /* BaseCustomUITextField.swift */,
+				F172EBE928215CBA00B05DCA /* BuisnessUrlTextField.swift */,
+				F172EBEA28215CBA00B05DCA /* EmailTextField.swift */,
+				F1D102B8281BEA5F00DD2C0D /* UserNameTextField.swift */,
+				F1D102BD281C0AE000DD2C0D /* PasswordUITextField.swift */,
+				F10DA7862821BD2900C0BAAB /* UsernameTextFieldWithButton.swift */,
+			);
+			path = CustomUITextField;
+			sourceTree = "<group>";
+		};
+		F1D102B1281BE67600DD2C0D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F1D102B2281BE67600DD2C0D /* DMSans-Regular.ttf */,
+				F1D102B3281BE67600DD2C0D /* DMSans-Medium.ttf */,
+				F1D102B4281BE67600DD2C0D /* DMSans-Bold.ttf */,
+				F1D102B5281BE67600DD2C0D /* DMSans-BoldItalic.ttf */,
+				F1D102B6281BE67600DD2C0D /* DMSans-MediumItalic.ttf */,
+				F1D102B7281BE67600DD2C0D /* DMSans-Italic.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +309,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F19B1895281BA6070061EEDC /* Build configuration list for PBXNativeTarget "CuBa_Practice" */;
 			buildPhases = (
+				0991AC474D3DB2360718F568 /* [CP] Check Pods Manifest.lock */,
+				F19788D228238CEE00CFCE07 /* ShellScript */,
 				F19B1867281BA6050061EEDC /* Sources */,
 				F19B1868281BA6050061EEDC /* Frameworks */,
 				F19B1869281BA6050061EEDC /* Resources */,
+				991B8F1E87E697328C9FD793 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +329,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F19B1898281BA6070061EEDC /* Build configuration list for PBXNativeTarget "CuBa_PracticeTests" */;
 			buildPhases = (
+				6B5F3AAD0E3083ABB37ADBE5 /* [CP] Check Pods Manifest.lock */,
 				F19B187D281BA6070061EEDC /* Sources */,
 				F19B187E281BA6070061EEDC /* Frameworks */,
 				F19B187F281BA6070061EEDC /* Resources */,
@@ -169,9 +348,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F19B189B281BA6070061EEDC /* Build configuration list for PBXNativeTarget "CuBa_PracticeUITests" */;
 			buildPhases = (
+				4BA84FC9EEA49C5449D0FE04 /* [CP] Check Pods Manifest.lock */,
 				F19B1887281BA6070061EEDC /* Sources */,
 				F19B1888281BA6070061EEDC /* Frameworks */,
 				F19B1889281BA6070061EEDC /* Resources */,
+				C756764F2DCF39984CCFBE85 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -231,9 +412,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F19B187B281BA6060061EEDC /* LaunchScreen.storyboard in Resources */,
+				F15CB90028224B4600032101 /* DMSans-BoldItalic.ttf in Resources */,
+				F15CB90228224B4C00032101 /* DMSans-Medium.ttf in Resources */,
+				F15CB90528224B5300032101 /* DMSans-Italic.ttf in Resources */,
+				F15CB90128224B4900032101 /* DMSans-Bold.ttf in Resources */,
+				F15CB90428224B5100032101 /* DMSans-MediumItalic.ttf in Resources */,
+				F19788DF282399E200CFCE07 /* Localizable.strings in Resources */,
+				F15CB90328224B4E00032101 /* DMSans-Regular.ttf in Resources */,
+				F13A3A2628216A480073D373 /* Main.storyboard in Resources */,
+				F157700E282166DB008EEF6F /* LaunchScreen.storyboard in Resources */,
 				F19B1878281BA6060061EEDC /* Assets.xcassets in Resources */,
-				F19B1876281BA6050061EEDC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +429,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F19788DD282399E100CFCE07 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,19 +437,158 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F19788DE282399E200CFCE07 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0991AC474D3DB2360718F568 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CuBa_Practice-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4BA84FC9EEA49C5449D0FE04 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CuBa_Practice-CuBa_PracticeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B5F3AAD0E3083ABB37ADBE5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CuBa_PracticeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		991B8F1E87E697328C9FD793 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CuBa_Practice/Pods-CuBa_Practice-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CuBa_Practice/Pods-CuBa_Practice-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CuBa_Practice/Pods-CuBa_Practice-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C756764F2DCF39984CCFBE85 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CuBa_Practice-CuBa_PracticeUITests/Pods-CuBa_Practice-CuBa_PracticeUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CuBa_Practice-CuBa_PracticeUITests/Pods-CuBa_Practice-CuBa_PracticeUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CuBa_Practice-CuBa_PracticeUITests/Pods-CuBa_Practice-CuBa_PracticeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F19788D228238CEE00CFCE07 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F19B1867281BA6050061EEDC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F19788E128239A8A00CFCE07 /* R.generated.swift in Sources */,
+				F142DC4E2825BC9A0031366B /* Constants.swift in Sources */,
+				F13A3A2C282174BB0073D373 /* CustomSignupButton.swift in Sources */,
+				F172EBF928215FEC00B05DCA /* UIViewController.swift in Sources */,
+				F172EBEB28215CBA00B05DCA /* BuisnessUrlTextField.swift in Sources */,
+				F172EBEC28215CBA00B05DCA /* EmailTextField.swift in Sources */,
+				F1D102BE281C0AE000DD2C0D /* PasswordUITextField.swift in Sources */,
+				F1D102B9281BEA5F00DD2C0D /* UserNameTextField.swift in Sources */,
+				F172EBE128215B8000B05DCA /* SignInViewController.swift in Sources */,
+				F10DA7872821BD2900C0BAAB /* UsernameTextFieldWithButton.swift in Sources */,
+				F10DA7892821C25600C0BAAB /* CustomSignInButton.swift in Sources */,
+				F172EBE228215B8000B05DCA /* SignUpScreenViewController.swift in Sources */,
+				F19B18A0281BAA2C0061EEDC /* BaseCustomUITextField.swift in Sources */,
+				F13A3A2E282176290073D373 /* BaseCustomUIButton.swift in Sources */,
 				F19B1873281BA6050061EEDC /* ViewController.swift in Sources */,
 				F19B186F281BA6050061EEDC /* AppDelegate.swift in Sources */,
+				F1D102AF281BC72300DD2C0D /* ColorFile.swift in Sources */,
 				F19B1871281BA6050061EEDC /* SceneDelegate.swift in Sources */,
+				F13A3A30282178AA0073D373 /* BaseUILabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,12 +625,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F19B1874281BA6050061EEDC /* Main.storyboard */ = {
+		F13A3A2428216A480073D373 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F19B1875281BA6050061EEDC /* Base */,
+				F13A3A2528216A480073D373 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F19788DA28238FA500CFCE07 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F19788D928238FA500CFCE07 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		F19B1879281BA6060061EEDC /* LaunchScreen.storyboard */ = {
@@ -434,6 +770,7 @@
 		};
 		F19B1896281BA6070061EEDC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBCB2B33FE063C65966A11EE /* Pods-CuBa_Practice.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -461,6 +798,7 @@
 		};
 		F19B1897281BA6070061EEDC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D91EB1B59697612B8760C8A8 /* Pods-CuBa_Practice.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -488,6 +826,7 @@
 		};
 		F19B1899281BA6070061EEDC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DEE4D0329124B8DAFF9823BE /* Pods-CuBa_PracticeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +851,7 @@
 		};
 		F19B189A281BA6070061EEDC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 977EB4441445293D07863A55 /* Pods-CuBa_PracticeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -536,6 +876,7 @@
 		};
 		F19B189C281BA6070061EEDC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F416A0A766D00BA287882F9 /* Pods-CuBa_Practice-CuBa_PracticeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -558,6 +899,7 @@
 		};
 		F19B189D281BA6070061EEDC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5382DE418E641E1043CE2B45 /* Pods-CuBa_Practice-CuBa_PracticeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

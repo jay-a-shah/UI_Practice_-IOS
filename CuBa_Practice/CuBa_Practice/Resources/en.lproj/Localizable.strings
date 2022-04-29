@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  CuBa_Practice
+
+  Created by Jay Shah on 05/05/22.
+  
+*/
+
+"welcomeMessage" = "Hel;lo How are you";
+"demo" = "Suer";
+"UIAlertController" = "UIAlertController";
+"btnTitleContinue" = "Continue";
+"btnTitleCancel" = "Cancel";
+"btnTitleSignUp" = "Sign Up";
+"btnTitleSignIn" = "Sign In";
+"btnForgotPassword" = "Forgot?";
+"btnAlreadyHaveAccount" = "Already Have an Account Please Sign In";
+"alertForgotPassword" = "You Forgot the Password";
+"alertSignIn" = "Sign In Button is Clicked";
+"alertSignUp" = "Sign Up Button is Clicked";
+
