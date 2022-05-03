@@ -10,6 +10,7 @@
 		F13A3A2628216A480073D373 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F13A3A2428216A480073D373 /* Main.storyboard */; };
 		F13A3A2C282174BB0073D373 /* CustomSignupButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13A3A2B282174BB0073D373 /* CustomSignupButton.swift */; };
 		F13A3A2E282176290073D373 /* BaseCustomUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13A3A2D282176290073D373 /* BaseCustomUIButton.swift */; };
+		F13A3A30282178AA0073D373 /* BasUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13A3A2F282178AA0073D373 /* BasUILabel.swift */; };
 		F157700E282166DB008EEF6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F19B1879281BA6060061EEDC /* LaunchScreen.storyboard */; };
 		F172EBE128215B8000B05DCA /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F172EBDF28215B8000B05DCA /* SignInViewController.swift */; };
 		F172EBE228215B8000B05DCA /* SignUpScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F172EBE028215B8000B05DCA /* SignUpScreenViewController.swift */; };
@@ -50,12 +51,12 @@
 		F13A3A2528216A480073D373 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F13A3A2B282174BB0073D373 /* CustomSignupButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSignupButton.swift; sourceTree = "<group>"; };
 		F13A3A2D282176290073D373 /* BaseCustomUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCustomUIButton.swift; sourceTree = "<group>"; };
+		F13A3A2F282178AA0073D373 /* BasUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasUILabel.swift; sourceTree = "<group>"; };
 		F172EBDF28215B8000B05DCA /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		F172EBE028215B8000B05DCA /* SignUpScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreenViewController.swift; sourceTree = "<group>"; };
 		F172EBE928215CBA00B05DCA /* BuisnessUrlTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuisnessUrlTextField.swift; sourceTree = "<group>"; };
 		F172EBEA28215CBA00B05DCA /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
 		F172EBF828215FEC00B05DCA /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
-		F172EBFB2821601900B05DCA /* BaseCustomUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCustomUILabel.swift; sourceTree = "<group>"; };
 		F19B186B281BA6050061EEDC /* CuBa_Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CuBa_Practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F19B186E281BA6050061EEDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F19B1870281BA6050061EEDC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,7 +118,7 @@
 		F172EBFA2821601900B05DCA /* CustomUILabel */ = {
 			isa = PBXGroup;
 			children = (
-				F172EBFB2821601900B05DCA /* BaseCustomUILabel.swift */,
+				F13A3A2F282178AA0073D373 /* BasUILabel.swift */,
 			);
 			path = CustomUILabel;
 			sourceTree = "<group>";
@@ -367,6 +368,7 @@
 				F19B186F281BA6050061EEDC /* AppDelegate.swift in Sources */,
 				F1D102AF281BC72300DD2C0D /* ColorFile.swift in Sources */,
 				F19B1871281BA6050061EEDC /* SceneDelegate.swift in Sources */,
+				F13A3A30282178AA0073D373 /* BasUILabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

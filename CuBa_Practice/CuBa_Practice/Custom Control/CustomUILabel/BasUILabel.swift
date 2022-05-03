@@ -1,14 +1,13 @@
 //
-//  BaseCustomUILabel.swift
+//  BasUILabel.swift
 //  CuBa_Practice
 //
 //  Created by Jay Shah on 03/05/22.
 //
-
 import Foundation
 import UIKit
 
-class BaseCustomUILabel: UILabel {
+class BaseUILabel: UILabel {
    
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -24,3 +23,4 @@ class BaseCustomUILabel: UILabel {
         
     }
 }
+
