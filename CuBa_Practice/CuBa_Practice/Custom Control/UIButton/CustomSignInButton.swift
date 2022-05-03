@@ -1,13 +1,15 @@
 //
-//  CustomSignupButton.swift
+//  CustomSignInButton.swift
 //  CuBa_Practice
 //
-//  Created by Jay Shah on 03/05/22.
+//  Created by Jay Shah on 04/05/22.
 //
+
+
 import UIKit
 import Foundation
 
-class CustomSignupButton: BaseCustomUIButton {
+class CustomSignInButton: BaseCustomUIButton {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -23,7 +25,7 @@ class CustomSignupButton: BaseCustomUIButton {
         self.layer.cornerRadius = 6
         self.backgroundColor = UIColor.purpleColor
         self.setTitleColor(UIColor.white, for: .normal)
-        self.setTitle("SignUp", for: .normal)
+        self.setTitle("SignIp", for: .normal)
         
     }
 }

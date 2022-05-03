@@ -1,19 +1,20 @@
 //
-//  EmailTextField.swift
+//  UsernameTextFieldWithButton.swift
 //  CuBa_Practice
 //
-//  Created by Jay Shah on 03/05/22.
+//  Created by Jay Shah on 04/05/22.
 //
 
 import Foundation
 import UIKit
 
-class EmailTextField: BaseCustomUITextField{
-    
+class UsernameTextFieldWithButton: BaseCustomUITextField {
+  
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
     }
+  
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setup()
@@ -26,4 +27,13 @@ class EmailTextField: BaseCustomUITextField{
         returnKeyType = .next
         super.setUpImage(image: "Icon_Email", onSide: .left)
     }
+    override func becomeFirstResponder() -> Bool {
+        setUpImage(image: "Icon_Right", onSide: .right)
+        return super.becomeFirstResponder()
+    }
+    override func resignFirstResponder() -> Bool {
+        setUpImage(image: nil, onSide: .right)
+        return super.resignFirstResponder()
+    }
 }
+

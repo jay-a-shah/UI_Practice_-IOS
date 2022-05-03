@@ -25,5 +25,7 @@ class PasswordUITextField: BaseCustomUITextField{
         isSecureTextEntry = true
         returnKeyType = .done
         super.setUpImage(image: "Icon_Lock", onSide: .left)
+        super.setUpButton(btnTitle: "Forgot ?")
     }
+    
 }

@@ -36,7 +36,10 @@ class SignUpScreenViewController: UIViewController {
             let contentInset:UIEdgeInsets = UIEdgeInsets.zero
             scrollView.contentInset = contentInset
         }
-//    @IBAction func signUpAction(_ sender: UIButton) {
+    @IBAction func AlreadyHaveAnAccountBtn(_ sender: Any) {
+        makealert(Message: "Already Have an Account Please Sign In")
+    }
+    //    @IBAction func signUpAction(_ sender: UIButton) {
 //        makealert(Message: "Sign Up Button Is Clicked")
 //    }
 }

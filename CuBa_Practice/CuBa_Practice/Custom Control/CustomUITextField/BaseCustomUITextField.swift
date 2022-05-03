@@ -16,7 +16,7 @@ class BaseCustomUITextField: UITextField {
         case left
         case right
     }
-    
+
     override func becomeFirstResponder() -> Bool {
         bottomLine.backgroundColor = UIColor.greenColor.cgColor
         return super.becomeFirstResponder()
@@ -68,12 +68,12 @@ class BaseCustomUITextField: UITextField {
         self.enablesReturnKeyAutomatically = true
     }
 
-    func setUpImage(image: String, onSide: TextFieldImageSide){
+    func setUpImage(image: String?, onSide: TextFieldImageSide){
         let imageView = UIImageView(frame: CGRect(x: 5, y: 0, width: 22, height: 22))
-        if let imageSystem = UIImage(systemName: image){
+        if let imageSystem = UIImage(systemName: image ?? "Image_User"){
             imageView.image = imageSystem
         }else {
-            imageView.image = UIImage(named: image)
+            imageView.image = UIImage(named: image ?? "Image_User")
         }
         let imageContainerView = UIView(frame: CGRect(x: 5, y: 0, width: 30, height: 30))
         imageContainerView.addSubview(imageView)

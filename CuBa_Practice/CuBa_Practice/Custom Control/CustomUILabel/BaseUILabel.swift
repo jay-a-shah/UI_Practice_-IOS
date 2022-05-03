@@ -1,5 +1,5 @@
 //
-//  BasUILabel.swift
+//  BaseUILabel.swift
 //  CuBa_Practice
 //
 //  Created by Jay Shah on 03/05/22.
