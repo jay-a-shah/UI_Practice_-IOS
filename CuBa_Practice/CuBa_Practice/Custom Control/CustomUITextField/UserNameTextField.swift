@@ -25,8 +25,9 @@ class UserNameTextField: BaseCustomUITextField {
     override func setup() {
         super.setup()
         super.setUpImage(image: "Image_User", onSide: .left)
-        super.setUpImage(image: "Icon_Right", onSide: .right)
-        self.keyboardType = .emailAddress
-        self.keyboardAppearance = .dark
+        keyboardType = .asciiCapable
+        autocapitalizationType = .words
+        keyboardAppearance = .light
+        returnKeyType = .next
     }
 }

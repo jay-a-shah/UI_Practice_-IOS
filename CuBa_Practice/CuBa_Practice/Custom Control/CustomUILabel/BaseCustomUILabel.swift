@@ -1,5 +1,5 @@
 //
-//  BaseCustomUIButton.swift
+//  BaseCustomUILabel.swift
 //  CuBa_Practice
 //
 //  Created by Jay Shah on 03/05/22.
@@ -8,8 +8,8 @@
 import Foundation
 import UIKit
 
-class BaseCustomUIButton: UIButton {
-    
+class BaseCustomUILabel: UILabel {
+   
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -19,8 +19,8 @@ class BaseCustomUIButton: UIButton {
         setup()
     }
     func setup(){
-        self.layer.cornerRadius = 6
-        self.backgroundColor = UIColor.purpleColor
-        self.setTitleColor(UIColor.grayColor, for: .normal)
+        self.font = UIFont.init(name: "DMSans-BoldItalic", size: 14)
+        textColor = UIColor.grayColor
+        
     }
 }

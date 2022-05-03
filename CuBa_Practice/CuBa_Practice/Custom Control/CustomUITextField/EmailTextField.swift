@@ -1,5 +1,5 @@
 //
-//  BaseCustomUIButton.swift
+//  EmailTextField.swift
 //  CuBa_Practice
 //
 //  Created by Jay Shah on 03/05/22.
@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class BaseCustomUIButton: UIButton {
+class EmailTextField: BaseCustomUITextField{
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -18,9 +18,11 @@ class BaseCustomUIButton: UIButton {
         super.init(coder: coder)
         setup()
     }
-    func setup(){
-        self.layer.cornerRadius = 6
-        self.backgroundColor = UIColor.purpleColor
-        self.setTitleColor(UIColor.grayColor, for: .normal)
+    override func setup() {
+        super.setup()
+        keyboardType = .emailAddress
+        keyboardAppearance = .light
+        returnKeyType = .next
+        super.setUpImage(image: "Icon_Email", onSide: .left)
     }
 }

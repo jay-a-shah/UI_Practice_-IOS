@@ -1,14 +1,14 @@
 //
-//  PasswordUITextField.swift
+//  BuisnessUrlTextField.swift
 //  CuBa_Practice
 //
-//  Created by Jay Shah on 29/04/22.
+//  Created by Jay Shah on 03/05/22.
 //
 
 import Foundation
 import UIKit
 
-class PasswordUITextField: BaseCustomUITextField{
+class BuisnessUrlTextField: BaseCustomUITextField{
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -20,10 +20,9 @@ class PasswordUITextField: BaseCustomUITextField{
     }
     override func setup() {
         super.setup()
-        keyboardType = .asciiCapable
+        keyboardType = .URL
         keyboardAppearance = .dark
-        isSecureTextEntry = true
-        returnKeyType = .done
-        super.setUpImage(image: "Icon_Lock", onSide: .left)
+        returnKeyType = .next
+        super.setUpImage(image: "Icon_Globe", onSide: .left)
     }
 }

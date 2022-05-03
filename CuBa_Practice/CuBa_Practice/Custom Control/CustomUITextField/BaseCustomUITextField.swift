@@ -10,11 +10,20 @@ import UIKit
 
 class BaseCustomUITextField: UITextField {
    
-    var textPadding = UIEdgeInsets(top: 12, left: 40, bottom: 12, right: 40)
+    var textPadding = UIEdgeInsets(top: 12, left: 20, bottom: 14, right: 40)
     let bottomLine = CALayer()
     enum TextFieldImageSide {
         case left
         case right
+    }
+    
+    override func becomeFirstResponder() -> Bool {
+        bottomLine.backgroundColor = UIColor.greenColor.cgColor
+        return super.becomeFirstResponder()
+    }
+    override func resignFirstResponder() -> Bool {
+        bottomLine.backgroundColor = UIColor.lightGray.cgColor
+        return super.resignFirstResponder()
     }
     
     //This Padding will be given when text is there
@@ -42,30 +51,31 @@ class BaseCustomUITextField: UITextField {
     
     
     func setBottomLine() {
-        bottomLine.frame = CGRect(x: 0.0, y: self.bounds.height + 10, width: self.frame.width + 40, height: 2.0)
+        bottomLine.frame = CGRect(x: 0.0, y: self.bounds.height + 11, width: self.frame.width + 40, height: 2.0)
         self.borderStyle = UITextField.BorderStyle.none
-        bottomLine.backgroundColor = UIColor.gray.cgColor
+        bottomLine.backgroundColor = UIColor.lightGray.cgColor
         self.layer.addSublayer(bottomLine)
     }
     
     func setup(){
         setBottomLine()
-        self.delegate = self
-        self.font = UIFont.init(name: "DMSans-Regular", size: 14)
+        self.font = UIFont.init(name: "DMSans-Italic", size: 14)
         self.layer.cornerRadius = 10
         self.clipsToBounds = true
         self.layer.borderWidth = 0
         self.backgroundColor = UIColor.white
         self.attributedPlaceholder = NSAttributedString(string:self.placeholder ?? "", attributes: [NSAttributedString.Key.foregroundColor :UIColor.grayColor])
+        self.enablesReturnKeyAutomatically = true
     }
+
     func setUpImage(image: String, onSide: TextFieldImageSide){
-        let imageView = UIImageView(frame: CGRect(x: 10, y: 5, width: 30, height: 30))
+        let imageView = UIImageView(frame: CGRect(x: 5, y: 0, width: 22, height: 22))
         if let imageSystem = UIImage(systemName: image){
             imageView.image = imageSystem
         }else {
             imageView.image = UIImage(named: image)
         }
-        let imageContainerView = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        let imageContainerView = UIView(frame: CGRect(x: 5, y: 0, width: 30, height: 30))
         imageContainerView.addSubview(imageView)
         switch onSide {
         case .left:
@@ -80,19 +90,10 @@ class BaseCustomUITextField: UITextField {
         let btnView = UIButton(frame: CGRect(x: 0, y: 0, width: ((self.frame.height) * 0.70), height: ((self.frame.height) * 0.70)))
         btnView.setTitle(btnTitle, for: .normal)
         btnView.setTitleColor(UIColor.purpleColor, for: .normal)
-        btnView.titleLabel?.font = UIFont(name: "DMSans-Regular", size: 12)
+        btnView.titleLabel?.font = UIFont(name: "DMSans-Italic", size: 12)
         self.rightViewMode = .always
         self.rightView = btnView
     }
-    
+   
 }
-extension BaseCustomUITextField : UITextFieldDelegate {
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        bottomLine.backgroundColor = UIColor.green.cgColor
-    }
 
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        bottomLine.backgroundColor = UIColor.gray.cgColor
-    }
-}
