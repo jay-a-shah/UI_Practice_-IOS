@@ -18,7 +18,7 @@ class BaseUILabel: UILabel {
         setup()
     }
     func setup(){
-        self.font = UIFont.init(name: "DMSans-BoldItalic", size: 14)
+     self.font = UIFont.init(name: "DMSans-Medium", size: 14)
         textColor = UIColor.grayColor
         
     }

@@ -25,7 +25,7 @@ class CustomSignInButton: BaseCustomUIButton {
         self.layer.cornerRadius = 6
         self.backgroundColor = UIColor.purpleColor
         self.setTitleColor(UIColor.white, for: .normal)
-        self.setTitle("SignIp", for: .normal)
+        self.setTitle("Sign In", for: .normal)
         
     }
 }

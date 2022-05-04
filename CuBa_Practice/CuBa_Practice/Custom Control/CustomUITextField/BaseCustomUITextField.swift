@@ -10,13 +10,15 @@ import UIKit
 
 class BaseCustomUITextField: UITextField {
    
-    var textPadding = UIEdgeInsets(top: 12, left: 20, bottom: 14, right: 40)
+    var textPadding = UIEdgeInsets(top: 16, left: 20, bottom: 14, right: 40)
     let bottomLine = CALayer()
+    var label = UILabel()
     enum TextFieldImageSide {
         case left
         case right
     }
-
+    
+    
     override func becomeFirstResponder() -> Bool {
         bottomLine.backgroundColor = UIColor.greenColor.cgColor
         return super.becomeFirstResponder()
@@ -57,9 +59,13 @@ class BaseCustomUITextField: UITextField {
         self.layer.addSublayer(bottomLine)
     }
     
-    func setup(){
+    func setup() {
+        
         setBottomLine()
-        self.font = UIFont.init(name: "DMSans-Italic", size: 14)
+       
+//        self.addSubview(label)
+//        setLabel(yourText: "Jay")
+        self.font = UIFont.init(name: "DMSans-Regular", size: 14)
         self.layer.cornerRadius = 10
         self.clipsToBounds = true
         self.layer.borderWidth = 0
@@ -67,13 +73,21 @@ class BaseCustomUITextField: UITextField {
         self.attributedPlaceholder = NSAttributedString(string:self.placeholder ?? "", attributes: [NSAttributedString.Key.foregroundColor :UIColor.grayColor])
         self.enablesReturnKeyAutomatically = true
     }
+//    func setLabel(yourText: String){
+//        label.text = yourText
+//        label.textColor = UIColor.grayColor
+//        label.font = UIFont.init(name: "DMSans-Medium", size: 14)
+//        label.translatesAutoresizingMaskIntoConstraints = false
+//        label.leftAnchor.constraint(equalTo: leftAnchor, constant: 0).isActive = true
+//        label.bottomAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
+//    }
 
-    func setUpImage(image: String?, onSide: TextFieldImageSide){
+    func setUpImage(image: String?, onSide: TextFieldImageSide) {
         let imageView = UIImageView(frame: CGRect(x: 5, y: 0, width: 22, height: 22))
-        if let imageSystem = UIImage(systemName: image ?? "Image_User"){
+        if let imageSystem = UIImage(systemName: image ?? "BlankImage"){
             imageView.image = imageSystem
         }else {
-            imageView.image = UIImage(named: image ?? "Image_User")
+            imageView.image = UIImage(named: image ?? "BlankImage")
         }
         let imageContainerView = UIView(frame: CGRect(x: 5, y: 0, width: 30, height: 30))
         imageContainerView.addSubview(imageView)
@@ -86,11 +100,13 @@ class BaseCustomUITextField: UITextField {
             rightViewMode = .always
         }
     }
-    func setUpButton(btnTitle: String){
+    
+    func setUpButton(btnTitle: String, action: Selector) {
         let btnView = UIButton(frame: CGRect(x: 0, y: 0, width: ((self.frame.height) * 0.70), height: ((self.frame.height) * 0.70)))
         btnView.setTitle(btnTitle, for: .normal)
         btnView.setTitleColor(UIColor.purpleColor, for: .normal)
         btnView.titleLabel?.font = UIFont(name: "DMSans-Italic", size: 12)
+        btnView.addTarget(nil, action: action, for: .touchUpInside)
         self.rightViewMode = .always
         self.rightView = btnView
     }

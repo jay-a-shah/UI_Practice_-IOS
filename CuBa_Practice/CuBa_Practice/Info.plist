@@ -4,11 +4,12 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>DMSansMedium.ttf</string>
-		<string>DMSansMediumItalic.ttf</string>
-		<string>DMSansBold.ttf</string>
 		<string>DMSans-BoldItalic.ttf</string>
-		<string></string>
+		<string>DMSans-Regular.ttf</string>
+		<string>DMSans-MediumItalic.ttf</string>
+		<string>DMSans-Medium.ttf</string>
+		<string>DMSans-Bold.ttf</string>
+		<string>DMSans-Italic.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

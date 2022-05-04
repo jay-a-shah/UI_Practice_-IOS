@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g7e-uR-Cf4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xvC-Ng-Yay">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -15,6 +15,9 @@
         <array key="DMSans-Medium.ttf">
             <string>DMSans-Medium</string>
         </array>
+        <array key="DMSans-Regular.ttf">
+            <string>DMSans-Regular</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Sign Up Screen View Controller-->
@@ -29,28 +32,28 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g24-it-ari">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="783.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="752.66666666666663"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TopImage" translatesAutoresizingMaskIntoConstraints="NO" id="BAo-kQ-LXC">
-                                                <rect key="frame" x="0.0" y="-76" width="375" height="281"/>
+                                                <rect key="frame" x="0.0" y="-76" width="375" height="250"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="281" id="Tg1-6X-98D"/>
+                                                    <constraint firstAttribute="height" constant="250" id="Tg1-6X-98D"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Getting Started" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFI-iH-dKr" customClass="BaseCustomUILabel">
-                                                <rect key="frame" x="35" y="206" width="305" height="31.333333333333343"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Getting Started" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFI-iH-dKr">
+                                                <rect key="frame" x="35" y="175" width="305" height="31.333333333333343"/>
                                                 <fontDescription key="fontDescription" name="DMSans-Bold" family="DM Sans" pointSize="24"/>
                                                 <color key="textColor" name="NeutralLabelN800"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an account to continue!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rsz-fe-mbM" customClass="BaseCustomUILabel">
-                                                <rect key="frame" x="35" y="245.33333333333334" width="305" height="18.333333333333343"/>
-                                                <fontDescription key="fontDescription" name="DMSans-Medium" family="DM Sans" pointSize="14"/>
+                                                <rect key="frame" x="35" y="214.33333333333334" width="305" height="18.333333333333343"/>
+                                                <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="14"/>
                                                 <color key="textColor" name="NeutralColorN100"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="QSd-4p-5cb">
-                                                <rect key="frame" x="35" y="303.66666666666674" width="305" height="313.33333333333326"/>
+                                                <rect key="frame" x="35" y="272.66666666666674" width="305" height="313.33333333333326"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="mPK-9J-9AT" userLabel="YourName ">
                                                         <rect key="frame" x="0.0" y="0.0" width="305" height="60.333333333333336"/>
@@ -119,7 +122,7 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZ3-Qr-Mbe" customClass="CustomSignupButton" customModule="CuBa_Practice" customModuleProvider="target">
-                                                <rect key="frame" x="35" y="664" width="305" height="44"/>
+                                                <rect key="frame" x="35" y="633" width="305" height="44"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="WAG-Bk-FYZ"/>
                                                 </constraints>
@@ -130,7 +133,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LXK-qY-VFU">
-                                                <rect key="frame" x="35" y="724" width="305" height="25.666666666666629"/>
+                                                <rect key="frame" x="35" y="693" width="305" height="25.666666666666629"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Button">
                                                     <attributedString key="attributedTitle">
@@ -218,7 +221,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uYB-CH-C8y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1688.8" y="89.408866995073893"/>
+            <point key="canvasLocation" x="2631.1999999999998" y="89.408866995073893"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="LO7-oV-kiW">
@@ -232,7 +235,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tRe-Mj-nsL">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="748.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="737.33333333333337"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TopImage" translatesAutoresizingMaskIntoConstraints="NO" id="jlq-c9-G4h">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="281"/>
@@ -258,7 +261,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="SHR-NU-xLE" userLabel="EmailAddress">
                                                         <rect key="frame" x="0.0" y="0.0" width="305" height="60.333333333333336"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username or Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOg-hA-3We" userLabel="EmailAddressLabel" customClass="BaseCustomUILabel">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username or Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOg-hA-3We" userLabel="EmailAddressLabel" customClass="BaseUILabel" customModule="CuBa_Practice" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="305" height="20.333333333333332"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
@@ -274,7 +277,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="h4v-eO-fC7" userLabel="Password">
                                                         <rect key="frame" x="0.0" y="84.333333333333314" width="305" height="60.333333333333343"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqR-wL-em5" customClass="BaseCustomUILabel">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqR-wL-em5" customClass="BaseUILabel" customModule="CuBa_Practice" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="305" height="20.333333333333332"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
@@ -297,27 +300,28 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6fW-d8-jRW">
-                                                <rect key="frame" x="35" y="686.33333333333337" width="305" height="28"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6fW-d8-jRW">
+                                                <rect key="frame" x="35" y="686.33333333333337" width="305" height="17"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="17" id="jY5-f3-OG1"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal">
                                                     <attributedString key="attributedTitle">
                                                         <fragment content="Don't have an account? ">
                                                             <attributes>
                                                                 <color key="NSColor" red="0.47843137254901957" green="0.52549019607843139" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                <font key="NSFont" size="13" name="Helvetica"/>
                                                             </attributes>
                                                         </fragment>
                                                         <fragment content="Sign up">
                                                             <attributes>
                                                                 <color key="NSColor" red="0.32156862749999998" green="0.26274509800000001" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                <font key="NSFont" size="13" name="Helvetica"/>
                                                             </attributes>
                                                         </fragment>
                                                     </attributedString>
-                                                </buttonConfiguration>
+                                                </state>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -372,12 +376,31 @@
                     <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="passwordTextField" destination="5YF-76-oKh" id="75E-D8-1H2"/>
+                        <outlet property="scrollView" destination="rv3-Ph-gW4" id="raf-qd-q8N"/>
                         <outlet property="userNameTextField" destination="7Og-cY-Z9k" id="Jy2-lA-9ds"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qPX-zM-5Q9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2404" y="88.669950738916256"/>
+            <point key="canvasLocation" x="3346.4000000000001" y="88.669950738916256"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qSZ-FK-SuP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xvC-Ng-Yay" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Aes-3i-sl5">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="g7e-uR-Cf4" kind="relationship" relationship="rootViewController" id="khd-pK-2TG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KGF-qB-TPJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1688.8" y="89.408866995073893"/>
         </scene>
     </scenes>
     <resources>

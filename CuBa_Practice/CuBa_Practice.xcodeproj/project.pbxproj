@@ -14,6 +14,12 @@
 		F13A3A2E282176290073D373 /* BaseCustomUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13A3A2D282176290073D373 /* BaseCustomUIButton.swift */; };
 		F13A3A30282178AA0073D373 /* BaseUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13A3A2F282178AA0073D373 /* BaseUILabel.swift */; };
 		F157700E282166DB008EEF6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F19B1879281BA6060061EEDC /* LaunchScreen.storyboard */; };
+		F15CB90028224B4600032101 /* DMSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1D102B5281BE67600DD2C0D /* DMSans-BoldItalic.ttf */; };
+		F15CB90128224B4900032101 /* DMSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1D102B4281BE67600DD2C0D /* DMSans-Bold.ttf */; };
+		F15CB90228224B4C00032101 /* DMSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1D102B3281BE67600DD2C0D /* DMSans-Medium.ttf */; };
+		F15CB90328224B4E00032101 /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1D102B2281BE67600DD2C0D /* DMSans-Regular.ttf */; };
+		F15CB90428224B5100032101 /* DMSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1D102B6281BE67600DD2C0D /* DMSans-MediumItalic.ttf */; };
+		F15CB90528224B5300032101 /* DMSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1D102B7281BE67600DD2C0D /* DMSans-Italic.ttf */; };
 		F172EBE128215B8000B05DCA /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F172EBDF28215B8000B05DCA /* SignInViewController.swift */; };
 		F172EBE228215B8000B05DCA /* SignUpScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F172EBE028215B8000B05DCA /* SignUpScreenViewController.swift */; };
 		F172EBEB28215CBA00B05DCA /* BuisnessUrlTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F172EBE928215CBA00B05DCA /* BuisnessUrlTextField.swift */; };
@@ -333,6 +339,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F15CB90028224B4600032101 /* DMSans-BoldItalic.ttf in Resources */,
+				F15CB90228224B4C00032101 /* DMSans-Medium.ttf in Resources */,
+				F15CB90528224B5300032101 /* DMSans-Italic.ttf in Resources */,
+				F15CB90128224B4900032101 /* DMSans-Bold.ttf in Resources */,
+				F15CB90428224B5100032101 /* DMSans-MediumItalic.ttf in Resources */,
+				F15CB90328224B4E00032101 /* DMSans-Regular.ttf in Resources */,
 				F13A3A2628216A480073D373 /* Main.storyboard in Resources */,
 				F157700E282166DB008EEF6F /* LaunchScreen.storyboard in Resources */,
 				F19B1878281BA6060061EEDC /* Assets.xcassets in Resources */,

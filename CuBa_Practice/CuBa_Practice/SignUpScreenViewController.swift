@@ -21,6 +21,7 @@ class SignUpScreenViewController: UIViewController {
         businessTextField.delegate = self
         emailTextField.delegate = self
         userNameTextField.delegate = self
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
@@ -36,8 +37,8 @@ class SignUpScreenViewController: UIViewController {
             let contentInset:UIEdgeInsets = UIEdgeInsets.zero
             scrollView.contentInset = contentInset
         }
-    @IBAction func AlreadyHaveAnAccountBtn(_ sender: Any) {
-        makealert(Message: "Already Have an Account Please Sign In")
+    @IBAction func onClickOFAlreadyHaveAnAccountBtn(_ sender: Any) {
+        makealert(message: "Already Have an Account Please Sign In")
     }
     //    @IBAction func signUpAction(_ sender: UIButton) {
 //        makealert(Message: "Sign Up Button Is Clicked")

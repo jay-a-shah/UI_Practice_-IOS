@@ -22,5 +22,6 @@ class BaseCustomUIButton: UIButton {
         self.layer.cornerRadius = 6
         self.backgroundColor = UIColor.purpleColor
         self.setTitleColor(UIColor.grayColor, for: .normal)
+        self.titleLabel?.font = UIFont(name: "DMSans-Medium", size: 14)
     }
 }

@@ -23,7 +23,8 @@ class CustomSignupButton: BaseCustomUIButton {
         self.layer.cornerRadius = 6
         self.backgroundColor = UIColor.purpleColor
         self.setTitleColor(UIColor.white, for: .normal)
-        self.setTitle("SignUp", for: .normal)
+        self.setTitle("Sign Up", for: .normal)
+        
         
     }
 }
