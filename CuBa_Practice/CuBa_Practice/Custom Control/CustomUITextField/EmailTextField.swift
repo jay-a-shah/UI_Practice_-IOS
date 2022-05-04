@@ -25,5 +25,6 @@ class EmailTextField: BaseCustomUITextField{
         keyboardAppearance = .light
         returnKeyType = .next
         super.setUpImage(image: "Icon_Email", onSide: .left)
+       
     }
 }

@@ -32,28 +32,28 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g24-it-ari">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="752.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="713.66666666666663"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TopImage" translatesAutoresizingMaskIntoConstraints="NO" id="BAo-kQ-LXC">
-                                                <rect key="frame" x="0.0" y="-76" width="375" height="250"/>
+                                                <rect key="frame" x="0.0" y="-76" width="375" height="230"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="250" id="Tg1-6X-98D"/>
+                                                    <constraint firstAttribute="height" constant="230" id="Tg1-6X-98D"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Getting Started" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFI-iH-dKr">
-                                                <rect key="frame" x="35" y="175" width="305" height="31.333333333333343"/>
+                                                <rect key="frame" x="35" y="155" width="305" height="31.333333333333343"/>
                                                 <fontDescription key="fontDescription" name="DMSans-Bold" family="DM Sans" pointSize="24"/>
                                                 <color key="textColor" name="NeutralLabelN800"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an account to continue!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rsz-fe-mbM" customClass="BaseCustomUILabel">
-                                                <rect key="frame" x="35" y="214.33333333333334" width="305" height="18.333333333333343"/>
+                                                <rect key="frame" x="35" y="194.33333333333334" width="305" height="18.333333333333343"/>
                                                 <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="14"/>
                                                 <color key="textColor" name="NeutralColorN100"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="QSd-4p-5cb">
-                                                <rect key="frame" x="35" y="272.66666666666674" width="305" height="313.33333333333326"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="QSd-4p-5cb">
+                                                <rect key="frame" x="35" y="252.66666666666666" width="305" height="301.33333333333337"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="mPK-9J-9AT" userLabel="YourName ">
                                                         <rect key="frame" x="0.0" y="0.0" width="305" height="60.333333333333336"/>
@@ -65,14 +65,14 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ajl-1v-hIe" customClass="UserNameTextField" customModule="CuBa_Practice" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="26.333333333333314" width="305" height="34"/>
+                                                                <rect key="frame" x="0.0" y="26.333333333333343" width="305" height="34"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="egI-g0-Jz2" userLabel="EmailAddress">
-                                                        <rect key="frame" x="0.0" y="84.333333333333314" width="305" height="60.333333333333343"/>
+                                                        <rect key="frame" x="0.0" y="80.333333333333343" width="305" height="60.333333333333343"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egm-dA-ogt" userLabel="EmailAddressLabel" customClass="BaseUILabel" customModule="CuBa_Practice" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="305" height="20.333333333333332"/>
@@ -88,7 +88,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="0Dw-Kn-kjE" userLabel="BusinessUrl">
-                                                        <rect key="frame" x="0.0" y="168.66666666666663" width="305" height="60.333333333333343"/>
+                                                        <rect key="frame" x="0.0" y="160.66666666666666" width="305" height="60.333333333333343"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Business URL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bG3-6Z-zEV" userLabel="BusinessUrl" customClass="BaseUILabel" customModule="CuBa_Practice" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="305" height="20.333333333333332"/>
@@ -104,7 +104,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="zPh-sj-XYp">
-                                                        <rect key="frame" x="0.0" y="252.99999999999997" width="305" height="60.333333333333343"/>
+                                                        <rect key="frame" x="0.0" y="241.00000000000003" width="305" height="60.333333333333343"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahR-1z-ZdG" customClass="BaseUILabel" customModule="CuBa_Practice" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="305" height="20.333333333333332"/>
@@ -113,7 +113,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J2e-QJ-MuW" customClass="PasswordUITextField" customModule="CuBa_Practice" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="26.333333333333371" width="305" height="34"/>
+                                                                <rect key="frame" x="0.0" y="26.333333333333314" width="305" height="34"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
@@ -122,7 +122,7 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZ3-Qr-Mbe" customClass="CustomSignupButton" customModule="CuBa_Practice" customModuleProvider="target">
-                                                <rect key="frame" x="35" y="633" width="305" height="44"/>
+                                                <rect key="frame" x="35" y="594" width="305" height="44"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="WAG-Bk-FYZ"/>
                                                 </constraints>
@@ -134,7 +134,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LXK-qY-VFU">
-                                                <rect key="frame" x="35" y="693" width="305" height="25.666666666666629"/>
+                                                <rect key="frame" x="35" y="654" width="305" height="25.666666666666629"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Button">
                                                     <attributedString key="attributedTitle">
@@ -171,7 +171,7 @@
                                             <constraint firstItem="LXK-qY-VFU" firstAttribute="top" secondItem="mZ3-Qr-Mbe" secondAttribute="bottom" constant="16" id="3tV-R2-k3r"/>
                                             <constraint firstItem="QSd-4p-5cb" firstAttribute="top" secondItem="Rsz-fe-mbM" secondAttribute="bottom" constant="40" id="48e-7t-NQC"/>
                                             <constraint firstItem="mZ3-Qr-Mbe" firstAttribute="trailing" secondItem="QSd-4p-5cb" secondAttribute="trailing" id="4WS-wp-Q7R"/>
-                                            <constraint firstItem="mZ3-Qr-Mbe" firstAttribute="top" secondItem="QSd-4p-5cb" secondAttribute="bottom" constant="47" id="4bO-eL-Cun"/>
+                                            <constraint firstItem="mZ3-Qr-Mbe" firstAttribute="top" secondItem="QSd-4p-5cb" secondAttribute="bottom" constant="40" id="4bO-eL-Cun"/>
                                             <constraint firstItem="IFI-iH-dKr" firstAttribute="top" secondItem="BAo-kQ-LXC" secondAttribute="bottom" constant="1" id="85T-rP-KA6"/>
                                             <constraint firstAttribute="trailing" secondItem="BAo-kQ-LXC" secondAttribute="trailing" id="9Lg-ef-J56"/>
                                             <constraint firstItem="BAo-kQ-LXC" firstAttribute="leading" secondItem="g24-it-ari" secondAttribute="leading" id="9sd-fx-6IM"/>

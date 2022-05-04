@@ -26,6 +26,7 @@ class UsernameTextFieldWithButton: BaseCustomUITextField {
         keyboardAppearance = .light
         returnKeyType = .next
         super.setUpImage(image: "Image_User", onSide: .left)
+       
     }
     override func becomeFirstResponder() -> Bool {
         setUpImage(image: "Icon_Right", onSide: .right)

@@ -18,7 +18,6 @@ class BaseCustomUITextField: UITextField {
         case right
     }
     
-    
     override func becomeFirstResponder() -> Bool {
         bottomLine.backgroundColor = UIColor.greenColor.cgColor
         return super.becomeFirstResponder()
@@ -53,18 +52,14 @@ class BaseCustomUITextField: UITextField {
     
     
     func setBottomLine() {
-        bottomLine.frame = CGRect(x: 0.0, y: self.bounds.height + 11, width: self.frame.width + 40, height: 2.0)
+        bottomLine.frame = CGRect(x: 0.0, y: self.bounds.height + 6, width: self.frame.width + 40, height: 2.0)
         self.borderStyle = UITextField.BorderStyle.none
         bottomLine.backgroundColor = UIColor.lightGray.cgColor
         self.layer.addSublayer(bottomLine)
     }
     
     func setup() {
-        
         setBottomLine()
-       
-//        self.addSubview(label)
-//        setLabel(yourText: "Jay")
         self.font = UIFont.init(name: "DMSans-Regular", size: 14)
         self.layer.cornerRadius = 10
         self.clipsToBounds = true
@@ -73,14 +68,6 @@ class BaseCustomUITextField: UITextField {
         self.attributedPlaceholder = NSAttributedString(string:self.placeholder ?? "", attributes: [NSAttributedString.Key.foregroundColor :UIColor.grayColor])
         self.enablesReturnKeyAutomatically = true
     }
-//    func setLabel(yourText: String){
-//        label.text = yourText
-//        label.textColor = UIColor.grayColor
-//        label.font = UIFont.init(name: "DMSans-Medium", size: 14)
-//        label.translatesAutoresizingMaskIntoConstraints = false
-//        label.leftAnchor.constraint(equalTo: leftAnchor, constant: 0).isActive = true
-//        label.bottomAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
-//    }
 
     func setUpImage(image: String?, onSide: TextFieldImageSide) {
         let imageView = UIImageView(frame: CGRect(x: 5, y: 0, width: 22, height: 22))

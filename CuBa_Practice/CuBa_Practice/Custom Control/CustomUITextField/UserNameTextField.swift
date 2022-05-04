@@ -29,7 +29,6 @@ class UserNameTextField: BaseCustomUITextField {
         autocapitalizationType = .words
         keyboardAppearance = .light
         returnKeyType = .next
-        //super.setLabel(yourText: "Your Name")
     }
     
 }
