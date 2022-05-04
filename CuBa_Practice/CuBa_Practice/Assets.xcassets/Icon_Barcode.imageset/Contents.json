@@ -1,10 +1,12 @@
 {
   "images" : [
     {
+      "filename" : "Icon L.pdf",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Icon L-1.pdf",
       "idiom" : "universal",
       "scale" : "2x"
     },

@@ -22,8 +22,10 @@ class SignInViewController: UIViewController {
         hideKeyboardWhenTappedAround(viewController: self)
     }
     @IBAction func onClickOfSignInBtn(_ sender: UIButton) {
-        makealert(message: "Sign In Button is Clicked")
-    }
+        if let userProfileVC = UIStoryboard(name: "UserProfile", bundle: nil).instantiateViewController(withIdentifier:"userProfileViewController" ) as? UserProfileViewController {
+            self.navigationController?.pushViewController(userProfileVC, animated: true)
+                }
+            }
 }
 extension SignInViewController: UITextFieldDelegate{
     

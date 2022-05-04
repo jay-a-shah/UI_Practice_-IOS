@@ -20,7 +20,9 @@ class BaseUILabel: UILabel {
     func setup(){
      self.font = UIFont.init(name: "DMSans-Medium", size: 14)
         textColor = UIColor.grayColor
-        
+    }
+    func setText(yourText: String) {
+        self.text = yourText
     }
 }
 

@@ -13,4 +13,7 @@ extension UIColor{
     static let purpleColor: UIColor = UIColor(named: "PurpleColor") ?? UIColor.white
     static let greenColor: UIColor = UIColor(named: "GreenColor") ?? UIColor.white
     static let lightGray: UIColor = UIColor(named: "NeutralN20") ?? UIColor.white
+    static let lightPurple: UIColor = UIColor(named: "lightPurple") ?? UIColor.white
+    static let DarkPurple: UIColor = UIColor(named: "NeutralLabelN800") ?? UIColor.white
+    static let darkGray: UIColor = UIColor(named: "NeutralColorN100") ?? UIColor.white
 }

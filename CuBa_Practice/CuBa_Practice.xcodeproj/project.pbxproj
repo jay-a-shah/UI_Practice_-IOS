@@ -20,6 +20,13 @@
 		F15CB90328224B4E00032101 /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1D102B2281BE67600DD2C0D /* DMSans-Regular.ttf */; };
 		F15CB90428224B5100032101 /* DMSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1D102B6281BE67600DD2C0D /* DMSans-MediumItalic.ttf */; };
 		F15CB90528224B5300032101 /* DMSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1D102B7281BE67600DD2C0D /* DMSans-Italic.ttf */; };
+		F15CB908282287E300032101 /* UserProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F15CB907282287E300032101 /* UserProfile.storyboard */; };
+		F15CB90C28228F2400032101 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15CB90B28228F2400032101 /* UserProfileViewController.swift */; };
+		F15CB90F2822948E00032101 /* RoundedCustomUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15CB90E2822948E00032101 /* RoundedCustomUIView.swift */; };
+		F15CB91128229E7000032101 /* DarkGrayUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15CB91028229E7000032101 /* DarkGrayUILabel.swift */; };
+		F15CB9132822A13500032101 /* LightGrayUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15CB9122822A13500032101 /* LightGrayUILabel.swift */; };
+		F15CB9172822BF7100032101 /* ModelClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15CB9162822BF7100032101 /* ModelClass.swift */; };
+		F15CB9192822C7ED00032101 /* UserProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15CB9182822C7ED00032101 /* UserProfileCell.swift */; };
 		F172EBE128215B8000B05DCA /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F172EBDF28215B8000B05DCA /* SignInViewController.swift */; };
 		F172EBE228215B8000B05DCA /* SignUpScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F172EBE028215B8000B05DCA /* SignUpScreenViewController.swift */; };
 		F172EBEB28215CBA00B05DCA /* BuisnessUrlTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F172EBE928215CBA00B05DCA /* BuisnessUrlTextField.swift */; };
@@ -62,6 +69,13 @@
 		F13A3A2B282174BB0073D373 /* CustomSignupButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSignupButton.swift; sourceTree = "<group>"; };
 		F13A3A2D282176290073D373 /* BaseCustomUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCustomUIButton.swift; sourceTree = "<group>"; };
 		F13A3A2F282178AA0073D373 /* BaseUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUILabel.swift; sourceTree = "<group>"; };
+		F15CB907282287E300032101 /* UserProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserProfile.storyboard; sourceTree = "<group>"; };
+		F15CB90B28228F2400032101 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		F15CB90E2822948E00032101 /* RoundedCustomUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCustomUIView.swift; sourceTree = "<group>"; };
+		F15CB91028229E7000032101 /* DarkGrayUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkGrayUILabel.swift; sourceTree = "<group>"; };
+		F15CB9122822A13500032101 /* LightGrayUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightGrayUILabel.swift; sourceTree = "<group>"; };
+		F15CB9162822BF7100032101 /* ModelClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelClass.swift; sourceTree = "<group>"; };
+		F15CB9182822C7ED00032101 /* UserProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileCell.swift; sourceTree = "<group>"; };
 		F172EBDF28215B8000B05DCA /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		F172EBE028215B8000B05DCA /* SignUpScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreenViewController.swift; sourceTree = "<group>"; };
 		F172EBE928215CBA00B05DCA /* BuisnessUrlTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuisnessUrlTextField.swift; sourceTree = "<group>"; };
@@ -116,6 +130,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F15CB9062822872E00032101 /* User Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F15CB907282287E300032101 /* UserProfile.storyboard */,
+				F15CB90B28228F2400032101 /* UserProfileViewController.swift */,
+				F15CB9162822BF7100032101 /* ModelClass.swift */,
+				F15CB9182822C7ED00032101 /* UserProfileCell.swift */,
+			);
+			path = "User Profile";
+			sourceTree = "<group>";
+		};
+		F15CB90D2822946A00032101 /* CustomUIView */ = {
+			isa = PBXGroup;
+			children = (
+				F15CB90E2822948E00032101 /* RoundedCustomUIView.swift */,
+			);
+			path = CustomUIView;
+			sourceTree = "<group>";
+		};
 		F172EBDC28215AC100B05DCA /* UIButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +163,8 @@
 			isa = PBXGroup;
 			children = (
 				F13A3A2F282178AA0073D373 /* BaseUILabel.swift */,
+				F15CB91028229E7000032101 /* DarkGrayUILabel.swift */,
+				F15CB9122822A13500032101 /* LightGrayUILabel.swift */,
 			);
 			path = CustomUILabel;
 			sourceTree = "<group>";
@@ -158,6 +193,7 @@
 		F19B186D281BA6050061EEDC /* CuBa_Practice */ = {
 			isa = PBXGroup;
 			children = (
+				F15CB9062822872E00032101 /* User Profile */,
 				F1D102AD281BC70E00DD2C0D /* Extensions */,
 				F19B189E281BAA040061EEDC /* Custom Control */,
 				F19B186E281BA6050061EEDC /* AppDelegate.swift */,
@@ -193,6 +229,7 @@
 		F19B189E281BAA040061EEDC /* Custom Control */ = {
 			isa = PBXGroup;
 			children = (
+				F15CB90D2822946A00032101 /* CustomUIView */,
 				F172EBFA2821601900B05DCA /* CustomUILabel */,
 				F172EBDC28215AC100B05DCA /* UIButton */,
 				F1D102B0281BCBB700DD2C0D /* CustomUITextField */,
@@ -348,6 +385,7 @@
 				F13A3A2628216A480073D373 /* Main.storyboard in Resources */,
 				F157700E282166DB008EEF6F /* LaunchScreen.storyboard in Resources */,
 				F19B1878281BA6060061EEDC /* Assets.xcassets in Resources */,
+				F15CB908282287E300032101 /* UserProfile.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +417,7 @@
 				F1D102BE281C0AE000DD2C0D /* PasswordUITextField.swift in Sources */,
 				F1D102B9281BEA5F00DD2C0D /* UserNameTextField.swift in Sources */,
 				F172EBE128215B8000B05DCA /* SignInViewController.swift in Sources */,
+				F15CB90C28228F2400032101 /* UserProfileViewController.swift in Sources */,
 				F10DA7872821BD2900C0BAAB /* UsernameTextFieldWithButton.swift in Sources */,
 				F10DA7892821C25600C0BAAB /* CustomSignInButton.swift in Sources */,
 				F172EBE228215B8000B05DCA /* SignUpScreenViewController.swift in Sources */,
@@ -386,9 +425,14 @@
 				F13A3A2E282176290073D373 /* BaseCustomUIButton.swift in Sources */,
 				F19B1873281BA6050061EEDC /* ViewController.swift in Sources */,
 				F19B186F281BA6050061EEDC /* AppDelegate.swift in Sources */,
+				F15CB90F2822948E00032101 /* RoundedCustomUIView.swift in Sources */,
+				F15CB9172822BF7100032101 /* ModelClass.swift in Sources */,
 				F1D102AF281BC72300DD2C0D /* ColorFile.swift in Sources */,
 				F19B1871281BA6050061EEDC /* SceneDelegate.swift in Sources */,
+				F15CB9132822A13500032101 /* LightGrayUILabel.swift in Sources */,
 				F13A3A30282178AA0073D373 /* BaseUILabel.swift in Sources */,
+				F15CB91128229E7000032101 /* DarkGrayUILabel.swift in Sources */,
+				F15CB9192822C7ED00032101 /* UserProfileCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
