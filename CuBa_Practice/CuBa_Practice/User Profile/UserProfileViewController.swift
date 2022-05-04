@@ -36,7 +36,7 @@ extension UserProfileViewController: UITableViewDelegate {
 }
 extension UserProfileViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return userProfileValues[section].
+        return userProfileValues[section].userProfileDetails.count ?? 1
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -44,15 +44,15 @@ extension UserProfileViewController: UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? UserProfileCell{
-            cell.mainHeading.text = userProfileValues[indexPath.row].userProfileDetails[indexPath.row].header
-            cell.subHeading.text = userProfileValues[indexPath.row].userProfileDetails[indexPath.row].info
+            cell.mainHeading.text = userProfileValues[indexPath.section].userProfileDetails[indexPath.row].header
+            cell.subHeading.text = userProfileValues[indexPath.section].userProfileDetails[indexPath.row].info
        return cell
         }
         return UITableViewCell()
     }
    
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return userProfileValues.count
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
