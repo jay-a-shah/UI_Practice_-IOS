@@ -129,6 +129,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                                 <connections>
+                                                    <action selector="onClickOfSignInBtn:" destination="7pc-oi-gzi" eventType="touchUpInside" id="9Yh-iH-SH8"/>
                                                     <segue destination="mti-Hh-mNO" kind="show" id="XTp-sM-Yjf"/>
                                                 </connections>
                                             </button>
@@ -220,6 +221,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uYB-CH-C8y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="7pc-oi-gzi" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2631.1999999999998" y="89.408866995073893"/>
         </scene>
@@ -299,6 +301,9 @@
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <connections>
+                                                    <action selector="onClickOfSignInBtn:" destination="mti-Hh-mNO" eventType="touchUpInside" id="kmg-0w-I4B"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6fW-d8-jRW">
                                                 <rect key="frame" x="35" y="686.33333333333337" width="305" height="17"/>

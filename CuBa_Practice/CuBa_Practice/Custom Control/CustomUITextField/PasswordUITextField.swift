@@ -21,7 +21,7 @@ class PasswordUITextField: BaseCustomUITextField{
     override func setup() {
         super.setup()
         keyboardType = .asciiCapable
-        keyboardAppearance = .dark
+        keyboardAppearance = .light
         isSecureTextEntry = true
         returnKeyType = .done
         super.setUpImage(image: "Icon_Lock", onSide: .left)

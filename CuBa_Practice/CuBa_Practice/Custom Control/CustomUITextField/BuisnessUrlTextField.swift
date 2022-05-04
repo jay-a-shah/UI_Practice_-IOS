@@ -21,7 +21,7 @@ class BuisnessUrlTextField: BaseCustomUITextField{
     override func setup() {
         super.setup()
         keyboardType = .URL
-        keyboardAppearance = .dark
+        keyboardAppearance = .light
         returnKeyType = .next
         super.setUpImage(image: "Icon_Globe", onSide: .left)
     }

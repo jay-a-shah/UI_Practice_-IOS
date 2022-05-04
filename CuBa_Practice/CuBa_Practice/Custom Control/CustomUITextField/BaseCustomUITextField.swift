@@ -105,7 +105,7 @@ class BaseCustomUITextField: UITextField {
         let btnView = UIButton(frame: CGRect(x: 0, y: 0, width: ((self.frame.height) * 0.70), height: ((self.frame.height) * 0.70)))
         btnView.setTitle(btnTitle, for: .normal)
         btnView.setTitleColor(UIColor.purpleColor, for: .normal)
-        btnView.titleLabel?.font = UIFont(name: "DMSans-Italic", size: 12)
+        btnView.titleLabel?.font = UIFont(name: "DMSans-Medium", size: 12)
         btnView.addTarget(nil, action: action, for: .touchUpInside)
         self.rightViewMode = .always
         self.rightView = btnView

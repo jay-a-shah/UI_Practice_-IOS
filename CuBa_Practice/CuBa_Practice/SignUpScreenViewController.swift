@@ -24,6 +24,7 @@ class SignUpScreenViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        self.hideKeyboardWhenTappedAround(viewController: self)
     }
     @objc fileprivate func keyboardWillShow(notification:NSNotification) {
             guard let userInfo = notification.userInfo else { return }

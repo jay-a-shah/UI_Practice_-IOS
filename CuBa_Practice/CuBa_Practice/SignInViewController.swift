@@ -16,9 +16,13 @@ class SignInViewController: UIViewController {
         super.viewDidLoad()
         userNameTextField.delegate = self
         passwordTextField.delegate = self
-        passwordTextField.setUpButton(btnTitle: "Forgot Password", action: #selector(pressed(_:)))
+        passwordTextField.setUpButton(btnTitle: "Forgot?", action: #selector(pressed(_:)))
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        hideKeyboardWhenTappedAround(viewController: self)
+    }
+    @IBAction func onClickOfSignInBtn(_ sender: UIButton) {
+        makealert(message: "Sign In Button is Clicked")
     }
 }
 extension SignInViewController: UITextFieldDelegate{
@@ -37,7 +41,7 @@ extension SignInViewController: UITextFieldDelegate{
 }
 extension SignInViewController {
     @objc func pressed(_ sender: UIButton) {
-        print("Pressed")
+        makealert(message: "You Forgot the Password")
     }
 }
 extension SignInViewController {
