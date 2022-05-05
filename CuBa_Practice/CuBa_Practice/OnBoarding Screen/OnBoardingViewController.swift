@@ -21,9 +21,12 @@ class OnBoardingViewController: UIViewController {
     var page = 0 {
         didSet {
             pageControl.currentPage = page
-            if(page == pageControlSlides.count - 1){
+            if (page == pageControlSlides.count - 1){
                 nextBtn.setTitle("Welcome", for: .normal)
-            }else{
+            } else if (page == pageControlSlides.startIndex){
+                prevBtn.isHidden = true
+            } else {
+                prevBtn.isHidden = false
                 nextBtn.setTitle("Next", for: .normal)
             }
         }
@@ -40,8 +43,10 @@ class OnBoardingViewController: UIViewController {
         collectionView.dataSource = self
         setData()
         turnOnSwipeToBack()
+        prevBtn.isHidden = true
+        
     }
-    @IBAction func onClickOfNextButton(_ sender: CustomWhiteBacKButton) {
+    @IBAction func onClickOfNextButton(_ sender: UIButton) {
         if(page != pageControlSlides.count - 1){
             page += 1
             let indexPath = IndexPath(item: page, section: 0)
@@ -52,7 +57,7 @@ class OnBoardingViewController: UIViewController {
             }
         }
     }
-    @IBAction func onClickOfPrevButton(_ sender: Any) {
+    @IBAction func onClickOfPrevButton(_ sender: UIButton) {
         page -= 1
         let indexPath = IndexPath(item: page, section: 0)
         collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
@@ -73,7 +78,7 @@ extension OnBoardingViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? OnBoardingScreenCell {
-            cell.configureCell(slide: pageControlSlides[indexPath.row])
+            cell.configureCell(slide: pageControlSlides[indexPath.row], viewController: self)
             return cell
         }
         return UICollectionViewCell()
@@ -84,7 +89,7 @@ extension OnBoardingViewController: UICollectionViewDataSource {
 //MARK: - Custom Function
 extension OnBoardingViewController {
     private func setData(){
-        pageControlSlides.append(OnBoardingModel(title: "Welcome to CaBu !", subTitle: "CaBu UI kit Crafted with passion and deep precision, this UI Kit has features that are very complete according to your product needs", btnTitle: "Waiting To Start"))
+        pageControlSlides.append(OnBoardingModel(title: "Welcome to CaBu !", subTitle: "CaBu UI kit Crafted with passion and deep precision, this UI Kit has features that are very complete according to your product needsCaBu UI kit Crafted with passion and deep precision, this UI Kit has features that are very complete according to your product needs", btnTitle: "Waiting To Start"))
         pageControlSlides.append(OnBoardingModel(title: "Second Page", subTitle: "This is first page stating what this app is about”, “A second page stating more app info incase you need them”, “The very last page with yet more info for our esteem users", btnTitle: "Not Started Still"))
         pageControlSlides.append(OnBoardingModel(title: "Last Page", subTitle: "the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", btnTitle: "Get Started"))
     }
@@ -92,9 +97,9 @@ extension OnBoardingViewController {
 
 extension OnBoardingViewController: UICollectionViewDelegateFlowLayout {
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+//    }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let width = scrollView.frame.width

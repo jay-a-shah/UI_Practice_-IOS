@@ -107,31 +107,31 @@
                                         </tabBarAppearance>
                                     </tabBar>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="LFv-Pn-MEx">
-                                        <rect key="frame" x="20" y="139.99999999999997" width="335" height="417.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="139.99999999999997" width="375" height="417.66666666666663"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="77" id="7kb-Ap-OkI" customClass="UserProfileCell" customModule="CuBa_Practice" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="49" width="335" height="77"/>
+                                                <rect key="frame" x="0.0" y="49" width="375" height="77"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7kb-Ap-OkI" id="8HW-7Q-aTO">
-                                                    <rect key="frame" x="0.0" y="0.0" width="335" height="77"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="77"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O9D-bR-xPn" customClass="DarkGrayUILabel" customModule="CuBa_Practice" customModuleProvider="target">
-                                                            <rect key="frame" x="36" y="16" width="220" height="21"/>
+                                                            <rect key="frame" x="36" y="16" width="260" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon_Back" translatesAutoresizingMaskIntoConstraints="NO" id="sbT-Lz-KdK">
-                                                            <rect key="frame" x="276" y="19.666666666666671" width="24" height="38"/>
+                                                            <rect key="frame" x="316" y="19.666666666666671" width="24" height="38"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="24" id="2cE-bm-rS4"/>
                                                                 <constraint firstAttribute="height" constant="24" id="Cau-mN-G4u"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WoB-cd-pLL" customClass="LightGrayUILabel" customModule="CuBa_Practice" customModuleProvider="target">
-                                                            <rect key="frame" x="36" y="38" width="220" height="21"/>
+                                                            <rect key="frame" x="36" y="38" width="260" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -162,14 +162,13 @@
                                     <constraint firstItem="LFv-Pn-MEx" firstAttribute="top" secondItem="Q2P-OV-mWQ" secondAttribute="bottom" id="3XZ-0p-gtW"/>
                                     <constraint firstAttribute="bottom" secondItem="9Jo-fc-bjN" secondAttribute="bottom" id="Ehc-SX-fbr"/>
                                     <constraint firstAttribute="trailing" secondItem="Q2P-OV-mWQ" secondAttribute="trailing" id="IM4-La-TAh"/>
-                                    <constraint firstItem="LFv-Pn-MEx" firstAttribute="leading" secondItem="Hab-QZ-P7c" secondAttribute="leading" constant="20" id="JUe-lA-yl9"/>
                                     <constraint firstItem="9Gm-PD-UyC" firstAttribute="centerX" secondItem="Hab-QZ-P7c" secondAttribute="centerX" id="JbE-AM-tCT"/>
                                     <constraint firstItem="9Jo-fc-bjN" firstAttribute="leading" secondItem="Hab-QZ-P7c" secondAttribute="leading" id="O71-i4-ieH"/>
-                                    <constraint firstAttribute="trailing" secondItem="LFv-Pn-MEx" secondAttribute="trailing" constant="20" id="Oyd-0N-QeX"/>
                                     <constraint firstItem="ce4-xo-Ckm" firstAttribute="trailing" secondItem="9Gm-PD-UyC" secondAttribute="trailing" id="QYW-g9-P0d"/>
                                     <constraint firstItem="ce4-xo-Ckm" firstAttribute="top" secondItem="9Gm-PD-UyC" secondAttribute="bottom" constant="2" id="Rvq-Hd-f5F"/>
                                     <constraint firstItem="9Gm-PD-UyC" firstAttribute="top" secondItem="Hab-QZ-P7c" secondAttribute="top" constant="56" id="buB-yE-rBZ"/>
                                     <constraint firstItem="Q2P-OV-mWQ" firstAttribute="leading" secondItem="Hab-QZ-P7c" secondAttribute="leading" id="fVN-sS-nvA"/>
+                                    <constraint firstItem="LFv-Pn-MEx" firstAttribute="centerX" secondItem="Hab-QZ-P7c" secondAttribute="centerX" id="hMG-QU-TFk"/>
                                     <constraint firstItem="ce4-xo-Ckm" firstAttribute="leading" secondItem="9Gm-PD-UyC" secondAttribute="leading" id="jT3-qC-REF"/>
                                     <constraint firstAttribute="trailing" secondItem="9Jo-fc-bjN" secondAttribute="trailing" id="lF5-E5-H0l"/>
                                     <constraint firstItem="9Jo-fc-bjN" firstAttribute="top" secondItem="LFv-Pn-MEx" secondAttribute="bottom" id="pWf-b4-HCB"/>
@@ -193,6 +192,7 @@
                             <constraint firstItem="Hab-QZ-P7c" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="4Gh-HH-xXd"/>
                             <constraint firstItem="5Iq-xa-JWL" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Ajj-Y1-iBe"/>
                             <constraint firstItem="aME-KS-mfV" firstAttribute="top" secondItem="5Iq-xa-JWL" secondAttribute="bottom" constant="-70" id="Eca-cO-B8W"/>
+                            <constraint firstItem="LFv-Pn-MEx" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" id="JtE-4J-Lg2"/>
                             <constraint firstItem="Hab-QZ-P7c" firstAttribute="top" secondItem="5Iq-xa-JWL" secondAttribute="bottom" constant="-30" id="Oya-T2-9po"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="5Iq-xa-JWL" secondAttribute="trailing" id="S83-nk-hiT"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Hab-QZ-P7c" secondAttribute="trailing" id="Zbr-rp-w2n"/>

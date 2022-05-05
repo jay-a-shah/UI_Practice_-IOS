@@ -35,6 +35,8 @@ extension UserProfileViewController: UITableViewDelegate {
         if let header = view as? UITableViewHeaderFooterView {
             header.textLabel?.textColor = UIColor.darkGray
             header.textLabel?.font = UIFont(name: "DMSans-Bold", size: 14)
+            header.clipsToBounds = true
+            
         }
     }
 }

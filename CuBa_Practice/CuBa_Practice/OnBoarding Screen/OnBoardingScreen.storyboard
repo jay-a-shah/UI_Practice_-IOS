@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="L21-rv-hQ0">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -23,17 +23,17 @@
             <objects>
                 <viewController storyboardIdentifier="onBoardingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="OnBoardingViewController" customModule="CuBa_Practice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OnBoarding_Image" translatesAutoresizingMaskIntoConstraints="NO" id="X7D-Xs-ZLu">
-                                <rect key="frame" x="19.5" y="92" width="375" height="282"/>
+                                <rect key="frame" x="7.6666666666666572" y="55.666666666666657" width="375" height="265.66666666666674"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q0K-vC-r8G">
-                                <rect key="frame" x="34.5" y="406" width="345" height="292"/>
+                                <rect key="frame" x="22.666666666666657" y="353.33333333333326" width="345" height="320.66666666666674"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OVP-Vm-3zo">
-                                        <rect key="frame" x="0.0" y="0.0" width="345" height="292"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="320.66666666666669"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="NqR-GH-wsT">
                                             <size key="itemSize" width="345" height="292"/>
@@ -43,20 +43,20 @@
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="Tf7-0m-ixf" customClass="OnBoardingScreenCell" customModule="CuBa_Practice" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="340" height="292"/>
+                                                <rect key="frame" x="0.0" y="14.333333333333334" width="340" height="292"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gh9-Ge-B4i">
                                                     <rect key="frame" x="0.0" y="0.0" width="340" height="292"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to CaBu !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2W4-Ln-ORT" userLabel="Title">
-                                                            <rect key="frame" x="20" y="56" width="300" height="31.5"/>
+                                                            <rect key="frame" x="20" y="56.000000000000007" width="300" height="31.333333333333336"/>
                                                             <fontDescription key="fontDescription" name="DMSans-Bold" family="DM Sans" pointSize="24"/>
                                                             <color key="textColor" name="NeutralLabelN800"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="toj-xd-wTI" userLabel="Subtitle" customClass="LightGrayUILabel" customModule="CuBa_Practice" customModuleProvider="target">
-                                                            <rect key="frame" x="20" y="99.5" width="300" height="72"/>
+                                                            <rect key="frame" x="20" y="99.333333333333314" width="300" height="72"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="72" id="cQH-0I-HBL"/>
                                                             </constraints>
@@ -65,8 +65,8 @@
                                                             <color key="textColor" name="NeutralColorN100"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nI-Of-lde" customClass="BaseCustomUIButton" customModule="CuBa_Practice" customModuleProvider="target">
-                                                            <rect key="frame" x="17.5" y="228" width="305" height="44"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nI-Of-lde" customClass="BaseCustomUIButton" customModule="CuBa_Practice" customModuleProvider="target">
+                                                            <rect key="frame" x="17.666666666666657" y="228" width="305" height="44"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="305" id="56W-0g-gAk"/>
                                                                 <constraint firstAttribute="height" constant="44" id="7mM-z0-SIe"/>
@@ -85,6 +85,7 @@
                                                         <constraint firstAttribute="trailing" secondItem="2W4-Ln-ORT" secondAttribute="trailing" constant="20" id="IvT-1f-J1e"/>
                                                         <constraint firstAttribute="bottom" secondItem="7nI-Of-lde" secondAttribute="bottom" constant="20" id="Sd2-Jp-JrG"/>
                                                         <constraint firstItem="2W4-Ln-ORT" firstAttribute="leading" secondItem="gh9-Ge-B4i" secondAttribute="leading" constant="20" id="XPX-8l-TjI"/>
+                                                        <constraint firstItem="7nI-Of-lde" firstAttribute="top" secondItem="toj-xd-wTI" secondAttribute="bottom" priority="227" constant="56" id="aRo-iK-6ep"/>
                                                         <constraint firstAttribute="trailing" secondItem="toj-xd-wTI" secondAttribute="trailing" constant="20" id="bOd-RQ-Qnc"/>
                                                         <constraint firstItem="2W4-Ln-ORT" firstAttribute="top" secondItem="gh9-Ge-B4i" secondAttribute="top" constant="56" id="kTO-Jj-fPD"/>
                                                         <constraint firstItem="7nI-Of-lde" firstAttribute="centerX" secondItem="gh9-Ge-B4i" secondAttribute="centerX" id="lJW-QV-EkQ"/>
@@ -106,28 +107,31 @@
                                     <constraint firstAttribute="trailing" secondItem="OVP-Vm-3zo" secondAttribute="trailing" id="N33-w9-iD4"/>
                                     <constraint firstAttribute="width" constant="345" id="OWb-qY-QJ2"/>
                                     <constraint firstItem="OVP-Vm-3zo" firstAttribute="top" secondItem="Q0K-vC-r8G" secondAttribute="top" id="h3Y-8a-qx5"/>
-                                    <constraint firstAttribute="height" constant="292" id="sR9-q6-fKA"/>
                                     <constraint firstItem="OVP-Vm-3zo" firstAttribute="leading" secondItem="Q0K-vC-r8G" secondAttribute="leading" id="vfP-dV-BM9"/>
                                 </constraints>
                             </view>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="BWl-mi-Y4E">
-                                <rect key="frame" x="34.5" y="738" width="345" height="53"/>
+                                <rect key="frame" x="22.666666666666657" y="714" width="345" height="25"/>
                                 <color key="pageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" red="1" green="0.57647058819999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3TK-Rf-TZm">
-                                <rect key="frame" x="34.5" y="801" width="345" height="31"/>
+                                <rect key="frame" x="22.666666666666657" y="749" width="345" height="31"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGx-8F-vEY" customClass="CustomWhiteBacKButton" customModule="CuBa_Practice" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="31"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGx-8F-vEY" customClass="CustomWhiteBacKButton" customModule="CuBa_Practice" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="162.33333333333334" height="31"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Prev"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Prev">
+                                            <color key="baseForegroundColor" name="PurpleColor"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <action selector="onClickOfPrevButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="GwW-5O-enw"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vF-fx-m7M" customClass="CustomWhiteBacKButton" customModule="CuBa_Practice" customModuleProvider="target">
-                                        <rect key="frame" x="182.5" y="0.0" width="162.5" height="31"/>
+                                        <rect key="frame" x="182.33333333333337" y="0.0" width="162.66666666666663" height="31"/>
+                                        <color key="tintColor" name="PurpleColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Next"/>
                                         <connections>
@@ -152,6 +156,7 @@
                             <constraint firstItem="X7D-Xs-ZLu" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="mSR-kL-XsI"/>
                             <constraint firstItem="X7D-Xs-ZLu" firstAttribute="top" relation="lessThanOrEqual" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="92" id="oQt-2I-J9J"/>
                             <constraint firstItem="3TK-Rf-TZm" firstAttribute="leading" secondItem="BWl-mi-Y4E" secondAttribute="leading" id="rME-6n-KP8"/>
+                            <constraint firstItem="Q0K-vC-r8G" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.38" id="yPy-16-UV2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5oh-fn-M3W"/>
@@ -173,7 +178,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="L21-rv-hQ0" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Sgq-4X-fz8">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
