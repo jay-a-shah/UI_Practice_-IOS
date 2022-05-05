@@ -17,9 +17,13 @@ class UserProfileViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+       turnOnSwipeToBack()
         // Do any additional setup after loading the view.
     }
-   
+    @IBAction func onClickOfBarcodeButton(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 }
 extension UserProfileViewController: UITableViewDelegate {
 //
@@ -36,7 +40,7 @@ extension UserProfileViewController: UITableViewDelegate {
 }
 extension UserProfileViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return userProfileValues[section].userProfileDetails.count ?? 1
+        return userProfileValues[section].userProfileDetails.count
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -50,7 +54,10 @@ extension UserProfileViewController: UITableViewDataSource {
         }
         return UITableViewCell()
     }
-   
+
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 77
+    }
     func numberOfSections(in tableView: UITableView) -> Int {
         return userProfileValues.count
     }

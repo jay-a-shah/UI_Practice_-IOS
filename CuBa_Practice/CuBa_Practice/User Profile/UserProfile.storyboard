@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -14,62 +14,68 @@
             <objects>
                 <viewController storyboardIdentifier="userProfileViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="UserProfileViewController" customModule="CuBa_Practice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Iq-xa-JWL" userLabel="TopView">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="179"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="162.33333333333334"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon_Barcode" translatesAutoresizingMaskIntoConstraints="NO" id="kCK-e4-FCY">
-                                        <rect key="frame" x="36" y="61" width="22" height="22"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="22" id="3R6-g7-OQV"/>
-                                            <constraint firstAttribute="width" constant="22" id="PZ8-Ce-H5y"/>
-                                        </constraints>
-                                    </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon_Dots" translatesAutoresizingMaskIntoConstraints="NO" id="EjR-2Y-5pL">
-                                        <rect key="frame" x="357" y="60" width="22" height="22"/>
+                                        <rect key="frame" x="318" y="60" width="22" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="22" id="KbR-2x-hdg"/>
                                             <constraint firstAttribute="height" constant="22" id="YKe-ur-Hmq"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lrg-Ji-S7f" userLabel="BarcodeBtn">
+                                        <rect key="frame" x="36" y="61" width="22" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="22" id="44P-VU-LJu"/>
+                                            <constraint firstAttribute="height" constant="22" id="W3S-ug-aMe"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="Icon_Barcode"/>
+                                        <connections>
+                                            <action selector="onClickOfBarcodeButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="C3P-gH-uNC"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" name="lightPurple"/>
                                 <constraints>
                                     <constraint firstItem="EjR-2Y-5pL" firstAttribute="top" secondItem="5Iq-xa-JWL" secondAttribute="top" constant="60" id="50x-S0-OfG"/>
-                                    <constraint firstItem="kCK-e4-FCY" firstAttribute="top" secondItem="5Iq-xa-JWL" secondAttribute="top" constant="61" id="XkI-Bj-GR4"/>
-                                    <constraint firstItem="kCK-e4-FCY" firstAttribute="leading" secondItem="5Iq-xa-JWL" secondAttribute="leading" constant="36" id="flv-hk-rCd"/>
+                                    <constraint firstItem="lrg-Ji-S7f" firstAttribute="top" secondItem="5Iq-xa-JWL" secondAttribute="top" constant="61" id="Bdm-cp-qFU"/>
+                                    <constraint firstItem="lrg-Ji-S7f" firstAttribute="leading" secondItem="5Iq-xa-JWL" secondAttribute="leading" constant="36" id="gqo-wn-QZP"/>
                                     <constraint firstAttribute="trailing" secondItem="EjR-2Y-5pL" secondAttribute="trailing" constant="35" id="jTf-CC-SyP"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hab-QZ-P7c" customClass="RoundedCustomUIView" customModule="CuBa_Practice" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="149" width="414" height="713"/>
+                                <rect key="frame" x="0.0" y="132.33333333333331" width="375" height="645.66666666666674"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Linh Nguyen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Gm-PD-UyC" customClass="DarkGrayUILabel" customModule="CuBa_Practice" customModuleProvider="target">
-                                        <rect key="frame" x="107" y="56" width="200" height="20"/>
+                                        <rect key="frame" x="87.666666666666686" y="56" width="200" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="4sI-kF-JSo"/>
                                             <constraint firstAttribute="height" constant="20" id="7hL-EL-rmT"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@linhnguyen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ce4-xo-Ckm" customClass="LightGrayUILabel" customModule="CuBa_Practice" customModuleProvider="target">
-                                        <rect key="frame" x="107" y="78" width="200" height="21"/>
+                                        <rect key="frame" x="87.666666666666686" y="78" width="200" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q2P-OV-mWQ">
-                                        <rect key="frame" x="0.0" y="139" width="414" height="1"/>
+                                        <rect key="frame" x="0.0" y="138.99999999999997" width="375" height="1"/>
                                         <color key="backgroundColor" name="NeutralN20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="0sZ-Oo-GSf"/>
                                         </constraints>
                                     </view>
                                     <tabBar contentMode="scaleToFill" translucent="NO" itemPositioning="centered" itemSpacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="9Jo-fc-bjN">
-                                        <rect key="frame" x="0.0" y="625" width="414" height="88"/>
+                                        <rect key="frame" x="0.0" y="557.66666666666663" width="375" height="88"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="88" id="DKJ-nY-zf0"/>
@@ -100,32 +106,32 @@
                                             <color key="selectionIndicatorTintColor" name="PurpleColor"/>
                                         </tabBarAppearance>
                                     </tabBar>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="LFv-Pn-MEx">
-                                        <rect key="frame" x="20" y="140" width="374" height="485"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="LFv-Pn-MEx">
+                                        <rect key="frame" x="20" y="139.99999999999997" width="335" height="417.66666666666663"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="77" id="7kb-Ap-OkI" customClass="UserProfileCell" customModule="CuBa_Practice" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="44.5" width="374" height="77"/>
+                                                <rect key="frame" x="0.0" y="49" width="335" height="77"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7kb-Ap-OkI" id="8HW-7Q-aTO">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="77"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="335" height="77"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O9D-bR-xPn" customClass="DarkGrayUILabel" customModule="CuBa_Practice" customModuleProvider="target">
-                                                            <rect key="frame" x="40" y="16" width="255" height="21"/>
+                                                            <rect key="frame" x="36" y="16" width="220" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon_Back" translatesAutoresizingMaskIntoConstraints="NO" id="sbT-Lz-KdK">
-                                                            <rect key="frame" x="315" y="19.5" width="24" height="38"/>
+                                                            <rect key="frame" x="276" y="19.666666666666671" width="24" height="38"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="24" id="2cE-bm-rS4"/>
                                                                 <constraint firstAttribute="height" constant="24" id="Cau-mN-G4u"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WoB-cd-pLL" customClass="LightGrayUILabel" customModule="CuBa_Practice" customModuleProvider="target">
-                                                            <rect key="frame" x="40" y="38" width="255" height="21"/>
+                                                            <rect key="frame" x="36" y="38" width="220" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -171,7 +177,7 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userProfile" translatesAutoresizingMaskIntoConstraints="NO" id="aME-KS-mfV">
-                                <rect key="frame" x="167" y="109" width="80" height="80"/>
+                                <rect key="frame" x="147.66666666666666" y="92.333333333333314" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="5SK-c0-69V"/>
                                     <constraint firstAttribute="height" constant="80" id="YXS-aD-ZWj"/>

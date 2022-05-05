@@ -16,13 +16,14 @@ class SignInViewController: UIViewController {
         super.viewDidLoad()
         userNameTextField.delegate = self
         passwordTextField.delegate = self
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
         passwordTextField.setUpButton(btnTitle: "Forgot?", action: #selector(pressed(_:)))
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         hideKeyboardWhenTappedAround(viewController: self)
     }
     @IBAction func onClickOfSignInBtn(_ sender: UIButton) {
-        if let userProfileVC = UIStoryboard(name: "UserProfile", bundle: nil).instantiateViewController(withIdentifier:"userProfileViewController" ) as? UserProfileViewController {
+        if let userProfileVC = UIStoryboard(name: "UserProfile", bundle: nil).instantiateViewController(withIdentifier: "userProfileViewController" ) as? UserProfileViewController {
             self.navigationController?.pushViewController(userProfileVC, animated: true)
                 }
             }

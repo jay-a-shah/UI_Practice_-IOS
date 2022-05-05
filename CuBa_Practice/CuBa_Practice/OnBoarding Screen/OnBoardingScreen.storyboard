@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="L21-rv-hQ0">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="DMSans-Bold.ttf">
+            <string>DMSans-Bold</string>
+        </array>
+        <array key="DMSans-Regular.ttf">
+            <string>DMSans-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--On Boarding View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="onBoardingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="OnBoardingViewController" customModule="CuBa_Practice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OnBoarding_Image" translatesAutoresizingMaskIntoConstraints="NO" id="X7D-Xs-ZLu">
+                                <rect key="frame" x="19.5" y="92" width="375" height="282"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q0K-vC-r8G">
+                                <rect key="frame" x="34.5" y="406" width="345" height="292"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OVP-Vm-3zo">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="292"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="NqR-GH-wsT">
+                                            <size key="itemSize" width="345" height="292"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="Tf7-0m-ixf" customClass="OnBoardingScreenCell" customModule="CuBa_Practice" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="340" height="292"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gh9-Ge-B4i">
+                                                    <rect key="frame" x="0.0" y="0.0" width="340" height="292"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to CaBu !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2W4-Ln-ORT" userLabel="Title">
+                                                            <rect key="frame" x="20" y="56" width="300" height="31.5"/>
+                                                            <fontDescription key="fontDescription" name="DMSans-Bold" family="DM Sans" pointSize="24"/>
+                                                            <color key="textColor" name="NeutralLabelN800"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="toj-xd-wTI" userLabel="Subtitle" customClass="LightGrayUILabel" customModule="CuBa_Practice" customModuleProvider="target">
+                                                            <rect key="frame" x="20" y="99.5" width="300" height="72"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="72" id="cQH-0I-HBL"/>
+                                                            </constraints>
+                                                            <string key="text">CaBu UI kit Crafted with passion and deep precision, this UI Kit has features that are very complete according to your product needs</string>
+                                                            <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="14"/>
+                                                            <color key="textColor" name="NeutralColorN100"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nI-Of-lde" customClass="BaseCustomUIButton" customModule="CuBa_Practice" customModuleProvider="target">
+                                                            <rect key="frame" x="17.5" y="228" width="305" height="44"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="305" id="56W-0g-gAk"/>
+                                                                <constraint firstAttribute="height" constant="44" id="7mM-z0-SIe"/>
+                                                            </constraints>
+                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                            <connections>
+                                                                <action selector="onClickOfGetStartedBtn:" destination="Tf7-0m-ixf" eventType="touchUpInside" id="5wy-74-Sl7"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="toj-xd-wTI" firstAttribute="top" secondItem="2W4-Ln-ORT" secondAttribute="bottom" constant="12" id="AcN-UR-E94"/>
+                                                        <constraint firstItem="toj-xd-wTI" firstAttribute="leading" secondItem="gh9-Ge-B4i" secondAttribute="leading" constant="20" id="FhV-Q5-pLI"/>
+                                                        <constraint firstAttribute="trailing" secondItem="2W4-Ln-ORT" secondAttribute="trailing" constant="20" id="IvT-1f-J1e"/>
+                                                        <constraint firstAttribute="bottom" secondItem="7nI-Of-lde" secondAttribute="bottom" constant="20" id="Sd2-Jp-JrG"/>
+                                                        <constraint firstItem="2W4-Ln-ORT" firstAttribute="leading" secondItem="gh9-Ge-B4i" secondAttribute="leading" constant="20" id="XPX-8l-TjI"/>
+                                                        <constraint firstAttribute="trailing" secondItem="toj-xd-wTI" secondAttribute="trailing" constant="20" id="bOd-RQ-Qnc"/>
+                                                        <constraint firstItem="2W4-Ln-ORT" firstAttribute="top" secondItem="gh9-Ge-B4i" secondAttribute="top" constant="56" id="kTO-Jj-fPD"/>
+                                                        <constraint firstItem="7nI-Of-lde" firstAttribute="centerX" secondItem="gh9-Ge-B4i" secondAttribute="centerX" id="lJW-QV-EkQ"/>
+                                                    </constraints>
+                                                </collectionViewCellContentView>
+                                                <size key="customSize" width="340" height="292"/>
+                                                <connections>
+                                                    <outlet property="getStartedBtn" destination="7nI-Of-lde" id="FdT-Zk-O1G"/>
+                                                    <outlet property="subTitleLabel" destination="toj-xd-wTI" id="MrY-MT-AxF"/>
+                                                    <outlet property="titleLabel" destination="2W4-Ln-ORT" id="e39-nU-Muh"/>
+                                                </connections>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="OVP-Vm-3zo" secondAttribute="bottom" id="5Pv-Gc-awz"/>
+                                    <constraint firstAttribute="trailing" secondItem="OVP-Vm-3zo" secondAttribute="trailing" id="N33-w9-iD4"/>
+                                    <constraint firstAttribute="width" constant="345" id="OWb-qY-QJ2"/>
+                                    <constraint firstItem="OVP-Vm-3zo" firstAttribute="top" secondItem="Q0K-vC-r8G" secondAttribute="top" id="h3Y-8a-qx5"/>
+                                    <constraint firstAttribute="height" constant="292" id="sR9-q6-fKA"/>
+                                    <constraint firstItem="OVP-Vm-3zo" firstAttribute="leading" secondItem="Q0K-vC-r8G" secondAttribute="leading" id="vfP-dV-BM9"/>
+                                </constraints>
+                            </view>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="BWl-mi-Y4E">
+                                <rect key="frame" x="34.5" y="738" width="345" height="53"/>
+                                <color key="pageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" red="1" green="0.57647058819999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3TK-Rf-TZm">
+                                <rect key="frame" x="34.5" y="801" width="345" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGx-8F-vEY" customClass="CustomWhiteBacKButton" customModule="CuBa_Practice" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Prev"/>
+                                        <connections>
+                                            <action selector="onClickOfPrevButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="GwW-5O-enw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vF-fx-m7M" customClass="CustomWhiteBacKButton" customModule="CuBa_Practice" customModuleProvider="target">
+                                        <rect key="frame" x="182.5" y="0.0" width="162.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Next"/>
+                                        <connections>
+                                            <action selector="onClickOfNextButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="VOX-zl-5GJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="PurpleColor"/>
+                        <constraints>
+                            <constraint firstItem="3TK-Rf-TZm" firstAttribute="trailing" secondItem="BWl-mi-Y4E" secondAttribute="trailing" id="6q4-ZP-6sE"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="3TK-Rf-TZm" secondAttribute="bottom" constant="30" id="C4B-Ky-w2F"/>
+                            <constraint firstItem="Q0K-vC-r8G" firstAttribute="top" secondItem="X7D-Xs-ZLu" secondAttribute="bottom" constant="32" id="FUx-PP-Ie8"/>
+                            <constraint firstItem="BWl-mi-Y4E" firstAttribute="trailing" secondItem="Q0K-vC-r8G" secondAttribute="trailing" id="H4S-dv-l7D"/>
+                            <constraint firstItem="X7D-Xs-ZLu" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.314732" id="MHa-3c-8mC"/>
+                            <constraint firstItem="Q0K-vC-r8G" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="aUh-4O-G0Z"/>
+                            <constraint firstItem="3TK-Rf-TZm" firstAttribute="top" secondItem="BWl-mi-Y4E" secondAttribute="bottom" constant="10" id="hNo-S4-3xL"/>
+                            <constraint firstItem="BWl-mi-Y4E" firstAttribute="top" secondItem="Q0K-vC-r8G" secondAttribute="bottom" constant="40" id="kNr-RF-nnx"/>
+                            <constraint firstItem="BWl-mi-Y4E" firstAttribute="leading" secondItem="Q0K-vC-r8G" secondAttribute="leading" id="ljV-A5-oTx"/>
+                            <constraint firstItem="X7D-Xs-ZLu" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="mSR-kL-XsI"/>
+                            <constraint firstItem="X7D-Xs-ZLu" firstAttribute="top" relation="lessThanOrEqual" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="92" id="oQt-2I-J9J"/>
+                            <constraint firstItem="3TK-Rf-TZm" firstAttribute="leading" secondItem="BWl-mi-Y4E" secondAttribute="leading" id="rME-6n-KP8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="5oh-fn-M3W"/>
+                    <connections>
+                        <outlet property="cardView" destination="Q0K-vC-r8G" id="NgY-h9-f9y"/>
+                        <outlet property="collectionView" destination="OVP-Vm-3zo" id="eh6-di-BOU"/>
+                        <outlet property="nextBtn" destination="7vF-fx-m7M" id="VWC-Md-ha7"/>
+                        <outlet property="pageControl" destination="BWl-mi-Y4E" id="Ad8-Ws-6ha"/>
+                        <outlet property="prevBtn" destination="dGx-8F-vEY" id="P10-o4-uD7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="65.625"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cOv-rz-OtV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="L21-rv-hQ0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Sgq-4X-fz8">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="BxL-3U-hZO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sCj-9W-Jug" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="65.625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="OnBoarding_Image" width="375" height="282"/>
+        <namedColor name="NeutralColorN100">
+            <color red="0.47843137254901963" green="0.52549019607843139" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NeutralLabelN800">
+            <color red="0.090196078431372548" green="0.16862745098039217" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PurpleColor">
+            <color red="0.32156862745098042" green="0.2627450980392157" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

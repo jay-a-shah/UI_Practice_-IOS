@@ -25,4 +25,9 @@ extension UIViewController {
         @objc func dismissKeyboard() {
             view.endEditing(true)
         }
+    
+    func turnOnSwipeToBack() {
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+        }
 }

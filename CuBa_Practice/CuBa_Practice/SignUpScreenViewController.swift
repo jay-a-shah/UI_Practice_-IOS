@@ -8,8 +8,8 @@
 import UIKit
 
 class SignUpScreenViewController: UIViewController {
-
-
+    
+    
     @IBOutlet weak var businessTextField: BuisnessUrlTextField!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var passwordTextField: PasswordUITextField!
@@ -27,24 +27,27 @@ class SignUpScreenViewController: UIViewController {
         self.hideKeyboardWhenTappedAround(viewController: self)
     }
     @objc fileprivate func keyboardWillShow(notification:NSNotification) {
-            guard let userInfo = notification.userInfo else { return }
-            var keyboardFrame:CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
-            keyboardFrame = self.view.convert(keyboardFrame, from: nil)
-            var contentInset:UIEdgeInsets = self.scrollView.contentInset
-            contentInset.bottom = keyboardFrame.size.height + 10
-            scrollView.contentInset = contentInset
-        }
-    @objc fileprivate func keyboardWillHide(notification:NSNotification) {
-            let contentInset:UIEdgeInsets = UIEdgeInsets.zero
-            scrollView.contentInset = contentInset
-        }
-    @IBAction func onClickOFAlreadyHaveAnAccountBtn(_ sender: Any) {
-        makealert(message: "Already Have an Account Please Sign In")
+        guard let userInfo = notification.userInfo else { return }
+        var keyboardFrame:CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
+        var contentInset:UIEdgeInsets = self.scrollView.contentInset
+        contentInset.bottom = keyboardFrame.size.height + 10
+        scrollView.contentInset = contentInset
     }
-    //    @IBAction func signUpAction(_ sender: UIButton) {
+    @objc fileprivate func keyboardWillHide(notification:NSNotification) {
+        let contentInset:UIEdgeInsets = UIEdgeInsets.zero
+        scrollView.contentInset = contentInset
+    }
+    @IBAction func onClickOFAlreadyHaveAnAccountBtn(_ sender: Any) {
+        if let signInVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:"signInViewController" ) as? SignInViewController {
+            self.navigationController?.pushViewController(signInVC, animated: true)
+        }
+    }
+}
+//    @IBAction func signUpAction(_ sender: UIButton) {
 //        makealert(Message: "Sign Up Button Is Clicked")
 //    }
-}
+
 extension SignUpScreenViewController: UITextFieldDelegate{
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
