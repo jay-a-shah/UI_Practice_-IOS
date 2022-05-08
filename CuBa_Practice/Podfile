@@ -1,0 +1,20 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'CuBa_Practice' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+pod 'R.swift'
+  # Pods for CuBa_Practice
+
+  target 'CuBa_PracticeTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'CuBa_PracticeUITests' do
+    # Pods for testing
+  end
+
+end
