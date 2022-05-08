@@ -51,6 +51,7 @@
 		F1D102B9281BEA5F00DD2C0D /* UserNameTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D102B8281BEA5F00DD2C0D /* UserNameTextField.swift */; };
 		F1D102BE281C0AE000DD2C0D /* PasswordUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D102BD281C0AE000DD2C0D /* PasswordUITextField.swift */; };
 		F1F27A792827EE40006729A2 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F27A782827EE40006729A2 /* R.generated.swift */; };
+		F1F27A802827F2B5006729A2 /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F27A7F2827F2B5006729A2 /* Identifiers.swift */; };
 		FAC74EB37FBCEA60998FD533 /* Pods_CuBa_Practice_CuBa_PracticeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF7A96C60CD999FFEAEA6D25 /* Pods_CuBa_Practice_CuBa_PracticeUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -127,6 +128,7 @@
 		F1D102B8281BEA5F00DD2C0D /* UserNameTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameTextField.swift; sourceTree = "<group>"; };
 		F1D102BD281C0AE000DD2C0D /* PasswordUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordUITextField.swift; sourceTree = "<group>"; };
 		F1F27A782827EE40006729A2 /* R.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		F1F27A7F2827F2B5006729A2 /* Identifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +259,7 @@
 		F19B186D281BA6050061EEDC /* CuBa_Practice */ = {
 			isa = PBXGroup;
 			children = (
+				F1F27A7E2827F280006729A2 /* Helper Class */,
 				F1F27A782827EE40006729A2 /* R.generated.swift */,
 				F19788E22823A42500CFCE07 /* OnBoarding Screen */,
 				F15CB9062822872E00032101 /* User Profile */,
@@ -336,6 +339,14 @@
 				F1D102B7281BE67600DD2C0D /* DMSans-Italic.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		F1F27A7E2827F280006729A2 /* Helper Class */ = {
+			isa = PBXGroup;
+			children = (
+				F1F27A7F2827F2B5006729A2 /* Identifiers.swift */,
+			);
+			path = "Helper Class";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -625,6 +636,7 @@
 				F19B1873281BA6050061EEDC /* ViewController.swift in Sources */,
 				F19B186F281BA6050061EEDC /* AppDelegate.swift in Sources */,
 				F19788EC2823B36D00CFCE07 /* OnBoardingScreenCell.swift in Sources */,
+				F1F27A802827F2B5006729A2 /* Identifiers.swift in Sources */,
 				F15CB90F2822948E00032101 /* RoundedCustomUIView.swift in Sources */,
 				F15CB9172822BF7100032101 /* ModelClass.swift in Sources */,
 				F1D102AF281BC72300DD2C0D /* ColorFile.swift in Sources */,

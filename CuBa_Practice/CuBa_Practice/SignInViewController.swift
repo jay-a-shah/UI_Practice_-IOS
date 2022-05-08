@@ -23,7 +23,7 @@ class SignInViewController: UIViewController {
         hideKeyboardWhenTappedAround(viewController: self)
     }
     @IBAction func onClickOfSignInBtn(_ sender: UIButton) {
-        if let userProfileVC = UIStoryboard(name: "UserProfile", bundle: nil).instantiateViewController(withIdentifier: "userProfileViewController" ) as? UserProfileViewController {
+        if let userProfileVC = UIStoryboard(name: "UserProfile", bundle: nil).instantiateViewController(withIdentifier: Identifiers.userProfileViewController.rawValue) as? UserProfileViewController {
             self.navigationController?.pushViewController(userProfileVC, animated: true)
                 }
             }
