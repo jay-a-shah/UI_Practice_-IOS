@@ -26,10 +26,15 @@ class UserProfileViewController: UIViewController {
     
 }
 extension UserProfileViewController: UITableViewDelegate {
-//
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//
-//    }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 25))
+        let header = UILabel(frame: CGRect(x: 33, y: 65, width: tableView.frame.width, height: 20))
+        header.font = UIFont(name: "DMSans-Bold", size: 14)
+        header.textColor = UIColor.darkGray
+        header.text = userProfileValues[section].headerName
+        headerView.addSubview(header)
+        return headerView
+    }
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         if let header = view as? UITableViewHeaderFooterView {
@@ -45,13 +50,14 @@ extension UserProfileViewController: UITableViewDataSource {
         return userProfileValues[section].userProfileDetails.count
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return userProfileValues[section].headerName
-    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? UserProfileCell{
             cell.mainHeading.text = userProfileValues[indexPath.section].userProfileDetails[indexPath.row].header
             cell.subHeading.text = userProfileValues[indexPath.section].userProfileDetails[indexPath.row].info
+            let dividerView = UIView(frame: CGRect(x: 0, y: cell.bounds.maxY, width: cell.bounds.width, height: 2))
+            dividerView.translatesAutoresizingMaskIntoConstraints  = false
+            dividerView.backgroundColor = UIColor.DarkPurple
+            cell.contentView.addSubview(dividerView)
        return cell
         }
         return UITableViewCell()
@@ -65,6 +71,6 @@ extension UserProfileViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
