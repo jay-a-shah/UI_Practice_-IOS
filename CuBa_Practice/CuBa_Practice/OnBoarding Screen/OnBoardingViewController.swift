@@ -6,7 +6,7 @@
 //
 
 import UIKit
-protocol makingAlert: AnyObject{
+protocol MakingAlert: AnyObject{
     func sendAlert(message: String)
 }
 
@@ -48,22 +48,6 @@ class OnBoardingViewController: UIViewController {
         turnOnSwipeToBack()
         prevBtn.isHidden = true
     }
-    @IBAction func onClickOfNextButton(_ sender: UIButton) {
-        if(page != pageControlSlides.count - 1){
-            page += 1
-            let indexPath = IndexPath(item: page, section: 0)
-            collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-        }else{
-            if let signIn = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "signInViewController" ) as? SignInViewController {
-                self.navigationController?.pushViewController(signIn, animated: true)
-            }
-        }
-    }
-    @IBAction func onClickOfPrevButton(_ sender: UIButton) {
-        page -= 1
-        let indexPath = IndexPath(item: page, section: 0)
-        collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-    }
 }
 
 //MARK: - UICollectionViewDelegate
@@ -79,14 +63,13 @@ extension OnBoardingViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? OnBoardingScreenCell {
-            cell.configureCell(slide: pageControlSlides[indexPath.row])
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifiers.tableViewCell.rawValue, for: indexPath) as? OnBoardingScreenCell {
+            cell.configureCell(slide: pageControlSlides[indexPath.row], pageNumber: indexPath.row)
             cell.displayAlert = self
             return cell
         }
         return UICollectionViewCell()
     }
-    
 }
 
 //MARK: - Custom Function
@@ -98,12 +81,9 @@ extension OnBoardingViewController {
     }
 }
 
+//MARK: - UICollectionViewDelegateFlowLayout
 extension OnBoardingViewController: UICollectionViewDelegateFlowLayout {
-    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
-//    }
-    
+
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let width = scrollView.frame.width
         page = Int(scrollView.contentOffset.x/width)
@@ -111,8 +91,31 @@ extension OnBoardingViewController: UICollectionViewDelegateFlowLayout {
     
 }
 
-extension OnBoardingViewController: makingAlert {
+//MARK: - makingAlert Delegate
+extension OnBoardingViewController: MakingAlert {
     func sendAlert(message: String) {
         self.makealert(message: message)
+    }
+}
+
+//MARK: - Outlets Action
+extension OnBoardingViewController {
+    
+    @IBAction func onClickOfNextButton(_ sender: UIButton) {
+        if(page != pageControlSlides.count - 1){
+            page += 1
+            let indexPath = IndexPath(item: page, section: 0)
+            collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+        }else{
+            if let signIn = UIStoryboard(name: Identifiers.mainStoryboard.rawValue , bundle: nil).instantiateViewController(withIdentifier: Identifiers.signInViewController.rawValue ) as? SignInViewController {
+                self.navigationController?.pushViewController(signIn, animated: true)
+            }
+        }
+    }
+    
+    @IBAction func onClickOfPrevButton(_ sender: UIButton) {
+        page -= 1
+        let indexPath = IndexPath(item: page, section: 0)
+        collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
     }
 }

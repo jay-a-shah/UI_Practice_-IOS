@@ -9,4 +9,7 @@ import Foundation
 enum Identifiers: String {
     case signInViewController = "signInViewController"
     case userProfileViewController = "userProfileViewController"
+    case tableViewCell = "cell"
+    case mainStoryboard = "Main"
+    case userProfileStoryboard = "UserProfile"
 }

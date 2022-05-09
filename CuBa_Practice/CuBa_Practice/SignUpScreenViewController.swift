@@ -9,12 +9,12 @@ import UIKit
 
 class SignUpScreenViewController: UIViewController {
     
-    
     @IBOutlet weak var businessTextField: BuisnessUrlTextField!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var passwordTextField: PasswordUITextField!
     @IBOutlet weak var emailTextField: EmailTextField!
     @IBOutlet weak var userNameTextField: UserNameTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         passwordTextField.delegate = self
@@ -39,14 +39,11 @@ class SignUpScreenViewController: UIViewController {
         scrollView.contentInset = contentInset
     }
     @IBAction func onClickOFAlreadyHaveAnAccountBtn(_ sender: Any) {
-        if let signInVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:"signInViewController" ) as? SignInViewController {
+        if let signInVC = UIStoryboard(name: Identifiers.mainStoryboard.rawValue, bundle: nil).instantiateViewController(withIdentifier:Identifiers.signInViewController.rawValue ) as? SignInViewController {
             self.navigationController?.pushViewController(signInVC, animated: true)
         }
     }
 }
-//    @IBAction func signUpAction(_ sender: UIButton) {
-//        makealert(Message: "Sign Up Button Is Clicked")
-//    }
 
 extension SignUpScreenViewController: UITextFieldDelegate{
     

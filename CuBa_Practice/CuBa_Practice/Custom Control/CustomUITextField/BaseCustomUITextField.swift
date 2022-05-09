@@ -97,6 +97,5 @@ class BaseCustomUITextField: UITextField {
         self.rightViewMode = .always
         self.rightView = btnView
     }
-   
 }
 

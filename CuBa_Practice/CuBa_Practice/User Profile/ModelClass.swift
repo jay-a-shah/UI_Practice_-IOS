@@ -11,6 +11,7 @@ struct UserProfileData {
     let headerName: String?
     let userProfileDetails: [UserDetails]
 }
+
 struct UserDetails {
     let header: String?
     let info: String?

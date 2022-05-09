@@ -6,12 +6,10 @@
       "scale" : "1x"
     },
     {
-      "filename" : "Icon_Dots-1.pdf",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Icon_Dots-2.pdf",
       "idiom" : "universal",
       "scale" : "3x"
     }
@@ -19,5 +17,8 @@
   "info" : {
     "author" : "xcode",
     "version" : 1
+  },
+  "properties" : {
+    "template-rendering-intent" : "original"
   }
 }
