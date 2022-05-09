@@ -20,13 +20,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Iq-xa-JWL" userLabel="TopView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="162.33333333333334"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon_Dots" translatesAutoresizingMaskIntoConstraints="NO" id="EjR-2Y-5pL">
-                                        <rect key="frame" x="318" y="60" width="22" height="22"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="22" id="KbR-2x-hdg"/>
-                                            <constraint firstAttribute="height" constant="22" id="YKe-ur-Hmq"/>
-                                        </constraints>
-                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lrg-Ji-S7f" userLabel="BarcodeBtn">
                                         <rect key="frame" x="36" y="61" width="22" height="22"/>
                                         <constraints>
@@ -39,13 +32,25 @@
                                             <action selector="onClickOfBarcodeButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="C3P-gH-uNC"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nfe-39-jpI">
+                                        <rect key="frame" x="318" y="60" width="22" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="22" id="bqP-Rn-Yg9"/>
+                                            <constraint firstAttribute="height" constant="22" id="k5R-AH-jTx"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="Icon_Dots"/>
+                                        <connections>
+                                            <action selector="onClickOfThreeDots:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Hyu-Za-rrE"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" name="lightPurple"/>
                                 <constraints>
-                                    <constraint firstItem="EjR-2Y-5pL" firstAttribute="top" secondItem="5Iq-xa-JWL" secondAttribute="top" constant="60" id="50x-S0-OfG"/>
+                                    <constraint firstItem="Nfe-39-jpI" firstAttribute="top" secondItem="5Iq-xa-JWL" secondAttribute="top" constant="60" id="3wD-hg-fVr"/>
                                     <constraint firstItem="lrg-Ji-S7f" firstAttribute="top" secondItem="5Iq-xa-JWL" secondAttribute="top" constant="61" id="Bdm-cp-qFU"/>
+                                    <constraint firstAttribute="trailing" secondItem="Nfe-39-jpI" secondAttribute="trailing" constant="35" id="abK-Oc-OKi"/>
                                     <constraint firstItem="lrg-Ji-S7f" firstAttribute="leading" secondItem="5Iq-xa-JWL" secondAttribute="leading" constant="36" id="gqo-wn-QZP"/>
-                                    <constraint firstAttribute="trailing" secondItem="EjR-2Y-5pL" secondAttribute="trailing" constant="35" id="jTf-CC-SyP"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hab-QZ-P7c" customClass="RoundedCustomUIView" customModule="CuBa_Practice" customModuleProvider="target">
@@ -109,6 +114,7 @@
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="LFv-Pn-MEx">
                                         <rect key="frame" x="0.0" y="139.33333333333334" width="375" height="418.33333333333326"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="separatorColor" name="NeutralN20"/>
                                         <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="77" id="7kb-Ap-OkI" customClass="UserProfileCell" customModule="CuBa_Practice" customModuleProvider="target">
@@ -153,6 +159,7 @@
                                                         <constraint firstAttribute="trailing" secondItem="sbT-Lz-KdK" secondAttribute="trailing" constant="35" id="yDo-Oi-cC2"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <inset key="separatorInset" minX="35" minY="0.0" maxX="35" maxY="0.0"/>
                                                 <connections>
                                                     <outlet property="mainHeading" destination="O9D-bR-xPn" id="UEC-wP-Byj"/>
                                                     <outlet property="subHeading" destination="WoB-cd-pLL" id="st9-Wg-0C2"/>

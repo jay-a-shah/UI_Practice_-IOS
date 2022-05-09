@@ -6,6 +6,9 @@
 //
 
 import UIKit
+protocol makingAlert: AnyObject{
+    func sendAlert(message: String)
+}
 
 class OnBoardingViewController: UIViewController {
     
@@ -44,7 +47,6 @@ class OnBoardingViewController: UIViewController {
         setData()
         turnOnSwipeToBack()
         prevBtn.isHidden = true
-        
     }
     @IBAction func onClickOfNextButton(_ sender: UIButton) {
         if(page != pageControlSlides.count - 1){
@@ -78,7 +80,8 @@ extension OnBoardingViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? OnBoardingScreenCell {
-            cell.configureCell(slide: pageControlSlides[indexPath.row], viewController: self)
+            cell.configureCell(slide: pageControlSlides[indexPath.row])
+            cell.displayAlert = self
             return cell
         }
         return UICollectionViewCell()
@@ -106,4 +109,10 @@ extension OnBoardingViewController: UICollectionViewDelegateFlowLayout {
         page = Int(scrollView.contentOffset.x/width)
     }
     
+}
+
+extension OnBoardingViewController: makingAlert {
+    func sendAlert(message: String) {
+        self.makealert(message: message)
+    }
 }

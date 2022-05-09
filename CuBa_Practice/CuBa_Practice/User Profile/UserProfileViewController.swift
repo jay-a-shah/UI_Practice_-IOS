@@ -18,21 +18,26 @@ class UserProfileViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
        turnOnSwipeToBack()
-        // Do any additional setup after loading the view.
+        
     }
     @IBAction func onClickOfBarcodeButton(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
+    }
+    @IBAction func onClickOfThreeDots(_ sender: UIButton) {
+        makealert(message: "Clicked On There Dots")
     }
     
 }
 extension UserProfileViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 25))
-        let header = UILabel(frame: CGRect(x: 33, y: 65, width: tableView.frame.width, height: 20))
+        let header = UILabel(frame: CGRect(x: 33, y: 40, width: tableView.frame.width, height: 40))
         header.font = UIFont(name: "DMSans-Bold", size: 14)
         header.textColor = UIColor.darkGray
         header.text = userProfileValues[section].headerName
+        headerView.backgroundColor = UIColor.white
         headerView.addSubview(header)
+        
         return headerView
     }
     
@@ -54,11 +59,13 @@ extension UserProfileViewController: UITableViewDataSource {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? UserProfileCell{
             cell.mainHeading.text = userProfileValues[indexPath.section].userProfileDetails[indexPath.row].header
             cell.subHeading.text = userProfileValues[indexPath.section].userProfileDetails[indexPath.row].info
-            let dividerView = UIView(frame: CGRect(x: 0, y: cell.bounds.maxY, width: cell.bounds.width, height: 2))
-            dividerView.translatesAutoresizingMaskIntoConstraints  = false
-            dividerView.backgroundColor = UIColor.DarkPurple
-            cell.contentView.addSubview(dividerView)
-       return cell
+            let seprator = UIView()
+            let bottomBorder = CALayer()
+            bottomBorder.frame = CGRect(x: cell.contentView.frame.minX + 30, y: 62.0, width: cell.contentView.frame.size.width - 60, height: 1.0)
+            bottomBorder.backgroundColor = UIColor.lightGray.cgColor
+            seprator.layer.addSublayer(bottomBorder)
+            cell.contentView.addSubview(seprator)
+            return cell
         }
         return UITableViewCell()
     }
@@ -66,6 +73,7 @@ extension UserProfileViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 77
     }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return userProfileValues.count
     }

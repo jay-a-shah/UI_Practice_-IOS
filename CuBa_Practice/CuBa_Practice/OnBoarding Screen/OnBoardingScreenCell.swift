@@ -9,7 +9,7 @@ import UIKit
 
 class OnBoardingScreenCell: UICollectionViewCell {
     
-    var displayAlert: UIViewController?
+    var displayAlert: makingAlert?
     @IBOutlet weak var getStartedBtn: BaseCustomUIButton!
     @IBOutlet weak var subTitleLabel: LightGrayUILabel!
     @IBOutlet weak var titleLabel: DarkGrayUILabel!
@@ -17,14 +17,13 @@ class OnBoardingScreenCell: UICollectionViewCell {
     override class func awakeFromNib() {
         super.awakeFromNib()
     }
-    func configureCell(slide: OnBoardingModel, viewController: UIViewController) {
-        self.displayAlert = viewController
+    func configureCell(slide: OnBoardingModel) {
         titleLabel.text = slide.title
         subTitleLabel.text = slide.subTitle
         getStartedBtn.setTitle(slide.btnTitle, for: .normal)
     }
     @IBAction func onClickOfGetStartedBtn(_ sender: BaseCustomUIButton) {
-        displayAlert?.makealert(message: "Get Started is Clicked")
-        
+        displayAlert?.sendAlert(message: "Get Started Button is Clicked" )
     }
 }
+
