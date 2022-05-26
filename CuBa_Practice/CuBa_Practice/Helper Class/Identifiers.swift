@@ -12,4 +12,5 @@ enum Identifiers: String {
     case tableViewCell = "cell"
     case mainStoryboard = "Main"
     case userProfileStoryboard = "UserProfile"
+    case BaseUrl = "https://reqres.in/api/"
 }
