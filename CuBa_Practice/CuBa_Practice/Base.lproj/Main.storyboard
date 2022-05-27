@@ -129,7 +129,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                                 <connections>
-                                                    <action selector="onClickOfSignInBtn:" destination="7pc-oi-gzi" eventType="touchUpInside" id="9Yh-iH-SH8"/>
+                                                    <action selector="onClickOfBtnSignUp:" destination="g7e-uR-Cf4" eventType="touchUpInside" id="h78-UJ-YsF"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LXK-qY-VFU">
@@ -220,7 +220,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uYB-CH-C8y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="7pc-oi-gzi" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3241" y="29"/>
         </scene>

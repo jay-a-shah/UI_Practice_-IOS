@@ -6,43 +6,59 @@
 //
 
 import Foundation
-import QuartzCore
 
-class BaseViewModel: NSObject {
+enum RequestMethod: String {
+    case get = "GET"
+    case post = "POST"
+    case put = "PUT"
+    case delete = "DELETE"
+}
+enum TypeOfApi: String {
+    case login = "login"
+    case register = "register"
+}
+
+enum ApiError: Error {
+    case error(error: String)
+}
+
+struct ErrorSignUpModel: Error {
+    let error: String
+}
+
+class ApiService {
     
-    enum RequestMethod: String {
-        case get = "GET"
-        case post = "POST"
-        case put = "PUT"
-        case delete = "DELETE"
-    }
-    enum TypeOfApi: String {
-        case login = "login"
-        case register = "register"
-    }
-    
-    enum ApiError: Error {
-        case error(error: String)
-    }
-    
-    static func apiCall<T: Codable>(_ url: String,method: RequestMethod,endPoint: TypeOfApi,responseDataType: T.Type,completionHandler: @escaping (Result<T, ApiError>) -> Void) {
-        guard let url = URL(string: Identifiers.BaseUrl.rawValue + endPoint.rawValue) else { return }
+    static func apiCall<T>(method: String, endPoint: String, body: Data ,responseBody:T.Type, completionHandler: @escaping (Swift.Result<T, ErrorSignUpModel>) -> Void) where T: Codable {
+        guard let url = URL(string: Identifiers.BaseUrl.rawValue + endPoint) else { return }
         var request = URLRequest(url: url)
-        request.httpMethod = method.rawValue
+        request.httpMethod = method
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
-       
+        request.httpBody = body
         URLSession.shared.dataTask(with: request) { data, urlResponse, error in
             if let error = error {
-                completionHandler(.failure(ApiError.error(error:error.localizedDescription)))
+                completionHandler(.failure(ErrorSignUpModel(error: "Api Failure")))
                 return
             }
             guard let responseData = data else{ return }
-            guard let responseData = try? JSONDecoder().decode(responseDataType.self, from: responseData) else { return }
+            if let responseCode = urlResponse as? HTTPURLResponse{
+                if responseCode.statusCode == 200 {
+                    print("Success")
+                    guard let responseData = try? JSONDecoder().decode(T.self, from: responseData) else { return }
                     completionHandler(.success(responseData))
-                  }.resume()
-        }
-        
+                } else {
+                    print("Error")
+                    guard let failureData = try? JSONDecoder().decode(ErrorModel.self, from: responseData) else { return }
+                    completionHandler(.failure(ErrorSignUpModel(error: failureData.error)))
+                }
+            }
+           
+        }.resume()
     }
     
+    
+}
+
+
+
 

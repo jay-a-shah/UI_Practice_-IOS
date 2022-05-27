@@ -13,6 +13,7 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var passwordTextField: PasswordUITextField!
     @IBOutlet weak var userNameTextField: EmailTextField!
+    let viewModel = SignInViewModel()
     
     //MARK: - View LifeCycle
     override func viewDidLoad() {
@@ -24,6 +25,7 @@ class SignInViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         hideKeyboardWhenTappedAround(viewController: self)
+        bindViewModel()
     }
 }
 
@@ -69,8 +71,34 @@ extension SignInViewController {
 extension SignInViewController {
     
     @IBAction func onClickOfSignInBtn(_ sender: UIButton) {
-        if let userProfileVC = UIStoryboard(name: Identifiers.userProfileStoryboard.rawValue, bundle: nil).instantiateViewController(withIdentifier: Identifiers.userProfileViewController.rawValue) as? UserProfileViewController {
-            self.navigationController?.pushViewController(userProfileVC, animated: true)
-        }
+        viewModel.validateData(email: userNameTextField.text ?? "", password: passwordTextField.text ??  "")
+        
     }
 }
+
+//MARK: - Bind ViewModel
+extension SignInViewController {
+    
+    func bindViewModel() {
+        let user = SignInModel(email: userNameTextField.text ?? "", password: passwordTextField.text ?? "")
+        viewModel.onValidationError = {error in
+            self.makealert(message: error)
+        }
+        viewModel.onLoginResponseData = { response in
+            DispatchQueue.main.async {
+                self.makealert(message: response.token)
+                if let userProfileVC = UIStoryboard(name: Identifiers.userProfileStoryboard.rawValue, bundle: nil).instantiateViewController(withIdentifier: Identifiers.userProfileViewController.rawValue) as? UserProfileViewController {
+                    self.navigationController?.pushViewController(userProfileVC, animated: true)
+                }
+            }
+        }
+        viewModel.onLoginFailure = {
+            DispatchQueue.main.async {
+                self.makealert(message: "Failure Of Api")
+            }
+        }
+        
+        
+    }
+}
+

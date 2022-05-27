@@ -14,6 +14,7 @@ class SignUpScreenViewController: UIViewController {
     @IBOutlet weak var passwordTextField: PasswordUITextField!
     @IBOutlet weak var emailTextField: EmailTextField!
     @IBOutlet weak var userNameTextField: UserNameTextField!
+    let viewModel = SignUpViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +25,11 @@ class SignUpScreenViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-        self.hideKeyboardWhenTappedAround(viewController: self)
+        hideKeyboardWhenTappedAround(viewController: self)
+        bindViewModel()
+    }
+    @IBAction func onClickOfBtnSignUp(_ sender: Any) {
+        viewModel.validateData(email: emailTextField.text ?? "", password: passwordTextField.text ?? "", userName: userNameTextField.text ?? "", buisnessUrl: businessTextField.text ?? "")
     }
     @objc fileprivate func keyboardWillShow(notification:NSNotification) {
         guard let userInfo = notification.userInfo else { return }
@@ -61,5 +66,33 @@ extension SignUpScreenViewController: UITextFieldDelegate{
             break
         }
         return true
+    }
+}
+
+extension SignUpScreenViewController {
+    
+    func bindViewModel() {
+        let user = SignUpModel(email: emailTextField.text ?? "", password: passwordTextField.text ?? "")
+        viewModel.onValidationError = {error in
+            self.makealert(message: error)
+        }
+        viewModel.onLoginSuccess = {
+            self.viewModel.onLoginResponseData = {response in
+                DispatchQueue.main.async {
+                    self.makealert(message: String(response.id) + response.token )
+                    if let userProfileVC = UIStoryboard(name: Identifiers.userProfileStoryboard.rawValue, bundle: nil).instantiateViewController(withIdentifier: Identifiers.userProfileViewController.rawValue) as? UserProfileViewController {
+                        self.navigationController?.pushViewController(userProfileVC, animated: true)
+                    }
+                }
+            }
+        }
+        viewModel.onLoginFailure = {
+            self.viewModel.onLoginFailureData = {failure in
+                DispatchQueue.main.async {
+                    self.makealert(message: failure.error)
+                }
+            }
+        }
+        
     }
 }
