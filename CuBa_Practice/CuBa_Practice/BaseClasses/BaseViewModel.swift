@@ -32,8 +32,8 @@ class ApiService {
         guard let url = URL(string: Identifiers.BaseUrl.rawValue + endPoint) else { return }
         var request = URLRequest(url: url)
         request.httpMethod = method
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        request.addValue(Constants.headerValue, forHTTPHeaderField: Constants.headerValueContentType)
+        request.addValue(Constants.headerValue, forHTTPHeaderField: Constants.headerValueAccept)
         request.httpBody = body
         URLSession.shared.dataTask(with: request) { data, urlResponse, error in
             if let error = error {
