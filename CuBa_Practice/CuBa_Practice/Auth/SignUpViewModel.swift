@@ -28,21 +28,16 @@ class SignUpViewModel: NSObject {
     }
     
     func apiCallSignUpWithUrlSession(_ email: String, _ password: String, _ userName: String, _ buisnessUrl:String) {
-        let user = SignUpModel(email: email, password: password)
-        guard let data = try? JSONEncoder().encode(user) else {
-            print("Error: Trying to convert model to JSON data")
-            return
-        }
-        ApiService.apiCall(method: RequestMethod.post.rawValue, endPoint: TypeOfApi.register.rawValue, body: data,responseBody: SignUpResponseModel.self) { [weak self]result in
-            guard let uSelf = self else {return}
+        let user = SignUpModel(email: email, password: password, buisnessUrl: buisnessUrl, userName: userName)
+        ApiService.apiCallAlamofire(baseUrl: Identifiers.BaseUrl.rawValue, endPoint: TypeOfApi.register.rawValue, method: .post, parameters: user.requestParams(), responseClass: SignUpResponseModel.self) { result in
             switch result {
             case .success(let data):
-                uSelf.onLoginSuccess?()
-                uSelf.onLoginResponseData?(SignUpResponseModel(id: data.id, token: data.token))
-                
+                self.onLoginSuccess?()
+                self.onLoginResponseData?(SignUpResponseModel(id: data.id, token: data.token))
+                break
             case .failure(let error):
-                uSelf.onLoginFailure?()
-                uSelf.onLoginFailureData?(ErrorSignUpModel(error: error.error))
+                self.onLoginFailure?()
+                self.onLoginFailureData?(ErrorSignUpModel(error: error.error))
             }
         }
         

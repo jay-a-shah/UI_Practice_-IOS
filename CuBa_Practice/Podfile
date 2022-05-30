@@ -6,6 +6,7 @@ target 'CuBa_Practice' do
   use_frameworks!
 
 pod 'R.swift'
+pod 'Alamofire'
   # Pods for CuBa_Practice
 
   target 'CuBa_PracticeTests' do

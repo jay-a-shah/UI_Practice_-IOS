@@ -11,4 +11,5 @@ struct Constants {
     static let headerValue = "application/json"
     static let headerValueContentType = "Content-Type"
     static let headerValueAccept = "Accept"
+    static let successResponseCode = 200
 }

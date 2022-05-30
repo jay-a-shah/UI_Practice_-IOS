@@ -13,6 +13,7 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var passwordTextField: PasswordUITextField!
     @IBOutlet weak var userNameTextField: EmailTextField!
+    @IBOutlet weak var signInBtn: UIView!
     let viewModel = SignInViewModel()
     
     //MARK: - View LifeCycle
@@ -72,7 +73,7 @@ extension SignInViewController {
     
     @IBAction func onClickOfSignInBtn(_ sender: UIButton) {
         viewModel.validateData(email: userNameTextField.text ?? "", password: passwordTextField.text ??  "")
-        
+    
     }
 }
 
@@ -86,15 +87,16 @@ extension SignInViewController {
         }
         viewModel.onLoginResponseData = { response in
             DispatchQueue.main.async {
+                
                 self.makealert(message: response.token)
                 if let userProfileVC = UIStoryboard(name: Identifiers.userProfileStoryboard.rawValue, bundle: nil).instantiateViewController(withIdentifier: Identifiers.userProfileViewController.rawValue) as? UserProfileViewController {
                     self.navigationController?.pushViewController(userProfileVC, animated: true)
                 }
             }
         }
-        viewModel.onLoginFailure = {
+        viewModel.onLoginFailureData = {failure in
             DispatchQueue.main.async {
-                self.makealert(message: "Failure Of Api")
+                self.makealert(message: failure.error)
             }
         }
         

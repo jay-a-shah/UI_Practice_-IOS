@@ -10,6 +10,12 @@ import Foundation
 struct SignInModel: Codable {
     let email: String
     let password: String
+    func requestParams() -> [String:Any]{
+        var user : [String:Any] = [:]
+        user["email"] = email
+        user["password"] = password
+        return user
+    }
 }
 
 struct SignInResponseModel: Codable {

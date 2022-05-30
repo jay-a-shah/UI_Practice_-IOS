@@ -72,7 +72,7 @@ extension SignUpScreenViewController: UITextFieldDelegate{
 extension SignUpScreenViewController {
     
     func bindViewModel() {
-        let user = SignUpModel(email: emailTextField.text ?? "", password: passwordTextField.text ?? "")
+        let user = SignUpModel(email: emailTextField.text ?? "", password: passwordTextField.text ?? "", buisnessUrl: businessTextField.text ?? "", userName: userNameTextField.text ?? "")
         viewModel.onValidationError = {error in
             self.makealert(message: error)
         }

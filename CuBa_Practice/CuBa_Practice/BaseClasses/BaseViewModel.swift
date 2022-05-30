@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 
 enum RequestMethod: String {
     case get = "GET"
@@ -28,10 +29,11 @@ struct ErrorSignUpModel: Error {
 
 class ApiService {
     
-    static func apiCall<T>(method: String, endPoint: String, body: Data ,responseBody:T.Type, completionHandler: @escaping (Swift.Result<T, ErrorSignUpModel>) -> Void) where T: Codable {
-        guard let url = URL(string: Identifiers.BaseUrl.rawValue + endPoint) else { return }
+    static func apiCallUrlSession<T>(method: RequestMethod, endPoint: TypeOfApi, body: Data ,responseBody:T.Type, completionHandler: @escaping (Swift.Result<T, ErrorSignUpModel>) -> Void) where T: Codable {
+        
+        guard let url = URL(string: Identifiers.BaseUrl.rawValue + endPoint.rawValue) else { return }
         var request = URLRequest(url: url)
-        request.httpMethod = method
+        request.httpMethod = method.rawValue
         request.addValue(Constants.headerValue, forHTTPHeaderField: Constants.headerValueContentType)
         request.addValue(Constants.headerValue, forHTTPHeaderField: Constants.headerValueAccept)
         request.httpBody = body
@@ -42,7 +44,7 @@ class ApiService {
             }
             guard let responseData = data else{ return }
             if let responseCode = urlResponse as? HTTPURLResponse{
-                if responseCode.statusCode == 200 {
+                if responseCode.statusCode == Constants.successResponseCode {
                     print("Success")
                     guard let responseData = try? JSONDecoder().decode(T.self, from: responseData) else { return }
                     completionHandler(.success(responseData))
@@ -52,11 +54,24 @@ class ApiService {
                     completionHandler(.failure(ErrorSignUpModel(error: failureData.error)))
                 }
             }
-           
+            
         }.resume()
     }
     
-    
+    static func apiCallAlamofire<T: Codable>(baseUrl: String, endPoint: String, method: HTTPMethod, parameters: Parameters, responseClass: T.Type, completionHandler: @escaping (Swift.Result<T, ErrorSignUpModel>) -> Void) {
+        let url = baseUrl + endPoint
+        AF.request(url, method: method, parameters: parameters, encoding: JSONEncoding.default, headers: [:]).response { (response) in
+            guard let data = response.data else { return }
+            do {
+                let result = try JSONDecoder().decode(responseClass.self, from: data)
+                completionHandler(.success(result))
+            }
+            catch {
+                guard let errors = try? JSONDecoder().decode(ErrorModel.self, from: data) else {return}
+                completionHandler(.failure(ErrorSignUpModel(error: errors.error)))
+            }
+        }
+    }
 }
 
 

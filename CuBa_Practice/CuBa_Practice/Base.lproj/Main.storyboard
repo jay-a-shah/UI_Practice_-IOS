@@ -383,6 +383,7 @@
                     <connections>
                         <outlet property="passwordTextField" destination="5YF-76-oKh" id="75E-D8-1H2"/>
                         <outlet property="scrollView" destination="rv3-Ph-gW4" id="raf-qd-q8N"/>
+                        <outlet property="signInBtn" destination="tRe-Mj-nsL" id="Q6K-pp-7kY"/>
                         <outlet property="userNameTextField" destination="7Og-cY-Z9k" id="Jy2-lA-9ds"/>
                     </connections>
                 </viewController>
