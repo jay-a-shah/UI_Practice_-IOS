@@ -19,14 +19,7 @@ class SignInViewController: UIViewController {
     //MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        userNameTextField.delegate = self
-        passwordTextField.delegate = self
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
-        passwordTextField.setUpButton(btnTitle: "Forgot?", action: #selector(pressed(_:)))
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-        hideKeyboardWhenTappedAround(viewController: self)
-        bindViewModel()
+        initialSetup()
     }
 }
 
@@ -73,7 +66,6 @@ extension SignInViewController {
     
     @IBAction func onClickOfSignInBtn(_ sender: UIButton) {
         viewModel.validateData(email: userNameTextField.text ?? "", password: passwordTextField.text ??  "")
-    
     }
 }
 
@@ -87,10 +79,10 @@ extension SignInViewController {
         }
         viewModel.onLoginResponseData = { response in
             DispatchQueue.main.async {
-                
-                self.makealert(message: response.token)
+                print(response.token)
                 if let userProfileVC = UIStoryboard(name: Identifiers.userProfileStoryboard.rawValue, bundle: nil).instantiateViewController(withIdentifier: Identifiers.userProfileViewController.rawValue) as? UserProfileViewController {
                     self.navigationController?.pushViewController(userProfileVC, animated: true)
+                    //self.navigationController?.popViewController(animated: true)
                 }
             }
         }
@@ -99,8 +91,28 @@ extension SignInViewController {
                 self.makealert(message: failure.error)
             }
         }
-        
-        
     }
 }
 
+//MARK: - Custom Functions
+extension SignInViewController {
+    
+    func loadData() {
+        userNameTextField.text = defaults.string(forKey: UserDefaultsKeys.email.rawValue)
+        passwordTextField.text = defaults.string(forKey: UserDefaultsKeys.password.rawValue)
+    }
+    
+    func initialSetup() {
+        userNameTextField.delegate = self
+        passwordTextField.delegate = self
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        passwordTextField.setUpButton(btnTitle: "Forgot?", action: #selector(pressed(_:)))
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        hideKeyboardWhenTappedAround(viewController: self)
+        bindViewModel()
+        if (defaults.bool(forKey: "loginCred")) {
+            loadData()
+        }
+    }
+}

@@ -13,4 +13,6 @@ enum Identifiers: String {
     case mainStoryboard = "Main"
     case userProfileStoryboard = "UserProfile"
     case BaseUrl = "https://reqres.in/api/"
+    case onBoardStoryboard = "OnBoardingScreen"
+    case onBoardingViewController = "onBoardingViewController"
 }

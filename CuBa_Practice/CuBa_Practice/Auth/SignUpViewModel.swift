@@ -14,6 +14,7 @@ class SignUpViewModel: NSObject {
     var onLoginFailure: (()->Void)?
     var onLoginResponseData: ((SignUpResponseModel)->Void)?
     var onLoginFailureData: ((ErrorSignUpModel)-> Void)?
+    var defaults = UserDefaults.standard
     
     func validateData(email: String, password: String, userName: String, buisnessUrl: String) {
         if email.isEmpty || password.isEmpty || userName.isEmpty || buisnessUrl.isEmpty {
@@ -33,6 +34,8 @@ class SignUpViewModel: NSObject {
             switch result {
             case .success(let data):
                 self.onLoginSuccess?()
+                self.defaults.set(email, forKey: UserDefaultsKeys.email.rawValue)
+                self.defaults.set(password, forKey: UserDefaultsKeys.password.rawValue)
                 self.onLoginResponseData?(SignUpResponseModel(id: data.id, token: data.token))
                 break
             case .failure(let error):

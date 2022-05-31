@@ -27,6 +27,11 @@ struct ErrorSignUpModel: Error {
     let error: String
 }
 
+enum UserDefaultsKeys: String {
+    case email = "emailKey"
+    case password = "passwordKey"
+}
+let defaults = UserDefaults.standard
 class ApiService {
     
     static func apiCallUrlSession<T>(method: RequestMethod, endPoint: TypeOfApi, body: Data ,responseBody:T.Type, completionHandler: @escaping (Swift.Result<T, ErrorSignUpModel>) -> Void) where T: Codable {

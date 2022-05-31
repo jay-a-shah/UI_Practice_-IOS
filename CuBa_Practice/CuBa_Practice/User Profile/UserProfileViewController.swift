@@ -22,7 +22,9 @@ class UserProfileViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         turnOnSwipeToBack()
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
+    
 }
 
 //MARK: - UITableViewDelegate
@@ -88,8 +90,24 @@ extension UserProfileViewController {
     @IBAction func onClickOfBarcodeButton(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
+    
     @IBAction func onClickOfThreeDots(_ sender: UIButton) {
-        makealert(message: "Clicked On There Dots")
+        customDialog(message: "Are you Sure You Want to Logout From this Wonderfull App")
+    }
+}
+
+extension UserProfileViewController {
+    
+    func customDialog(message: String){
+        let alert = UIAlertController(title: "UIAlertController", message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Logout", style: UIAlertAction.Style.default, handler: {(action: UIAlertAction) in
+            defaults.set(false, forKey: "isLoggedIn")
+            if let signInVC = UIStoryboard(name: Identifiers.mainStoryboard.rawValue, bundle: nil).instantiateViewController(withIdentifier:Identifiers.signInViewController.rawValue ) as? SignInViewController {
+            self.navigationController?.pushViewController(signInVC, animated: true)
+        }
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
 }

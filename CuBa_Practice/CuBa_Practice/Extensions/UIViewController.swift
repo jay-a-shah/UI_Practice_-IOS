@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 extension UIViewController {
+  
     
     func makealert(message: String){
              let alert = UIAlertController(title: "UIAlertController", message: message, preferredStyle: UIAlertController.Style.alert)
@@ -30,4 +31,14 @@ extension UIViewController {
         self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
         }
+    
+    func removeViewControllersFromBackStack() {
+        guard let navigationController = self.navigationController else { return }
+        var navigationArray = navigationController.viewControllers // To get all UIViewController stack as Array
+        let temp = navigationArray.last
+        navigationArray.removeAll()
+        navigationArray.append(temp!) //To remove all previous UIViewController except the last one
+        self.navigationController?.viewControllers = navigationArray
+    }
+   
 }

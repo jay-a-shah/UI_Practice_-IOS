@@ -45,7 +45,6 @@ class OnBoardingViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         setData()
-        turnOnSwipeToBack()
         prevBtn.isHidden = true
     }
 }
@@ -107,6 +106,7 @@ extension OnBoardingViewController {
             let indexPath = IndexPath(item: page, section: 0)
             collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
         }else{
+            UserDefaults.standard.set(true, forKey: "onBoardScreen")
             if let signIn = UIStoryboard(name: Identifiers.mainStoryboard.rawValue , bundle: nil).instantiateViewController(withIdentifier: Identifiers.signInViewController.rawValue ) as? SignInViewController {
                 self.navigationController?.pushViewController(signIn, animated: true)
             }

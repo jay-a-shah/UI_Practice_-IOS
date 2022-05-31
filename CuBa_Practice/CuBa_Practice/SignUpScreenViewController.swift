@@ -15,6 +15,7 @@ class SignUpScreenViewController: UIViewController {
     @IBOutlet weak var emailTextField: EmailTextField!
     @IBOutlet weak var userNameTextField: UserNameTextField!
     let viewModel = SignUpViewModel()
+    var Defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,7 +80,7 @@ extension SignUpScreenViewController {
         viewModel.onLoginSuccess = {
             self.viewModel.onLoginResponseData = {response in
                 DispatchQueue.main.async {
-                    self.makealert(message: String(response.id) + response.token )
+                    print(String(response.id) + response.token)
                     if let userProfileVC = UIStoryboard(name: Identifiers.userProfileStoryboard.rawValue, bundle: nil).instantiateViewController(withIdentifier: Identifiers.userProfileViewController.rawValue) as? UserProfileViewController {
                         self.navigationController?.pushViewController(userProfileVC, animated: true)
                     }

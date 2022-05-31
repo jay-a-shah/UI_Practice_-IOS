@@ -15,6 +15,7 @@ class SignInViewModel: NSObject {
     var onLoginFailure: (()->Void)?
     var onLoginResponseData: ((SignInResponseModel)->Void)?
     var onLoginFailureData: ((ErrorSignUpModel)-> Void)?
+    var defaults = UserDefaults.standard
     
     func validateData(email: String, password: String) {
         if email.isEmpty {
@@ -35,12 +36,18 @@ class SignInViewModel: NSObject {
         ApiService.apiCallAlamofire(baseUrl: Identifiers.BaseUrl.rawValue, endPoint: TypeOfApi.login.rawValue, method: .post, parameters: user.requestParams(), responseClass: SignInResponseModel.self) { result in
             switch result {
             case .success(let data):
+                settingUserDefaults()
                 self.onLoginResponseData?(SignInResponseModel(token: data.token))
                 break
             case .failure(let error):
                 self.onLoginFailureData?(ErrorSignUpModel(error: error.error))
             }
         }
-        
+        func settingUserDefaults() {
+            self.defaults.set(email, forKey: UserDefaultsKeys.email.rawValue)
+            self.defaults.set(password, forKey: UserDefaultsKeys.password.rawValue)
+            self.defaults.set(true, forKey: "isLoggedIn")
+            self.defaults.set(true, forKey: "loginCred")
+        }
     }
 }
