@@ -17,6 +17,7 @@ enum RequestMethod: String {
 enum TypeOfApi: String {
     case login = "login"
     case register = "register"
+    case userList = "users?page=2"
 }
 
 enum ApiError: Error {
@@ -63,9 +64,9 @@ class ApiService {
         }.resume()
     }
     
-    static func apiCallAlamofire<T: Codable>(baseUrl: String, endPoint: String, method: HTTPMethod, parameters: Parameters, responseClass: T.Type, completionHandler: @escaping (Swift.Result<T, ErrorSignUpModel>) -> Void) {
+    static func apiCallAlamofire<T: Codable>(baseUrl: String, endPoint: String, method: HTTPMethod, parameters: Parameters?, responseClass: T.Type, completionHandler: @escaping (Swift.Result<T, ErrorSignUpModel>) -> Void) {
         let url = baseUrl + endPoint
-        AF.request(url, method: method, parameters: parameters, encoding: JSONEncoding.default, headers: [:]).response { (response) in
+        AF.request(url, method: method, parameters: parameters, encoding: (parameters == nil)  ? URLEncoding.default : JSONEncoding.default, headers: [:]).response { (response) in
             guard let data = response.data else { return }
             do {
                 let result = try JSONDecoder().decode(responseClass.self, from: data)

@@ -8,49 +8,25 @@
 import UIKit
 
 class SignUpScreenViewController: BaseViewController {
-
+    
     //MARK: - Outlets
     @IBOutlet weak var businessTextField: BuisnessUrlTextField!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var passwordTextField: PasswordUITextField!
     @IBOutlet weak var emailTextField: EmailTextField!
     @IBOutlet weak var userNameTextField: UserNameTextField!
+    
+    //MARK: - Variables
     let viewModel = SignUpViewModel()
-
+    
+    //MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        passwordTextField.delegate = self
-        businessTextField.delegate = self
-        emailTextField.delegate = self
-        userNameTextField.delegate = self
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-        hideKeyboardWhenTappedAround(viewController: self)
-        bindViewModel()
-    }
-    @IBAction func onClickOfBtnSignUp(_ sender: Any) {
-        viewModel.validateData(email: emailTextField.text ?? "", password: passwordTextField.text ?? "", userName: userNameTextField.text ?? "", buisnessUrl: businessTextField.text ?? "")
-    }
-    @objc fileprivate func keyboardWillShow(notification:NSNotification) {
-        guard let userInfo = notification.userInfo else { return }
-        var keyboardFrame:CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
-        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
-        var contentInset:UIEdgeInsets = self.scrollView.contentInset
-        contentInset.bottom = keyboardFrame.size.height + 10
-        scrollView.contentInset = contentInset
-    }
-    @objc fileprivate func keyboardWillHide(notification:NSNotification) {
-        let contentInset:UIEdgeInsets = UIEdgeInsets.zero
-        scrollView.contentInset = contentInset
-    }
-    @IBAction func onClickOFAlreadyHaveAnAccountBtn(_ sender: Any) {
-        if let signInVC = UIStoryboard(name: Identifiers.mainStoryboard.rawValue, bundle: nil).instantiateViewController(withIdentifier:Identifiers.signInViewController.rawValue ) as? SignInViewController {
-            self.navigationController?.pushViewController(signInVC, animated: true)
-        }
+        initialSetup()
     }
 }
 
+//MARK: - UITextFieldDelegate
 extension SignUpScreenViewController: UITextFieldDelegate{
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -68,8 +44,10 @@ extension SignUpScreenViewController: UITextFieldDelegate{
         }
         return true
     }
+    
 }
 
+//MARK: - Bind ViewModel
 extension SignUpScreenViewController {
     
     func bindViewModel() {
@@ -96,6 +74,56 @@ extension SignUpScreenViewController {
                 }
             }
         }
-        
     }
+    
+}
+
+//MARK: - Custom Functions
+extension SignUpScreenViewController {
+    
+    private func initialSetup() {
+        passwordTextField.delegate = self
+        businessTextField.delegate = self
+        emailTextField.delegate = self
+        userNameTextField.delegate = self
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        hideKeyboardWhenTappedAround(viewController: self)
+        bindViewModel()
+    }
+    
+}
+
+//MARK: - Outlet Action
+extension SignUpScreenViewController {
+    
+    @IBAction func onClickOfBtnSignUp(_ sender: Any) {
+        viewModel.validateData(email: emailTextField.text ?? "", password: passwordTextField.text ?? "", userName: userNameTextField.text ?? "", buisnessUrl: businessTextField.text ?? "")
+    }
+    
+    @IBAction func onClickOFAlreadyHaveAnAccountBtn(_ sender: Any) {
+        if let signInVC = UIStoryboard(name: Identifiers.mainStoryboard.rawValue, bundle: nil).instantiateViewController(withIdentifier:Identifiers.tabBarController.rawValue ) as? TabBarController {
+            self.navigationController?.pushViewController(signInVC, animated: true)
+        }
+    }
+    
+}
+
+//MARK: - Objc Function
+extension SignUpScreenViewController {
+    
+    @objc fileprivate func keyboardWillShow(notification:NSNotification) {
+        guard let userInfo = notification.userInfo else { return }
+        var keyboardFrame:CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
+        var contentInset:UIEdgeInsets = self.scrollView.contentInset
+        contentInset.bottom = keyboardFrame.size.height + 10
+        scrollView.contentInset = contentInset
+    }
+    @objc fileprivate func keyboardWillHide(notification:NSNotification) {
+        let contentInset:UIEdgeInsets = UIEdgeInsets.zero
+        scrollView.contentInset = contentInset
+    }
+    
 }

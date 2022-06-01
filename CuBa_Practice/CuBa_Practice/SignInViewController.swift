@@ -83,7 +83,7 @@ extension SignInViewController {
             DispatchQueue.main.async {
                 self.endProgressBar()
                 print(response.token)
-                if let userProfileVC = UIStoryboard(name: Identifiers.userProfileStoryboard.rawValue, bundle: nil).instantiateViewController(withIdentifier: Identifiers.userProfileViewController.rawValue) as? UserProfileViewController {
+                if let userProfileVC = UIStoryboard(name: Identifiers.userProfileStoryboard.rawValue, bundle: nil).instantiateViewController(withIdentifier: Identifiers.tabBarController.rawValue) as? TabBarController {
                     self.navigationController?.pushViewController(userProfileVC, animated: true)
                     //self.navigationController?.popViewController(animated: true)
                 }

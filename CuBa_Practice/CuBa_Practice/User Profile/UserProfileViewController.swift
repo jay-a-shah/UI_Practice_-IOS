@@ -88,7 +88,7 @@ extension UserProfileViewController: UITableViewDataSource {
 extension UserProfileViewController {
     
     @IBAction func onClickOfBarcodeButton(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
+     makealert(message: "barcodeButton")
     }
     
     @IBAction func onClickOfThreeDots(_ sender: UIButton) {

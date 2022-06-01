@@ -35,7 +35,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //                    window?.makeKeyAndVisible()
 //                }
             } else {
-                if let userProfileScreen = UIStoryboard(name: Identifiers.userProfileStoryboard.rawValue , bundle: nil).instantiateViewController(withIdentifier: Identifiers.userProfileViewController.rawValue ) as? UserProfileViewController {
+                if let userProfileScreen = UIStoryboard(name: Identifiers.userProfileStoryboard.rawValue , bundle: nil).instantiateViewController(withIdentifier: "tabBarController" ) as? TabBarController {
                     window?.rootViewController = UINavigationController(rootViewController: userProfileScreen)
                     window?.makeKeyAndVisible()
                 }

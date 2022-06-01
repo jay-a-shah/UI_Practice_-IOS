@@ -62,6 +62,11 @@
 		F1F985B12847318200E4339B /* progressBar.json in Resources */ = {isa = PBXBuildFile; fileRef = F1F985B02847318200E4339B /* progressBar.json */; };
 		F1F985B32847343200E4339B /* new.json in Resources */ = {isa = PBXBuildFile; fileRef = F1F985B22847343200E4339B /* new.json */; };
 		F1F985B52847343C00E4339B /* progressNinja.json in Resources */ = {isa = PBXBuildFile; fileRef = F1F985B42847343C00E4339B /* progressNinja.json */; };
+		F1F985B728476F3700E4339B /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F985B628476F3700E4339B /* TabBarController.swift */; };
+		F1F985B92847729100E4339B /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F985B82847729100E4339B /* UserListViewController.swift */; };
+		F1F985BB284772C700E4339B /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F985BA284772C700E4339B /* UserListViewModel.swift */; };
+		F1F985BD2847750700E4339B /* UserListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F985BC2847750700E4339B /* UserListModel.swift */; };
+		F1F985C1284776FC00E4339B /* UserListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F985C0284776FC00E4339B /* UserListCell.swift */; };
 		FAC74EB37FBCEA60998FD533 /* Pods_CuBa_Practice_CuBa_PracticeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF7A96C60CD999FFEAEA6D25 /* Pods_CuBa_Practice_CuBa_PracticeUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -149,6 +154,11 @@
 		F1F985B02847318200E4339B /* progressBar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = progressBar.json; sourceTree = "<group>"; };
 		F1F985B22847343200E4339B /* new.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = new.json; sourceTree = "<group>"; };
 		F1F985B42847343C00E4339B /* progressNinja.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = progressNinja.json; sourceTree = "<group>"; };
+		F1F985B628476F3700E4339B /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		F1F985B82847729100E4339B /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
+		F1F985BA284772C700E4339B /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
+		F1F985BC2847750700E4339B /* UserListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListModel.swift; sourceTree = "<group>"; };
+		F1F985C0284776FC00E4339B /* UserListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +219,11 @@
 				F15CB90B28228F2400032101 /* UserProfileViewController.swift */,
 				F15CB9162822BF7100032101 /* ModelClass.swift */,
 				F15CB9182822C7ED00032101 /* UserProfileCell.swift */,
+				F1F985B628476F3700E4339B /* TabBarController.swift */,
+				F1F985B82847729100E4339B /* UserListViewController.swift */,
+				F1F985BA284772C700E4339B /* UserListViewModel.swift */,
+				F1F985BC2847750700E4339B /* UserListModel.swift */,
+				F1F985C0284776FC00E4339B /* UserListCell.swift */,
 			);
 			path = "User Profile";
 			sourceTree = "<group>";
@@ -290,7 +305,6 @@
 				F19B189E281BAA040061EEDC /* Custom Control */,
 				F19B186E281BA6050061EEDC /* AppDelegate.swift */,
 				F19B1870281BA6050061EEDC /* SceneDelegate.swift */,
-				F19B1872281BA6050061EEDC /* BaseViewController.swift */,
 				F172EBDF28215B8000B05DCA /* SignInViewController.swift */,
 				F172EBE028215B8000B05DCA /* SignUpScreenViewController.swift */,
 				F13A3A2428216A480073D373 /* Main.storyboard */,
@@ -332,6 +346,7 @@
 		F1BEC5A1283F8CCA00D4410E /* BaseClasses */ = {
 			isa = PBXGroup;
 			children = (
+				F19B1872281BA6050061EEDC /* BaseViewController.swift */,
 				F1BEC5A7283FA54B00D4410E /* BaseViewModel.swift */,
 			);
 			path = BaseClasses;
@@ -684,10 +699,13 @@
 				F1D102B9281BEA5F00DD2C0D /* UserNameTextField.swift in Sources */,
 				F172EBE128215B8000B05DCA /* SignInViewController.swift in Sources */,
 				F15CB90C28228F2400032101 /* UserProfileViewController.swift in Sources */,
+				F1F985BD2847750700E4339B /* UserListModel.swift in Sources */,
 				F10DA7872821BD2900C0BAAB /* UsernameTextFieldWithButton.swift in Sources */,
 				F1BEC5AB283FC27500D4410E /* SignInModel.swift in Sources */,
 				F144AF752840A1C300610D52 /* String.swift in Sources */,
+				F1F985B92847729100E4339B /* UserListViewController.swift in Sources */,
 				F10DA7892821C25600C0BAAB /* CustomSignInButton.swift in Sources */,
+				F1F985C1284776FC00E4339B /* UserListCell.swift in Sources */,
 				F172EBE228215B8000B05DCA /* SignUpScreenViewController.swift in Sources */,
 				F19B18A0281BAA2C0061EEDC /* BaseCustomUITextField.swift in Sources */,
 				F1BEC5A3283F924600D4410E /* SignInViewModel.swift in Sources */,
@@ -695,6 +713,7 @@
 				F19788EA2823B1CB00CFCE07 /* OnBoardingModel.swift in Sources */,
 				F144AF772840F99600610D52 /* SignUpModel.swift in Sources */,
 				F19B1873281BA6050061EEDC /* BaseViewController.swift in Sources */,
+				F1F985BB284772C700E4339B /* UserListViewModel.swift in Sources */,
 				F19B186F281BA6050061EEDC /* AppDelegate.swift in Sources */,
 				F19788EC2823B36D00CFCE07 /* OnBoardingScreenCell.swift in Sources */,
 				F1BEC5A8283FA54B00D4410E /* BaseViewModel.swift in Sources */,
@@ -706,6 +725,7 @@
 				F19B1871281BA6050061EEDC /* SceneDelegate.swift in Sources */,
 				F19788E82823B17400CFCE07 /* CustomWhiteBacKButton.swift in Sources */,
 				F15CB9132822A13500032101 /* LightGrayUILabel.swift in Sources */,
+				F1F985B728476F3700E4339B /* TabBarController.swift in Sources */,
 				F13A3A30282178AA0073D373 /* BaseUILabel.swift in Sources */,
 				F15CB91128229E7000032101 /* DarkGrayUILabel.swift in Sources */,
 				F15CB9192822C7ED00032101 /* UserProfileCell.swift in Sources */,
