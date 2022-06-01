@@ -7,16 +7,16 @@
 
 import UIKit
 
-class SignUpScreenViewController: UIViewController {
-    
+class SignUpScreenViewController: BaseViewController {
+
+    //MARK: - Outlets
     @IBOutlet weak var businessTextField: BuisnessUrlTextField!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var passwordTextField: PasswordUITextField!
     @IBOutlet weak var emailTextField: EmailTextField!
     @IBOutlet weak var userNameTextField: UserNameTextField!
     let viewModel = SignUpViewModel()
-    var Defaults = UserDefaults.standard
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         passwordTextField.delegate = self
@@ -75,11 +75,12 @@ extension SignUpScreenViewController {
     func bindViewModel() {
         let user = SignUpModel(email: emailTextField.text ?? "", password: passwordTextField.text ?? "", buisnessUrl: businessTextField.text ?? "", userName: userNameTextField.text ?? "")
         viewModel.onValidationError = {error in
-            self.makealert(message: error)
+            if (error == "Success") { self.setUpProgressBar() } else { self.makealert(message: error) }
         }
         viewModel.onLoginSuccess = {
             self.viewModel.onLoginResponseData = {response in
                 DispatchQueue.main.async {
+                    self.endProgressBar()
                     print(String(response.id) + response.token)
                     if let userProfileVC = UIStoryboard(name: Identifiers.userProfileStoryboard.rawValue, bundle: nil).instantiateViewController(withIdentifier: Identifiers.userProfileViewController.rawValue) as? UserProfileViewController {
                         self.navigationController?.pushViewController(userProfileVC, animated: true)
@@ -90,6 +91,7 @@ extension SignUpScreenViewController {
         viewModel.onLoginFailure = {
             self.viewModel.onLoginFailureData = {failure in
                 DispatchQueue.main.async {
+                    self.endProgressBar()
                     self.makealert(message: failure.error)
                 }
             }

@@ -10,6 +10,7 @@ import Foundation
 
 class SignInViewModel: NSObject {
     
+    //MARK: - Variables
     var onValidationError: ((String)-> Void)?
     var onLoginSuccess: (()->Void)?
     var onLoginFailure: (()->Void)?
@@ -17,6 +18,7 @@ class SignInViewModel: NSObject {
     var onLoginFailureData: ((ErrorSignUpModel)-> Void)?
     var defaults = UserDefaults.standard
     
+    //MARK: - Functions
     func validateData(email: String, password: String) {
         if email.isEmpty {
             onValidationError?("Email is Empty")
@@ -43,6 +45,7 @@ class SignInViewModel: NSObject {
                 self.onLoginFailureData?(ErrorSignUpModel(error: error.error))
             }
         }
+    
         func settingUserDefaults() {
             self.defaults.set(email, forKey: UserDefaultsKeys.email.rawValue)
             self.defaults.set(password, forKey: UserDefaultsKeys.password.rawValue)

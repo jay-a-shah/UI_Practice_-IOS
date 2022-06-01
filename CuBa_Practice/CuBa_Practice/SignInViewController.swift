@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import Lottie
 
-class SignInViewController: UIViewController {
+class SignInViewController: BaseViewController {
     
     //MARK: - Outlets
     @IBOutlet weak var scrollView: UIScrollView!
@@ -65,6 +66,7 @@ extension SignInViewController {
 extension SignInViewController {
     
     @IBAction func onClickOfSignInBtn(_ sender: UIButton) {
+        setUpProgressBar()
         viewModel.validateData(email: userNameTextField.text ?? "", password: passwordTextField.text ??  "")
     }
 }
@@ -79,6 +81,7 @@ extension SignInViewController {
         }
         viewModel.onLoginResponseData = { response in
             DispatchQueue.main.async {
+                self.endProgressBar()
                 print(response.token)
                 if let userProfileVC = UIStoryboard(name: Identifiers.userProfileStoryboard.rawValue, bundle: nil).instantiateViewController(withIdentifier: Identifiers.userProfileViewController.rawValue) as? UserProfileViewController {
                     self.navigationController?.pushViewController(userProfileVC, animated: true)
@@ -88,6 +91,7 @@ extension SignInViewController {
         }
         viewModel.onLoginFailureData = {failure in
             DispatchQueue.main.async {
+                self.endProgressBar()
                 self.makealert(message: failure.error)
             }
         }
@@ -115,4 +119,5 @@ extension SignInViewController {
             loadData()
         }
     }
+    
 }

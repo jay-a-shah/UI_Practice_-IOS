@@ -45,7 +45,7 @@
 		F19788EC2823B36D00CFCE07 /* OnBoardingScreenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19788EB2823B36D00CFCE07 /* OnBoardingScreenCell.swift */; };
 		F19B186F281BA6050061EEDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19B186E281BA6050061EEDC /* AppDelegate.swift */; };
 		F19B1871281BA6050061EEDC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19B1870281BA6050061EEDC /* SceneDelegate.swift */; };
-		F19B1873281BA6050061EEDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19B1872281BA6050061EEDC /* ViewController.swift */; };
+		F19B1873281BA6050061EEDC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19B1872281BA6050061EEDC /* BaseViewController.swift */; };
 		F19B1878281BA6060061EEDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F19B1877281BA6060061EEDC /* Assets.xcassets */; };
 		F19B1886281BA6070061EEDC /* CuBa_PracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19B1885281BA6070061EEDC /* CuBa_PracticeTests.swift */; };
 		F19B1890281BA6070061EEDC /* CuBa_PracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19B188F281BA6070061EEDC /* CuBa_PracticeUITests.swift */; };
@@ -59,6 +59,9 @@
 		F1D102BE281C0AE000DD2C0D /* PasswordUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D102BD281C0AE000DD2C0D /* PasswordUITextField.swift */; };
 		F1F27A792827EE40006729A2 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F27A782827EE40006729A2 /* R.generated.swift */; };
 		F1F27A802827F2B5006729A2 /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F27A7F2827F2B5006729A2 /* Identifiers.swift */; };
+		F1F985B12847318200E4339B /* progressBar.json in Resources */ = {isa = PBXBuildFile; fileRef = F1F985B02847318200E4339B /* progressBar.json */; };
+		F1F985B32847343200E4339B /* new.json in Resources */ = {isa = PBXBuildFile; fileRef = F1F985B22847343200E4339B /* new.json */; };
+		F1F985B52847343C00E4339B /* progressNinja.json in Resources */ = {isa = PBXBuildFile; fileRef = F1F985B42847343C00E4339B /* progressNinja.json */; };
 		FAC74EB37FBCEA60998FD533 /* Pods_CuBa_Practice_CuBa_PracticeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF7A96C60CD999FFEAEA6D25 /* Pods_CuBa_Practice_CuBa_PracticeUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -119,7 +122,7 @@
 		F19B186B281BA6050061EEDC /* CuBa_Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CuBa_Practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F19B186E281BA6050061EEDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F19B1870281BA6050061EEDC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F19B1872281BA6050061EEDC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F19B1872281BA6050061EEDC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F19B1877281BA6060061EEDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F19B187A281BA6060061EEDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F19B187C281BA6060061EEDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -143,6 +146,9 @@
 		F1D102BD281C0AE000DD2C0D /* PasswordUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordUITextField.swift; sourceTree = "<group>"; };
 		F1F27A782827EE40006729A2 /* R.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		F1F27A7F2827F2B5006729A2 /* Identifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiers.swift; sourceTree = "<group>"; };
+		F1F985B02847318200E4339B /* progressBar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = progressBar.json; sourceTree = "<group>"; };
+		F1F985B22847343200E4339B /* new.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = new.json; sourceTree = "<group>"; };
+		F1F985B42847343C00E4339B /* progressNinja.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = progressNinja.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +279,7 @@
 		F19B186D281BA6050061EEDC /* CuBa_Practice */ = {
 			isa = PBXGroup;
 			children = (
+				F1F985AF2847317300E4339B /* Animation */,
 				F1BEC5A6283FA50600D4410E /* Auth */,
 				F1BEC5A1283F8CCA00D4410E /* BaseClasses */,
 				F1F27A7E2827F280006729A2 /* Helper Class */,
@@ -283,7 +290,7 @@
 				F19B189E281BAA040061EEDC /* Custom Control */,
 				F19B186E281BA6050061EEDC /* AppDelegate.swift */,
 				F19B1870281BA6050061EEDC /* SceneDelegate.swift */,
-				F19B1872281BA6050061EEDC /* ViewController.swift */,
+				F19B1872281BA6050061EEDC /* BaseViewController.swift */,
 				F172EBDF28215B8000B05DCA /* SignInViewController.swift */,
 				F172EBE028215B8000B05DCA /* SignUpScreenViewController.swift */,
 				F13A3A2428216A480073D373 /* Main.storyboard */,
@@ -384,6 +391,16 @@
 				F12B99902844BFDA0021273F /* Constants.swift */,
 			);
 			path = "Helper Class";
+			sourceTree = "<group>";
+		};
+		F1F985AF2847317300E4339B /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				F1F985B22847343200E4339B /* new.json */,
+				F1F985B42847343C00E4339B /* progressNinja.json */,
+				F1F985B02847318200E4339B /* progressBar.json */,
+			);
+			path = Animation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -496,12 +513,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1F985B52847343C00E4339B /* progressNinja.json in Resources */,
 				F15CB90028224B4600032101 /* DMSans-BoldItalic.ttf in Resources */,
 				F15CB90228224B4C00032101 /* DMSans-Medium.ttf in Resources */,
 				F19788E42823A45600CFCE07 /* OnBoardingScreen.storyboard in Resources */,
 				F15CB90528224B5300032101 /* DMSans-Italic.ttf in Resources */,
 				F15CB90128224B4900032101 /* DMSans-Bold.ttf in Resources */,
 				F15CB90428224B5100032101 /* DMSans-MediumItalic.ttf in Resources */,
+				F1F985B12847318200E4339B /* progressBar.json in Resources */,
+				F1F985B32847343200E4339B /* new.json in Resources */,
 				F15CB90328224B4E00032101 /* DMSans-Regular.ttf in Resources */,
 				F13A3A2628216A480073D373 /* Main.storyboard in Resources */,
 				F157700E282166DB008EEF6F /* LaunchScreen.storyboard in Resources */,
@@ -674,7 +694,7 @@
 				F13A3A2E282176290073D373 /* BaseCustomUIButton.swift in Sources */,
 				F19788EA2823B1CB00CFCE07 /* OnBoardingModel.swift in Sources */,
 				F144AF772840F99600610D52 /* SignUpModel.swift in Sources */,
-				F19B1873281BA6050061EEDC /* ViewController.swift in Sources */,
+				F19B1873281BA6050061EEDC /* BaseViewController.swift in Sources */,
 				F19B186F281BA6050061EEDC /* AppDelegate.swift in Sources */,
 				F19788EC2823B36D00CFCE07 /* OnBoardingScreenCell.swift in Sources */,
 				F1BEC5A8283FA54B00D4410E /* BaseViewModel.swift in Sources */,

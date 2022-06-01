@@ -402,12 +402,28 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="mti-Hh-mNO" kind="relationship" relationship="rootViewController" id="9jV-uB-w9E"/>
+                        <segue destination="mti-Hh-mNO" kind="relationship" relationship="rootViewController" id="yuk-2S-hws"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YbB-U9-K7Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2536.8000000000002" y="10.344827586206897"/>
+        </scene>
+        <!--Base View Controller-->
+        <scene sceneID="3GN-Md-HBf">
+            <objects>
+                <viewController storyboardIdentifier="viewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WkE-xY-oaP" customClass="BaseViewController" customModule="CuBa_Practice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ym3-id-ORS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="e0h-88-zND"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zu5-cA-EUN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LPZ-jC-FNM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2596" y="703"/>
         </scene>
     </scenes>
     <resources>

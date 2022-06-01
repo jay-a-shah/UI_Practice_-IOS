@@ -24,7 +24,8 @@ class SignUpViewModel: NSObject {
         } else if !password.validatePassword() {
             onValidationError?("Password is Not Valid")
         } else {
-           apiCallSignUpWithUrlSession(email, password, userName, buisnessUrl)
+            onValidationError?("Success")
+            apiCallSignUpWithUrlSession(email, password, userName, buisnessUrl)
         }
     }
     

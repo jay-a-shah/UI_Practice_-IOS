@@ -30,6 +30,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                     window?.rootViewController = UINavigationController(rootViewController: signInScreen)
                     window?.makeKeyAndVisible()
                 }
+//                if let vc = UIStoryboard(name: Identifiers.mainStoryboard.rawValue , bundle: nil).instantiateViewController(withIdentifier: "viewController" ) as? BaseViewController {
+//                    window?.rootViewController = UINavigationController(rootViewController: vc)
+//                    window?.makeKeyAndVisible()
+//                }
             } else {
                 if let userProfileScreen = UIStoryboard(name: Identifiers.userProfileStoryboard.rawValue , bundle: nil).instantiateViewController(withIdentifier: Identifiers.userProfileViewController.rawValue ) as? UserProfileViewController {
                     window?.rootViewController = UINavigationController(rootViewController: userProfileScreen)
