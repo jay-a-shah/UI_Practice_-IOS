@@ -140,6 +140,7 @@
 		F1BEC5A2283F924600D4410E /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		F1BEC5A7283FA54B00D4410E /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		F1BEC5AA283FC27500D4410E /* SignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInModel.swift; sourceTree = "<group>"; };
+		F1C7194C2848B030005B46C6 /* CuBa_Practice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CuBa_Practice.entitlements; sourceTree = "<group>"; };
 		F1D102AE281BC72300DD2C0D /* ColorFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorFile.swift; sourceTree = "<group>"; };
 		F1D102B2281BE67600DD2C0D /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
 		F1D102B3281BE67600DD2C0D /* DMSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Medium.ttf"; sourceTree = "<group>"; };
@@ -294,6 +295,7 @@
 		F19B186D281BA6050061EEDC /* CuBa_Practice */ = {
 			isa = PBXGroup;
 			children = (
+				F1C7194C2848B030005B46C6 /* CuBa_Practice.entitlements */,
 				F1F985AF2847317300E4339B /* Animation */,
 				F1BEC5A6283FA50600D4410E /* Auth */,
 				F1BEC5A1283F8CCA00D4410E /* BaseClasses */,
@@ -907,6 +909,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CuBa_Practice/CuBa_Practice.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -935,6 +938,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CuBa_Practice/CuBa_Practice.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
