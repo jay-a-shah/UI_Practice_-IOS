@@ -231,6 +231,7 @@
                                                 </imageView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="gkp-z4-wZU" firstAttribute="height" secondItem="4hn-DJ-J3Z" secondAttribute="height" multiplier="0.096" id="3JV-u1-AAa"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="gkp-z4-wZU" secondAttribute="trailing" constant="20" id="By0-9K-b12"/>
                                                 <constraint firstItem="g2v-vV-f6Y" firstAttribute="height" secondItem="4hn-DJ-J3Z" secondAttribute="height" multiplier="0.605333" id="IIH-Cw-FGs"/>
                                                 <constraint firstAttribute="bottom" secondItem="g2v-vV-f6Y" secondAttribute="bottom" constant="10" id="Iir-Vz-Fc0"/>
@@ -340,6 +341,7 @@
                 <tabBarController storyboardIdentifier="tabBarController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uzq-rV-vnE" customClass="TabBarController" customModule="CuBa_Practice" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ory-TY-hgL">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
