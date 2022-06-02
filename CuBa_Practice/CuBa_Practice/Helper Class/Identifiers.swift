@@ -16,4 +16,5 @@ enum Identifiers: String {
     case onBoardStoryboard = "OnBoardingScreen"
     case onBoardingViewController = "onBoardingViewController"
     case tabBarController = "tabBarController"
+    case signUpViewController = "signUpScreenViewController"
 }

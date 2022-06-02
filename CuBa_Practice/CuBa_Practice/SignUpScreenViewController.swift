@@ -91,6 +91,7 @@ extension SignUpScreenViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         hideKeyboardWhenTappedAround(viewController: self)
         bindViewModel()
+        turnOnSwipeToBack()
     }
     
 }
@@ -103,7 +104,7 @@ extension SignUpScreenViewController {
     }
     
     @IBAction func onClickOFAlreadyHaveAnAccountBtn(_ sender: Any) {
-        if let signInVC = UIStoryboard(name: Identifiers.mainStoryboard.rawValue, bundle: nil).instantiateViewController(withIdentifier:Identifiers.tabBarController.rawValue ) as? TabBarController {
+        if let signInVC = UIStoryboard(name: Identifiers.mainStoryboard.rawValue, bundle: nil).instantiateViewController(withIdentifier:Identifiers.signInViewController.rawValue ) as? SignInViewController {
             self.navigationController?.pushViewController(signInVC, animated: true)
         }
     }

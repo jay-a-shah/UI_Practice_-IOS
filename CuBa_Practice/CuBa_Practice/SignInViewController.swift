@@ -117,6 +117,7 @@ extension SignInViewController {
         bindViewModel()
         if (defaults.bool(forKey: "loginCred")) {
             loadData()
+        turnOnSwipeToBack()
         }
     }
     
