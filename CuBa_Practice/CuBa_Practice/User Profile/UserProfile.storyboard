@@ -319,17 +319,47 @@
             </objects>
             <point key="canvasLocation" x="1649" y="-224"/>
         </scene>
-        <!--View Controller-->
+        <!--Local Notification View Controller-->
         <scene sceneID="oLA-Mb-PrW">
             <objects>
-                <viewController id="xae-rC-8uN" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="localNotificationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xae-rC-8uN" customClass="LocalNotificationViewController" customModule="CuBa_Practice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="97A-32-m1d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2I-t5-c9c" customClass="BaseCustomUIButton" customModule="CuBa_Practice" customModuleProvider="target">
+                                <rect key="frame" x="20" y="665" width="335" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="MsZ-aE-3YB"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Local Notification">
+                                            <attributes>
+                                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="18" name="Helvetica-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onClickOfLocalNotification:" destination="xae-rC-8uN" eventType="touchUpInside" id="FKc-SE-Y7K"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="SCe-fI-wO5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SCe-fI-wO5" firstAttribute="trailing" secondItem="d2I-t5-c9c" secondAttribute="trailing" constant="20" id="7S5-RV-k32"/>
+                            <constraint firstItem="d2I-t5-c9c" firstAttribute="leading" secondItem="SCe-fI-wO5" secondAttribute="leading" constant="20" id="B2C-cd-MMq"/>
+                            <constraint firstItem="SCe-fI-wO5" firstAttribute="bottom" secondItem="d2I-t5-c9c" secondAttribute="bottom" constant="20" id="TW6-wn-KSW"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="Icon_Bar" id="RZd-Mr-afa"/>
+                    <connections>
+                        <outlet property="btnLocalNotification" destination="d2I-t5-c9c" id="D44-Le-abC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pxJ-Ae-fxQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

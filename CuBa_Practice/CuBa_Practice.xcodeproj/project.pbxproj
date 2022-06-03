@@ -57,6 +57,8 @@
 		F1D102AF281BC72300DD2C0D /* ColorFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D102AE281BC72300DD2C0D /* ColorFile.swift */; };
 		F1D102B9281BEA5F00DD2C0D /* UserNameTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D102B8281BEA5F00DD2C0D /* UserNameTextField.swift */; };
 		F1D102BE281C0AE000DD2C0D /* PasswordUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D102BD281C0AE000DD2C0D /* PasswordUITextField.swift */; };
+		F1E271B52849DB8300310D65 /* LocalNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E271B42849DB8300310D65 /* LocalNotificationViewController.swift */; };
+		F1E271B72849E62800310D65 /* notification.gif in Resources */ = {isa = PBXBuildFile; fileRef = F1E271B62849E62700310D65 /* notification.gif */; };
 		F1F27A792827EE40006729A2 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F27A782827EE40006729A2 /* R.generated.swift */; };
 		F1F27A802827F2B5006729A2 /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F27A7F2827F2B5006729A2 /* Identifiers.swift */; };
 		F1F985B12847318200E4339B /* progressBar.json in Resources */ = {isa = PBXBuildFile; fileRef = F1F985B02847318200E4339B /* progressBar.json */; };
@@ -149,6 +151,8 @@
 		F1D102B7281BE67600DD2C0D /* DMSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Italic.ttf"; sourceTree = "<group>"; };
 		F1D102B8281BEA5F00DD2C0D /* UserNameTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameTextField.swift; sourceTree = "<group>"; };
 		F1D102BD281C0AE000DD2C0D /* PasswordUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordUITextField.swift; sourceTree = "<group>"; };
+		F1E271B42849DB8300310D65 /* LocalNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationViewController.swift; sourceTree = "<group>"; };
+		F1E271B62849E62700310D65 /* notification.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = notification.gif; sourceTree = "<group>"; };
 		F1F27A782827EE40006729A2 /* R.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		F1F27A7F2827F2B5006729A2 /* Identifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiers.swift; sourceTree = "<group>"; };
 		F1F985B02847318200E4339B /* progressBar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = progressBar.json; sourceTree = "<group>"; };
@@ -224,6 +228,7 @@
 				F1F985BA284772C700E4339B /* UserListViewModel.swift */,
 				F1F985BC2847750700E4339B /* UserListModel.swift */,
 				F1F985C0284776FC00E4339B /* UserListCell.swift */,
+				F1E271B42849DB8300310D65 /* LocalNotificationViewController.swift */,
 			);
 			path = "User Profile";
 			sourceTree = "<group>";
@@ -294,6 +299,7 @@
 		F19B186D281BA6050061EEDC /* CuBa_Practice */ = {
 			isa = PBXGroup;
 			children = (
+				F1E271B62849E62700310D65 /* notification.gif */,
 				F1F985AF2847317300E4339B /* Animation */,
 				F1BEC5A6283FA50600D4410E /* Auth */,
 				F1BEC5A1283F8CCA00D4410E /* BaseClasses */,
@@ -530,6 +536,7 @@
 			files = (
 				F1F985B52847343C00E4339B /* progressNinja.json in Resources */,
 				F15CB90028224B4600032101 /* DMSans-BoldItalic.ttf in Resources */,
+				F1E271B72849E62800310D65 /* notification.gif in Resources */,
 				F15CB90228224B4C00032101 /* DMSans-Medium.ttf in Resources */,
 				F19788E42823A45600CFCE07 /* OnBoardingScreen.storyboard in Resources */,
 				F15CB90528224B5300032101 /* DMSans-Italic.ttf in Resources */,
@@ -702,6 +709,7 @@
 				F1F985BD2847750700E4339B /* UserListModel.swift in Sources */,
 				F10DA7872821BD2900C0BAAB /* UsernameTextFieldWithButton.swift in Sources */,
 				F1BEC5AB283FC27500D4410E /* SignInModel.swift in Sources */,
+				F1E271B52849DB8300310D65 /* LocalNotificationViewController.swift in Sources */,
 				F144AF752840A1C300610D52 /* String.swift in Sources */,
 				F1F985B92847729100E4339B /* UserListViewController.swift in Sources */,
 				F10DA7892821C25600C0BAAB /* CustomSignInButton.swift in Sources */,
