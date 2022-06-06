@@ -347,18 +347,27 @@
                                     <action selector="onClickOfLocalNotification:" destination="xae-rC-8uN" eventType="touchUpInside" id="FKc-SE-Y7K"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Still You Have not Replied to a Notification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gI6-ec-XT6">
+                                <rect key="frame" x="28.333333333333343" y="395.66666666666669" width="318.33333333333326" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.32156862749999998" green="0.26274509800000001" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SCe-fI-wO5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="gI6-ec-XT6" firstAttribute="centerY" secondItem="97A-32-m1d" secondAttribute="centerY" id="3Ag-wc-GRC"/>
                             <constraint firstItem="SCe-fI-wO5" firstAttribute="trailing" secondItem="d2I-t5-c9c" secondAttribute="trailing" constant="20" id="7S5-RV-k32"/>
                             <constraint firstItem="d2I-t5-c9c" firstAttribute="leading" secondItem="SCe-fI-wO5" secondAttribute="leading" constant="20" id="B2C-cd-MMq"/>
                             <constraint firstItem="SCe-fI-wO5" firstAttribute="bottom" secondItem="d2I-t5-c9c" secondAttribute="bottom" constant="20" id="TW6-wn-KSW"/>
+                            <constraint firstItem="gI6-ec-XT6" firstAttribute="centerX" secondItem="97A-32-m1d" secondAttribute="centerX" id="vqe-cH-OIH"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="Icon_Bar" id="RZd-Mr-afa"/>
                     <connections>
                         <outlet property="btnLocalNotification" destination="d2I-t5-c9c" id="D44-Le-abC"/>
+                        <outlet property="lblNotificationResponse" destination="gI6-ec-XT6" id="SZI-M6-CzP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pxJ-Ae-fxQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -11,26 +11,27 @@ import UserNotifications
 class LocalNotificationViewController: UIViewController {
     
     //MARK: - Outlets
+    @IBOutlet weak var lblNotificationResponse: UILabel!
     @IBOutlet weak var btnLocalNotification: BaseCustomUIButton!
     
     //MARK: - Variables
     let userNotificationCenter = UNUserNotificationCenter.current()
-
+    
     //MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.userNotificationCenter.delegate = self
-       
     }
-   
+    
     func requestNotificationAuthorization() {
-       // let authOptions = UNAuthorizationOptions.init(arrayLiteral: .alert, .badge, .sound)
+        // let authOptions = UNAuthorizationOptions.init(arrayLiteral: .alert, .badge, .sound)
         userNotificationCenter.requestAuthorization(options: [.alert, .sound, .badge]) { (success,error)  in
             if let error = error {
                 print("Error ",error)
             }
         }
     }
+    
     func sendNotification() {
         let notificationContent = UNMutableNotificationContent()
         notificationContent.title = "Test"
@@ -56,9 +57,10 @@ class LocalNotificationViewController: UIViewController {
             }
         }
         
-        let like = UNNotificationAction.init(identifier: "Accept", title: "Accept", options: .foreground, icon: .init(templateImageName: "Icon_Right"))
+        let replyAction = UNTextInputNotificationAction(identifier: "Accept", title: "Reply on message", textInputButtonTitle: "Chal Bhej", textInputPlaceholder: "Input text here")
+        //let like = UNNotificationAction.init(identifier: "Accept", title: "Reply on message", options: .foreground, icon: .init(templateImageName: "Icon_Right"))
         let dislike = UNNotificationAction.init(identifier: "Decline", title: "Decline", options: .destructive, icon: .init(templateImageName: "Icon_Back"))
-        let category = UNNotificationCategory.init(identifier: notificationContent.categoryIdentifier, actions: [like,dislike], intentIdentifiers: [], options: [])
+        let category = UNNotificationCategory.init(identifier: notificationContent.categoryIdentifier, actions: [replyAction,dislike], intentIdentifiers: [], options: [])
         userNotificationCenter.setNotificationCategories([category])
         
     }
@@ -72,6 +74,11 @@ extension LocalNotificationViewController: UNUserNotificationCenterDelegate {
         switch response.actionIdentifier {
         case "Accept":
             print("Accept")
+            if let textResponse =  response as? UNTextInputNotificationResponse {
+                let sendText =  textResponse.userText
+                lblNotificationResponse.text = sendText
+                print("Received text message: \(sendText)")
+            }
             UIApplication.shared.applicationIconBadgeNumber = 0
         case "Decline":
             print("Decline")
@@ -79,7 +86,7 @@ extension LocalNotificationViewController: UNUserNotificationCenterDelegate {
             print("Unknown action")
         }
     }
-
+    
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         completionHandler([.alert, .badge, .sound])
     }
